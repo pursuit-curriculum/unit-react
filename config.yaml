@@ -1,0 +1,89 @@
+details:
+  name: React
+  repository_name: unit-react
+
+sequence:
+  Rendering & Interactivity:
+    - name: Unit 3 Launch
+      elements:
+        - kind: deck
+        - kind: recording
+    - name: NPM for React
+      pursuit_path: npm-for-react
+      kind: lesson
+      activity: ~ # none
+    - name: React Props
+      pursuit_path: react-props
+      kind: lesson
+      activity: repository
+    - name: React State - Booleans, Numbers & Strings
+      pursuit_path: react-state-primitive-values
+      kind: lesson
+      activity: repository
+    - name: React State - Objects
+      pursuit_path: react-state-objects
+      kind: lesson
+      activity: repository
+    - name: React Forms
+      pursuit_path: react-forms
+      kind: lesson
+      activity: repository
+    - name: React Lifting State
+      pursuit_path: react-lifting-state
+      kind: lesson
+      activity: repository
+    - name: React Deployment
+      pursuit_path: react-deployment
+      kind: lesson
+      activity: repository
+    - name: Bird Sanctuary Project
+      pursuit_path: project-bird-sanctuary
+      kind: project
+      points: 7
+    - name: React Student Dashboard
+      pursuit_path: project-student-dashboard
+      kind: project
+      points: 10
+  Asynchronous Actions:
+    - name: React Lifecycle Methods & Networking in React
+      pursuit_path: react-lifecycle-networking
+      kind: lesson
+      activity: repository
+    - name: Routing in React
+      pursuit_path: react-router
+      kind: lesson
+      activity: repository
+    - name: React CRUD (Multi-part lesson and lab)
+      pursuit_path: react-crud
+      kind: lesson
+  Application Development:
+    - name: Collaboration with GitHub
+      pursuit_path: collaboration-with-github
+      kind: lesson
+      activity: ~ #none
+    - name: Merge Conflicts
+      pursuit_path: merge-conflicts
+      kind: lesson
+      activity: ~ # none
+    - name: Project Workflow with Teams
+      pursuit_path: project-workflow
+      kind: lesson
+      activity: repository
+    - name: React YouTube Clone Project
+      pursuit_path: project-youtube-clone
+      kind: project
+      activity: repository
+      points: 7
+    - name: Final Assessment
+      pursuit_path: assessment-final-react
+      kind: assessment
+      activity: repository
+      points: 26
+    - name: Bonus - Convert Classes to Hooks
+      pursuit_path: classes-to-hooks
+      kind: lesson
+      activity: repository
+    - name: End of Module Reflection
+      elements:
+        - kind: deck
+        - kind: recording

@@ -12,6 +12,10 @@ sequence:
       pursuit_path: npm-for-react
       kind: lesson
       activity: ~ # none
+    - name: Introduction to React
+      pursuit_path: intro-to-react
+      kind: lesson
+      activity: repository
     - name: React Props
       pursuit_path: react-props
       kind: lesson
@@ -23,7 +27,7 @@ sequence:
     - name: React State - Objects
       pursuit_path: react-state-objects
       kind: lesson
-      activity: repository
+      activity: ~ # none, continue last lab
     - name: React Forms
       pursuit_path: react-forms
       kind: lesson
@@ -35,10 +39,11 @@ sequence:
     - name: React Deployment
       pursuit_path: react-deployment
       kind: lesson
-      activity: repository
+      activity: ~ # none coming soon
     - name: Bird Sanctuary Project
       pursuit_path: project-bird-sanctuary
       kind: project
+      activity: repository
       points: 7
     - name: React Student Dashboard
       pursuit_path: project-student-dashboard
@@ -56,6 +61,7 @@ sequence:
     - name: React CRUD (Multi-part lesson and lab)
       pursuit_path: react-crud
       kind: lesson
+      activity: repository
   Application Development:
     - name: Collaboration with GitHub
       pursuit_path: collaboration-with-github
@@ -68,7 +74,7 @@ sequence:
     - name: Project Workflow with Teams
       pursuit_path: project-workflow
       kind: lesson
-      activity: repository
+      activity: ~ # none
     - name: React YouTube Clone Project
       pursuit_path: project-youtube-clone
       kind: project
@@ -80,7 +86,7 @@ sequence:
       activity: repository
       points: 26
     - name: Bonus - Convert Classes to Hooks
-      pursuit_path: classes-to-hooks
+      pursuit_path: react-classes-to-hooks
       kind: lesson
       activity: repository
     - name: End of Module Reflection

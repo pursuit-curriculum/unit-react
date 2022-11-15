@@ -47,6 +47,7 @@ sequence:
       points: 7
     - name: React Student Dashboard
       pursuit_path: project-student-dashboard
+      activity: repository
       kind: project
       points: 10
   Asynchronous Actions:

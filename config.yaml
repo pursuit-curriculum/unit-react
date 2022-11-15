@@ -41,12 +41,12 @@ sequence:
       kind: lesson
       activity: ~ # none coming soon
     - name: Bird Sanctuary Project
-      pursuit_path: project-bird-sanctuary
+      pursuit_path: bird-sanctuary
       kind: project
       activity: repository
       points: 7
     - name: React Student Dashboard
-      pursuit_path: project-student-dashboard
+      pursuit_path: student-dashboard
       activity: repository
       kind: project
       points: 10
@@ -77,12 +77,12 @@ sequence:
       kind: lesson
       activity: ~ # none
     - name: React YouTube Clone Project
-      pursuit_path: project-youtube-clone
+      pursuit_path: youtube-clone
       kind: project
       activity: repository
       points: 7
     - name: Final Assessment
-      pursuit_path: assessment-final-react
+      pursuit_path: final-react
       kind: assessment
       activity: repository
       points: 26

@@ -63,7 +63,7 @@ sequence:
       pursuit_path: react-crud
       kind: lesson
       activity: repository
-      starter: television-shows
+      starter: television-shows-api
   Application Development:
     - name: Collaboration with GitHub
       pursuit_path: collaboration-with-github

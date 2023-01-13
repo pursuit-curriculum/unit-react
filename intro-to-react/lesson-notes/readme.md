@@ -2,10 +2,14 @@
 
 ## Learning Objectives
 
-- Understand what React is and what problem it solves
-- Use Create React App to start a React project
-- Understand the role of the files and folders in Create React App starter code
-- Create an application that uses React to render its front-end
+By the end of this lesson you should be able to:
+
+- Understand what React is and what problem it solves.
+- Use Create React App to start a React project.
+- Understand the role of the files and folders in Create React App starter code.
+- Create a simple application that uses React to render its front end.
+
+<hr>
 
 ## Getting Started
 

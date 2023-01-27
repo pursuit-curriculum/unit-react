@@ -1,58 +1,267 @@
-# NPM for React
+## Introduction
 
-Node package manager, or NPM, is a powerful tool that makes it possible to access and share open-source code. Through NPM, it is possible to use free packages created by developers across the world that can improve your application. For example, React is available for download via NPM.
+Let's build a small node application together. We will work on an imaginary business venture where the local zoo is looking to partner with a candy manufacturer to make unique and memorable jellybeans to help raise some money.
 
-In this lesson, you'll learn how to create an NPM project and learn more about the `package.json` file. You'll also learn specific tools for working with React.
+The company has sent over some data on some possible jellybeans, but it's a bit hard to read and analyze the data in its current format. We'll build a little app that imports the data, and then we will write a couple of functions to explore the data.
 
-## Learning objectives
+## Getting started
 
-By the end of this lesson you should be able to:
+- `mkdir zoo-jellybeans`
+- `cd zoo-jellybeans`
+- `touch index.js jellybeans.js jellybeans.json`
+- `echo "node_modules\n.DS_Store" >> .gitignore`
+- `npm init -y`, the flag `-y` will automatically set all default input for `package.json`
 
-- Create a new NPM project with `npm init`.
-- Describe the purpose of the `package.json` file and modify it.
-- Create scripts via the `package.json` file.
-- Use `npx` to run the `create-react-app` package.
-- Use the `export`, `import`, and `default` keywords to connect multiple files.
+<details><summary>Copy and paste only the array into <code>jellybeans.js</code>:</summary>
 
----
+<code><pre>
 
-## Guiding questions
+```js
+[
+  {
+    name: "Wiggly Chilean Corralero",
+    color: "sky blue",
+    flavorType: "bitter",
+    inStock: true,
+  },
+  {
+    name: "Impish Argente Brun",
+    color: "gold",
+    flavorType: "spicy",
+    inStock: false,
+  },
+  {
+    name: "Venerated Pulikulam",
+    color: "yellow",
+    flavorType: "salty",
+    inStock: true,
+  },
+  {
+    name: "Well-to-do Hognosed viper",
+    color: "blue",
+    flavorType: "salty",
+    inStock: false,
+  },
+  {
+    name: "Attractive Australian Freshwater Crocodile",
+    color: "black",
+    flavorType: "fruity",
+    inStock: true,
+  },
+  {
+    name: "Mediocre West African Lion",
+    color: "olive",
+    flavorType: "fruity",
+    inStock: true,
+  },
+  {
+    name: "Ill-informed Bolognese",
+    color: "salmon",
+    flavorType: "salty",
+    inStock: false,
+  },
+  {
+    name: "Warped Bouvier des Flandres",
+    color: "lime",
+    flavorType: "spicy",
+    inStock: true,
+  },
+  {
+    name: "Serene Allmogekor",
+    color: "tan",
+    flavorType: "bitter",
+    inStock: false,
+  },
+  {
+    name: "Brisk Grass Carrying Wasp",
+    color: "fuchsia",
+    flavorType: "savory",
+    inStock: true,
+  },
+];
+```
 
-- Take a look at the [NPM website](https://www.npmjs.com/). What is a package?
+</pre></code>
 
-- What is NPM and how does it interact with packages?
+</details>
 
-- How can you create a new NPM project?
+<details><summary>Copy and paste only the array into <code>jellybeans.json</code>:</summary>
 
-- What is the overall purpose of the `package.json` file?
+<code><pre>
 
-- How do you run the `"test"` script that is provided by default when creating a new `package.json` file?
+```js
+[
+  {
+    name: "Perfumed Savannah",
+    color: "yellow",
+    flavorType: "fruity",
+    inStock: true,
+  },
+  {
+    name: "Agitated Northeast Congo Lion",
+    color: "fuchsia",
+    flavorType: "fruity",
+    inStock: false,
+  },
+  {
+    name: "Royal Australian Draught Horse",
+    color: "magenta",
+    flavorType: "spicy",
+    inStock: true,
+  },
+  {
+    name: "Unselfish Kurilian Bobtail",
+    color: "turquoise",
+    flavorType: "salty",
+    inStock: true,
+  },
+  {
+    name: "Glorious Northeast Congo Lion",
+    color: "magenta",
+    flavorType: "nutty",
+    inStock: false,
+  },
+  {
+    name: "Rotating Silver",
+    color: "gold",
+    flavorType: "fruity",
+    inStock: false,
+  },
+  {
+    name: "Speedy Toyger",
+    color: "gold",
+    flavorType: "spicy",
+    inStock: true,
+  },
+  {
+    name: "Flowery Australian Freshwater Crocodile",
+    color: "grey",
+    flavorType: "salty",
+    inStock: true,
+  },
+  {
+    name: "Upset Chinese River Dolphin",
+    color: "indigo",
+    flavorType: "nutty",
+    inStock: true,
+  },
+  {
+    name: "Smoggy Württemberger",
+    color: "pink",
+    flavorType: "savory",
+    inStock: false,
+  },
+];
+```
 
-- Change the word `"test"` to `"example"`. How can you run that same script now?
+</pre></code>
+</details>
 
-- Change the value of the script to `"echo $USER"` then run that script. What changed and why?
+## Import the data
 
-- Describe what the following command will do:
+In `index.js`:
 
-  ```
-  npx -y create-react-app my-first-react-project
-  ```
+- Require `jellybeans.js` and set it to a variable `jellybeans`.
+- Require `jellybeans.json` and set it to a variable `jellybeansJSON`.
+- Log each one to confirm you've successfully imported each set of data.
 
-- Before running the command above, make sure you are in a project folder that _is not_ a git repository.
+## Work with the data
 
-  Run the command above and take a look at the output from it. After going into the new directory that has been created by the command, what could you run to start the development server?
+### See a list of salty jellybeans
 
-- Start the development server. What happens? How can you stop the server?
+There are 6 `flavorTypes`:
 
-- Open up the directory you created with your code editor. Find the `App.test.js` file. What is the meaning of the following line of code that can be found there? What line of code in the `App.js` file relates to this line of code?
+- spicy
+- salty
+- fruity
+- nutty
+- savory
+- bitter
 
-  ```js
-  import App from "./App";
-  ```
+Create a variable called `salty` that will be an array of all the salty jellybeans from the `jellybeans` array.
 
-- Take a look at the following two lines from the `App.js` file. Based on what you know from answering the question above, what do you think these two lines do?
+To do this, we can approach this by realizing that we want to `filter` out all the jellybeans that are not salty. Therefore we can use the `filter` method:
 
-  ```js
-  import logo from "./logo.svg";
-  import "./App.css";
-  ```
+```js
+const salty = jellybeansJSON.filter();
+```
+
+Then, we want to confirm that the jellybean(jb) `flavorType` is equal to `salty`. If this value is true, it will be added to a new array. If it is false, it will not be added to the new array.
+
+```js
+const salty = jellybeansJSON.filter((jb) => {
+  return jb.flavorType === "salty";
+});
+
+console.log(salty);
+```
+
+- [Filter method documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+### Write a function that allows you to see jellybeans listed alphabetically by color
+
+Create a function called `organizeByColor` that will take arguments of a jellybeans array and return the array with the objects organized by color.
+
+```js
+const organizeByColor = (candies) => {
+  return candies;
+};
+```
+
+> **Question:** Why is it important to NOT name the parameter the same as the data variable?
+
+#### Review the sort method
+
+`a` will represent the first array object, and `b` will represent the second object.
+
+`.sort()` will iterate over the array and compare `a` to `b`.
+
+Strings are compared by the first character only. The character values are based on their [character code values](https://www.w3schools.com/charsets/ref_utf_basic_latin.asp). For example, lowercase `a` is valued at 97, `b` is valued at 98, and `z`'s value is 122. Notice that capital letters have different codes. For example, the letter `A` has a value of 65.
+
+There are three possibilities when comparing values. To sort the items in alphabetically ascending order, we will follow the following:
+
+- `a` is smaller than `b`. Therefore it must move to the left. In order to move it to the left, we will return a value of `-1`.
+- `a` is larger than `b`. Therefore it must move to the right. In order to move it to the right, we will return a value of `1`.
+- `a` and `b` are the same. Therefore the order should not d. We will return a value of 0.
+
+#### Complete the function
+
+```js
+const organizeByColor = (candies) => {
+  return candies.sort((a, b) => {
+    if (a.color < b.color) {
+      return -1;
+    } else if (a.color > b.color) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+};
+```
+
+```js
+console.log(organizeByColor(jellybeansJSON));
+```
+
+- [Sort method documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
+## Write a custom script
+
+Open the `package.json` file. Write a custom script that prints the name of your favorite animal in the terminal.
+
+```js
+{
+ "name": "make-fake-data",
+ "version": "1.0.0",
+ "description": "",
+ "main": "index.js",
+ "scripts": {
+ "animal": "echo 'My favorite animal is a cat'"
+ },
+ "author": "",
+ "license": "ISC"
+}
+
+
+```

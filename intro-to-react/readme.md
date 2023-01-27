@@ -1,41 +1,53 @@
 # Introduction to React
 
-## Objectives
+React is an open-source third party front-end framework that makes developing and maintaining large and robust front-end applications easier.
 
-- Understand what React is and what problem it solves
-- Use Create React App to start a React project
-- Understand the role of the files and folders in Create React App starter code
-- Create an application that uses React to render its front end
+At first, there is a steep learning curve to learn the basics, but once you learn the patterns and understand the fundamental concepts it will become much more enjoyable to build with React.
 
-## Vocabulary
+## Learning Objectives
 
-- Robust website/application
-- Boilerplate code
-- Virtual DOM
-- Components
-- React and React DOM
-- render
-- JSX
+By the end of this lesson you should be able to:
+
+- Understand what React is and what problem it solves.
+- Use Create React App to start a React project.
+- Understand the role of the files and folders in Create React App starter code.
+- Create a simple application that uses React to render its front end.
+
+<hr>
 
 ## Demo app
 
 This is the full code for the examples in this pre-reading. You may try to code out the examples to learn or to use the final code as a reference. [link](https://github.com/joinpursuit/Pursuit-Core-Web-React-Introduction-Project)
 
+![Demo App Complete](./assets/demo-app-complete.png)
+
 ## Motivation for learning React
 
-You have built interactive web pages with vanilla JavaScript (vanilla refers to the built-in DOM manipulation functionality in a web browser). But there were some problems you likely encountered:
+You have built interactive web pages with Vanilla JavaScript (Vanilla refers to the built-in DOM manipulation functionality in a web browser). But there were some problems you likely encountered:
 
 - The files became very large.
 - The code was hard to organize.
 - The lines of code were lengthy, and it could be hard to find what you were looking for.
-- It was likely hard to update a small piece because all the surrounding code was particular to specific HTML element ids and classes.
+- It was likely hard to update a small piece because all the surrounding code was particular to specific HTML element `id`s and `classes` and thus had to be updated as well.
 - It could be hard to create a reusable bit of code for all the reasons above.
 - Creating logic to update multiple components likely led to [spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code).
 - Updating the DOM could become slow and inefficient.
 
-People tend to create third-party open-source libraries or third-party frameworks whenever code becomes difficult to manage or certain essential qualities are helpful in many projects.
+Other developers have shared these same pain points and decided to create a different approach to building front-end applications amd share them with others. Typically, these projects are called `third-party open-source libraries.`
 
-Open source projects are free for anyone to use and free for anyone to contribute.
+Typically, the first-party is you. The second-party is the client or employer you are working for. A third-party is a separate entity that will assist in some way.
+
+[Open source software is free for anyone to use and free for anyone to contribute.](free for anyone to use and free for anyone to contribute.)
+
+A library is a collection of code that will assists you in building something. It can also be referred to as a framework.
+
+You can compare your options to cooking a meal.
+
+- You can make a meal from scratch - this gives you the most flexibility and control, but it also is the most time consuming. This is like coding an entire project from scratch.
+- You can choose some items to be pre-made, like pasta, butter, or pickles. These are generic food items that someone else has made that help you speed up your cooking process, but these products don't have an opinion on what kind of dishes to used for. These items are like code libraries
+- You can buy some pre-made food like brownie mix or frozen dinners, these items have been made with a specific meal in mind. These items are like frameworks.
+
+People tend to create third-party open-source libraries or third-party frameworks whenever code becomes difficult to manage or certain essential qualities are helpful in many projects.
 
 React is a third-party library that you can download and use to make building robust websites easier.
 
@@ -116,7 +128,7 @@ npm start
 
 This section will break down what each file and folder does. There is a lot of boilerplate code you will not need to use or change for labs, assessments, or even some projects for this course. However, they will be explained below so you can comfortably navigate the application.
 
-> **Note** The only file you will be heavily editing for your in-class builds is `src/App.js`.
+> **Note** The only boilerplate file you will be heavily editing for your in-class builds is `src/App.js`.
 
 #### `README.md`
 
@@ -124,11 +136,11 @@ There is some boilerplate information about Create React App in this file. If yo
 
 ### `node_modules/`
 
-This folder contains many folders containing all of the code to run Create React App. You can peek inside and see, but you won't need to change any code here.
+This folder contains many folders containing all of the code to run Create React App. You can peek inside, but you won't need to change any code here.
 
 #### `package-lock.json`
 
-This file keeps track of the `node_modules/` folder. This file is automatically generated and maintained. You won't need to change any code here.
+This file keeps track of the files and folders inside the `node_modules/` folder. This file is automatically generated and maintained. You won't need to change any code here.
 
 #### `package.json`
 
@@ -199,7 +211,7 @@ This allows you to organize your CSS in two different ways, which can help with 
 
 #### `App.test.js` and `setUpTests.js`
 
-This is an example of one way to set up testing. These files will not be used because this course uses Cypress, which requires a different configuration.
+This is an example of one way to set up testing. These files will not be used because this course currently uses Cypress, which requires a different configuration.
 
 #### `logo.svg`
 
@@ -599,3 +611,13 @@ Learn more about [Rendering Elements](https://reactjs.org/docs/rendering-element
 - [The Virtual DOM](https://www.codecademy.com/articles/react-virtual-dom)
 - [Rendering Elements - React Docs](https://reactjs.org/docs/rendering-elements.html)
 - [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
+
+## Vocabulary
+
+- Robust website/application
+- Boilerplate code
+- Virtual DOM
+- Components
+- React and React DOM
+- render
+- JSX

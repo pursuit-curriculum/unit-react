@@ -1,200 +1,383 @@
-# NPM for React
+# NPM For React
 
-Node package manager, or NPM, is a powerful tool that makes it possible to access and share open-source code. Through NPM, it is possible to use free packages created by developers across the world that can improve your application. For example, React is available for download via NPM.
+In the upcoming lessons, you'll learn how to use a third-party open source library called React.
 
-In this lesson, you'll learn how to create an NPM project and learn more about the `package.json` file. You'll also learn specific tools for working with React.
+Before building a web application, you'll learn some basics about how to use Node.js and its libraries.
 
-## Learning objectives
+## Node.js
 
-By the end of this lesson you should be able to:
+Initially, JavaScript only ran in web browsers. Then, Google built a JavaScript runtime engine called V8. V8 is used to run JavaScript in Google browsers. Additionally, JavaScript V8 can run outside of the browser.
 
-- Create a new NPM project with `npm init`.
-- Describe the purpose of the `package.json` file and modify it.
-- Create scripts via the `package.json` file.
-- Use `npx` to run the `create-react-app` package.
-- Use the `export`, `import`, and `default` keywords to connect multiple files.
+The V8 engine powers Node.js. The main goal of Node.js is to be able to build scalable web applications. Node.js comes bundled with npm (node package manager). npm is both an online resource with third-party code you can download and use in your projects as well as a command line program.
 
----
+It's essential to know that Node.js and npm are two separate programs. Node.js is what runs your JavaScript files, while npm manages metadata about the project and third-party libraries associated with the projects. It is possible to build a project that can be run by Node.js but doesn't use npm. It is not possible to use npm without using Node.js.
 
-## What is NPM?
+## Creating a Node.js project
 
-NPM is a package manager. A package is code that can be "packaged up" and reused in other applications. For example, testing libraries like Jest and Cypress are packages. NPM manages the downloading and use of these packages, placing downloaded packages into the `node_modules/` directory. NPM also makes use of a `package.json` file which records information about your project and what packages you have installed.
+> **Note:** When creating a new Node.js project, make sure you are not already inside a git repository. You can check by running `git status`. If you get the following message:
 
-### Creating an NPM project
+> > fatal: not a git repository (or any of the parent directories): .git
 
-To create an NPM project, you can run the `npm init` command. Running this command will "initialize" an NPM project by beginning a prompt that will help in creating a `package.json` file.
+> Then you are NOT in a git repository and are ready to begin working.
 
-![Image showing the `npm init` prompt getting started.](./assets/npm-init.png)
+You can either read the following steps or code along. A common struggle when starting out is the proper location and nesting of files and folders. Example instructions using terminal are provided to clarify where files and folders should go.
 
-You are welcome to fill this out each time, however you can also run `npm init -y` to receive the default values. This will quickly create a new `package.json` file.
+Node projects need a _top level_ folder:
 
-### package.json
+- `mkdir my-node-project`
+- `cd my-node-project`
 
-After creating a `package.json` file, it will look something like the following. Remember that this is JSON, not JavaScript, and therefore it has some slightly different requirements.
+Now that the _top level_ folder setup is complete. You can initialize a new npm project:
+
+```
+npm init
+```
+
+This will log a message similar to the following one in the terminal:
+
+> This utility will walk you through creating a package.json file.
+> It only covers the most common items, and tries to guess sensible defaults.
+
+> See `npm help init` for definitive documentation on these fields
+> and exactly what they do.
+
+> Use `npm install <pkg>` afterward to install a package and
+> save it as a dependency in the package.json file.
+
+> Press ^C at any time to quit.
+
+Take the time to read this message and see if you understand it. Some parts may not make sense yet. As you build and work with these projects, it will become easier to understand.
+
+At the very least, you should take away that:
+
+- You will see some prompts that guide creating a `package.json` file.
+- You can type <kbd>Control</kbd>+<kbd>C</kbd> to quit any time.
+
+Press <kbd>return</kbd> to accept the default or type something different for each prompt.
+
+The terminal should look similar to the following:
+
+![npm init prompts](./assets/npm-init-prompts.png)
+
+For now, when running `npm init` you can press the <kbd>return</kbd> key repeatedly until you get your regular terminal prompt back. The default values are acceptable if you are learning or doing a tutorial. If you are working on a project that goes into your portfolio or will go into production, you would want to be more thoughtful about each value.
+
+Remember, you can check out more documentation by typing `npm help init` or `man npm`. Both of these commands will load a manual for npm into your terminal. Make your terminal full-sized to be able to read the manual with ease. Additionally, to quit the view type the letter <kbd>q</kbd>.
+
+If you look at the documentation, you may see the option `-y`. This means to select all the default options for the `npm init` command. This can make setting up a basic project for a tutorial or practice even faster.
+
+## package.json
+
+`package.json` is a file where the metadata for the project is stored. npm will automatically generate some of the fields. You can also edit this file manually.
+
+You can verify that the `npm init` process has worked by checking the contents of your folder. You should see a `package.json` file.
+
+While the contents of the `package.json` file look like a JavaScript object, they are not the same. Some key differences between a JavaScript object and JSON include:
+
+- Double quotes around all keys
+- Double quotes instead of single quotes whenever referencing a string value
+- No trailing commas
+- No comments are permitted
+
+By default, the `package.json` file should look similar to the following:
 
 ```json
 {
-  "name": "example-npm-project",
+  "name": "my-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC"
 }
 ```
 
-As you can see, the JSON file looks to contain an object with a variety of key-value pairs. Many of these pairs are self-explanatory. For example, the `"name"` key points to a value that represents the name of your project.
+If you scroll back to the earlier screenshot and compare the output of running the `npm init` command and the contents of the file, you will see that they are the same.
 
-You can read more details about these keys on the NPM website.
+### Editing a `package.json` file
 
-- [npm Docs: package.json](https://docs.npmjs.com/cli/v7/configuring-npm/package-json)
-
-### package-lock.json
-
-When packages are installed, you will see an accompanying file to the `package.json` file: the `package-lock.json` file. This file helps keep track of the specific versions of different packages that are installed.
-
-You should never need to manually update this file. You should always commit this file.
-
-### Scripts
-
-In this course, you will often leave the `package.json` as is. However, you may find yourself manually updating the `"scripts"` key. This key has a value which is an object, which contains a number of other keys. These keys are scripts that can be run from the command line via the following format:
-
-```
-npm run <SCRIPT-NAME>
-```
-
-For example, the default script has a name of `"test"`.
+You can edit the `package.json` file directly by opening the file in your code editor. You can change any of the keys or values at will. However, your JSON will need to be valid for it to run. For example, you could add your name as a value for the `"author" key:
 
 ```json
 {
-  "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cam Howe",
+  "license": "ISC"
 }
 ```
 
-It can be run from the command line with `npm run test`. To run this command, you must be in the directory where the `package.json` file is located.
+> **Note:** You must maintain proper JSON format, or your project will not run.
 
-Whatever is the value for that key (i.e. `"test"`) is the _command_ that will be run on the command line. For example, running `npm run test` will run the command set as the value.
+### Application entry point
 
-![Image showing the default `test` script being run.](./assets/default-test-script.png)
-
-As you can see, the string specified in the script (i.e. `Error: no test specified`) is "echoed" to the screen. The `exit` command stops whatever is running.
-
-#### Default script names
-
-Some script names are so commonly used that you can omit the `run` part of the command. For example, `test` and `start` are common to many NPM packages and therefore they can be shortened.
+Within an application, there has to be a starting point for the application to run. The `package.json` file defines this filename with the key `main`. According to the default `package.json` file, the entry point into the application is a file called `index.js`. You can create it by running the following command:
 
 ```
-npm start
-npm test
+ touch index.js
 ```
 
-## What is the npx command?
-
-While `npm` is designed to be used for local projects, it can also install packages globally. This means that certain commands or tools would become available to your entire operating system.
-
-However, some packages you may just need to run every once in awhile and therefore don't want to install globally. The `npx` command allows you to do this.
-
-For example, the [cowsay](https://www.npmjs.com/package/cowsay) package is a silly package that will print out an ASCII art image of a cow saying something. You can run it using `npx -y` and then using the command as described.
-
-![Image of `npx` being used to run the `cowsay` package.](./assets/cowsay.png)
-
-This will temporarily install the package and run the command.
-
-While `cowsay` is neat, `npx` is really useful for project generators like `create-react-app`.
-
-### create-react-app
-
-The `create-react-app` package performs a number of functions that will set you up to start building your own React application. This package will:
-
-1. Create a new folder with a name you give it.
-1. Setup the folder as an NPM project and install relevant packages.
-1. Create a number of default files so that you can run a React application right away.
-
-This means that, when you run the `create-react-app` command, you will want to be in the _parent_ directory of where you want your React project to live.
-
-The following command will create a new React application with the `create-react-app` package. Replace `PROJECT-NAME` with the name of the folder you want the package to create.
-
-```
-npx -y create-react-app PROJECT-NAME
-```
-
-## Export, import, and default
-
-In a later lesson you will learn more about what is created with the `create-react-app` package. However, before getting into that, it's important to identify how complex front end projects, like projects that make use of React, connect their files together.
-
-When working in a project created with `create-react-app`, you have the ability to `export` values from that file which can then be imported elsewhere. For example, imagine you have two files, `people.js` and `sayHello.js`.
+Open this file and write a simple console log:
 
 ```js
-// people.js
-const people = [
-  { id: 1, first: "Morgan", last: "Meyer" },
-  { id: 2, first: "Lidia", last: "Cardenal" },
-];
+console.log("Hello, Node.js!");
+```
+
+To run this program, type:
+
+```
+node index.js
+```
+
+## Modules
+
+In learning to work as a developer, there are likely two surprising challenges that you have encountered: naming variables well and organizing your code.
+
+Node.js allows you to organize your code into separate files. Each file is a module. Each module has its own scope for variables.
+
+### Updating to the Latest Syntax
+
+There is a newer syntax to import and export code between files.
+
+To utilize it, you must update your `package.json`.
+
+You must add the following line:
+
+```js
+  "type": "module",
+```
+
+It does not matter where you add this line within the `package.json`, as long as you maintain proper JSON structure.
+
+### Exporting a variable
+
+Create a new file called `messages.js`:
+
+```
+touch messages.js
 ```
 
 ```js
-// sayHello.js
-function sayHello(person) {
-  console.log(`Hello, ${person.first}!`);
+// messages.js
+const message = "Oh, hai!";
+```
+
+You will need to export this message to be able to use it in another file. You will use a built-in object called `module.exports`.
+
+```js
+const message = "Oh, hai!";
+
+export default message;
+```
+
+You will use the `import` statement to import this module. When requiring your file, you will use the _relative path_ to the file:
+
+```js
+// index.js
+import importedMessage from "./messages.js";
+
+console.log(importedMessage);
+```
+
+<details><summary>Gotcha!</summary>
+
+You must use the full file name for imports.
+
+If you only use the file name:
+
+```js
+import importedMessage from "./messages";
+```
+
+The error message will say it cannot find your module and suggest you look up in a higher directory.
+
+```
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/karolinrafalski/dev/curriculum-pursuit/react/deleteme/pre-reading/messages' imported from /Users/karolinrafalski/dev/curriculum-pursuit/react/deleteme/pre-reading/index.js
+Did you mean to import ../messages.js?
+
+```
+
+This is not a helpful error message. You must, instead, add the `.js` at the end of the file name.
+
+</details>
+
+If you forget to update your `package.json` to have `    "type": "module",`
+
+You will get an error message similar to:
+
+```js
+import importedMessage from "./messages";
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+```
+
+#### Exporting and importing multiple variables
+
+Add another variable to `messages.js`
+
+```js
+// messages.js
+const message = "Oh, hai!";
+const anotherMessage = "Oh, goodbye!";
+```
+
+In order to be able to export both these messages, `module.exports` would have to be set to an object.
+
+```js
+const message = "Oh, hai!";
+const anotherMessage = "Oh, goodbye!";
+export { message, anotherMessage };
+```
+
+To import these variables, go to `index.js`
+
+This console.log will now be the entire object:
+
+```js
+// index.js
+const importedMessage = require("./messages");
+
+console.log(importedMessage);
+```
+
+We can now access the original `message` with object destructuring.
+
+```js
+const importedMessage = require("./messages");
+
+console.log(importedMessage.message);
+```
+
+It is also possible to get the other object with destructuring:
+
+```js
+import { message, anotherMessage } from "./messages.js";
+
+console.log(message);
+console.log(anotherMessage);
+```
+
+You can also rename the objects. This can be helpful for shortening the names or creating new variable names that add clarity to the code.
+
+```js
+import { message as hello, anotherMessage } from "./messages.js";
+
+console.log(hello);
+console.log(anotherMessage);
+```
+
+```js
+import { message as hello, anotherMessage as goodbye } from "./messages.js";
+
+console.log(hello);
+console.log(goodbye);
+```
+
+#### Exporting and importing functions
+
+It is also possible to export and import functions. This will allow you write groups of functions that have related roles in the code base in their own files. By doing this, it will allow you to structure and organize your code to be maintainable as it grows.
+
+```js
+// messages.js
+
+const customMessage = (message, name) => {
+  return `${message} ${name}`;
+};
+
+module.exports = { message, anotherMessage, customMessage };
+```
+
+Import and call the function:
+
+```js
+// index.js
+import {
+  message as hello,
+  anotherMessage as goodbye,
+  customMessage,
+} from "./messages.js";
+
+console.log(customMessage("Nice to see you,", "Ava"));
+```
+
+### Exporting JSON
+
+JSON can be integral to a project. However, the JSON format is very strict. If you want to export a JSON file, you must name it `.json`. You will not need to use the `export` statement, [but you will need to assert the datatype on import](https://nodejs.org/docs/latest-v16.x/api/esm.html#data-imports).
+
+Create a file called `donuts.json`, then copy and paste these values into it.
+
+```json
+[
+  {
+    "id": "0001",
+    "type": "donut",
+    "name": "Cake"
+  },
+  {
+    "id": "0002",
+    "type": "donut",
+    "name": "Raised"
+  },
+  {
+    "id": "0003",
+    "type": "donut",
+    "name": "Old Fashioned"
+  }
+]
+```
+
+Import the JSON and log the value to confirm it has been imported:
+
+```js
+// index.js
+import donuts from "./donuts.json" assert { type: "json" };
+console.log(donuts);
+```
+
+## Creating a custom script
+
+You can write your own scripts that will interact with terminal and have the ability to launch other applications.
+
+Here is a simple script that prints `'I just ran my own script!'` to your terminal:
+
+`echo 'I just ran my own script!'`
+
+> **Note:** It is important to use single-quotes for this command.
+
+We can make this script a little bit more complex. We can add the text to a `README.md` file by using `>>` to reroute the output from printing to terminal and into the file:
+
+`echo 'I just ran my own script!' >> README.md`
+
+> **Note**: If the `README.md` file does not exist, the above command will create it.
+
+After testing that it works, add it to the `package.json`:
+
+**package.json**
+
+```json
+{
+  "name": "my-node-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "my-script": "echo 'I just ran my own script!'"
+  },
+  "author": "",
+  "license": "ISC"
 }
 ```
 
-Each of these files holds specific information or functionality. To access this data from other files, you will need to somehow `export` the values you wish to have accessible.
+To run this script type:
 
-For example, in the `people.js` file, you could export the array like so.
+`npm run my-script`
 
-```js
-// people.js
-const people = [
-  { id: 1, first: "Morgan", last: "Meyer" },
-  { id: 2, first: "Lidia", last: "Cardenal" },
-];
-
-export people;
-```
-
-In another file, you could then import this data by doing the following.
-
-```js
-// run.js
-import { people } from "./people.js";
-```
-
-Notice that the variable name that is exported, `people`, is what is used when importing. The object (i.e. `{}`) syntax is destructuring; each exported value gets placed into an object which can then be imported elsewhere.
-
-It's possible to avoid using the object destructuring syntax by including the word `default`.
-
-```js
-// sayHello.js
-function sayHello(person) {
-  console.log(`Hello, ${person.first}!`);
-}
-
-export default sayHello;
-```
-
-By adding the `default` keyword, instead of placing exports inside of an object, whatever is exported as the default is what will be imported.
-
-```js
-// run.js
-import { people } from "./people.js";
-import sayHello from "./sayHello.js";
-```
-
-In the case above, the function is exported as the `default` value from `sayHello.js`. Then, when importing, instead of destructuring to access the function, you just get the function.
-
-After importing values appropriately, those values can then be used in whatever file you like.
-
-```js
-// run.js
-import { people } from "./people.js";
-import sayHello from "./sayHello.js";
-
-people.forEach(sayHello);
-//> Hello, Morgan!
-//> Hello, Lidia!
-```
+What happens? Does the text in the file get replaced by the new text? Or does something else happen? Run the command a few times to find out.

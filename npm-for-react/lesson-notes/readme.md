@@ -6,11 +6,12 @@ The company has sent over some data on some possible jellybeans, but it's a bit 
 
 ## Getting started
 
-- `mkdir zoo-jellybeans`
-- `cd zoo-jellybeans`
-- `touch index.js jellybeans.js jellybeans.json`
-- `echo "node_modules\n.DS_Store" >> .gitignore`
-- `npm init -y`, the flag `-y` will automatically set all default input for `package.json`
+- `mkdir zoo-jellybeans`.
+- `cd zoo-jellybeans`.
+- `touch index.js jellybeans.js jellybeans.json`.
+- `echo "node_modules\n.DS_Store" >> .gitignore`.
+- `npm init -y`, the flag `-y` will automatically set all default input for `package.json`.
+- Update the `package.json` to be type module, so that you can use `import` and `export` statements.
 
 <details><summary>Copy and paste only the array into <code>jellybeans.js</code>:</summary>
 
@@ -161,8 +162,8 @@ The company has sent over some data on some possible jellybeans, but it's a bit 
 
 In `index.js`:
 
-- Require `jellybeans.js` and set it to a variable `jellybeans`.
-- Require `jellybeans.json` and set it to a variable `jellybeansJSON`.
+- Import `jellybeans.js` and set it to a variable `jellybeans`.
+- Import `jellybeans.json` and set it to a variable `jellybeansJSON`.
 - Log each one to confirm you've successfully imported each set of data.
 
 ## Work with the data
@@ -253,6 +254,7 @@ Open the `package.json` file. Write a custom script that prints the name of your
 ```js
 {
  "name": "make-fake-data",
+ "type": "module",
  "version": "1.0.0",
  "description": "",
  "main": "index.js",

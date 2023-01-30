@@ -61,7 +61,7 @@ The terminal should look similar to the following:
 
 For now, when running `npm init` you can press the <kbd>return</kbd> key repeatedly until you get your regular terminal prompt back. The default values are acceptable if you are learning or doing a tutorial. If you are working on a project that goes into your portfolio or will go into production, you would want to be more thoughtful about each value.
 
-Remember, you can check out more documentation by typing `npm help init` or `man npm`. Both of these commands will load a manual for npm into your terminal. Make your terminal full-sized to be able to read the manual with ease. Additionally, to quit the view type the letter <kbd>q</kbd>.
+Remember, you can check out more documentation by typing `npm help init` or `man npm`. Both of these commands will load a manual for npm into your terminal. Make your terminal full-sized to be able to read the manual with ease. Additionally, to quit the view type the letter <kbd>q</kbd>. You can also go to the [documentation online](https://docs.npmjs.com).
 
 If you look at the documentation, you may see the option `-y`. This means to select all the default options for the `npm init` command. This can make setting up a basic project for a tutorial or practice even faster.
 
@@ -169,7 +169,7 @@ touch messages.js
 const message = "Oh, hai!";
 ```
 
-You will need to export this message to be able to use it in another file. You will use a built-in object called `module.exports`.
+You will need to export this message to be able to use it in another file. You will use the `export` statement. The keyword `default` will allow you to rename the variable when you import it elsewhere.
 
 ```js
 const message = "Oh, hai!";
@@ -208,7 +208,7 @@ This is not a helpful error message. You must, instead, add the `.js` at the end
 
 </details>
 
-If you forget to update your `package.json` to have `    "type": "module",`
+> **Note**: If you forget to update your `package.json` to have `    "type": "module",`
 
 You will get an error message similar to:
 
@@ -229,7 +229,7 @@ const message = "Oh, hai!";
 const anotherMessage = "Oh, goodbye!";
 ```
 
-In order to be able to export both these messages, `module.exports` would have to be set to an object.
+In order to be able to export both these messages, the `export` statement would have to be set to an object.
 
 ```js
 const message = "Oh, hai!";
@@ -243,7 +243,7 @@ This console.log will now be the entire object:
 
 ```js
 // index.js
-const importedMessage = require("./messages");
+import importedMessage from "./messages";
 
 console.log(importedMessage);
 ```
@@ -251,7 +251,7 @@ console.log(importedMessage);
 We can now access the original `message` with object destructuring.
 
 ```js
-const importedMessage = require("./messages");
+import importedMessage from "./messages";
 
 console.log(importedMessage.message);
 ```
@@ -357,6 +357,8 @@ We can make this script a little bit more complex. We can add the text to a `REA
 `echo 'I just ran my own script!' >> README.md`
 
 > **Note**: If the `README.md` file does not exist, the above command will create it.
+
+This command is often seen when you create a new repository on GitHub.
 
 After testing that it works, add it to the `package.json`:
 

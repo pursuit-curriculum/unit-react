@@ -243,7 +243,7 @@ This console.log will now be the entire object:
 
 ```js
 // index.js
-const importedMessage = require("./messages");
+import importedMessage from "./messages.js";
 
 console.log(importedMessage);
 ```
@@ -251,7 +251,7 @@ console.log(importedMessage);
 We can now access the original `message` with object destructuring.
 
 ```js
-const importedMessage = require("./messages");
+import importedMessage from "./messages.js";
 
 console.log(importedMessage.message);
 ```

@@ -9,6 +9,7 @@ This is a list of new technical vocabulary we come across during the React unit.
 - Dependencies
 - Source Code
 - Runtime Environment
+- node module
 
 ## JavaScript Ecosystem Vocab
 - NPM
@@ -18,6 +19,7 @@ This is a list of new technical vocabulary we come across during the React unit.
 - Bundler
     - Webpack
     - Source Maps
+- ES6
 
 ## React Vocab
 - JSX
@@ -25,3 +27,6 @@ This is a list of new technical vocabulary we come across during the React unit.
 - React Component
 - React Element
 - React Root
+- classname
+- Relative Path
+- Absolute Path

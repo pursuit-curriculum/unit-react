@@ -102,7 +102,7 @@ Update this inside the `changeColor` function
 function changeColor() {
   const chooseIndex = Math.floor(Math.random() * colors.length);
   setColor(colors[chooseIndex]);
-  setCounter(counter++);
+  setCounter(counter + 1);
 }
 ```
 

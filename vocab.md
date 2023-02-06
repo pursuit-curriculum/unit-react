@@ -10,7 +10,9 @@ This is a list of new technical vocabulary we come across during the React unit.
 - Dependencies
 - Source Code
 - Runtime Environment
-- Absolute Path and Relative Path
+- node module
+- Relative Path and Absolute Path
+- Smart Components and Dumb Components
 
 ## JavaScript Ecosystem Vocab
 
@@ -20,15 +22,27 @@ This is a list of new technical vocabulary we come across during the React unit.
 - create-react-app and react-scripts
 - ESM and CJS
 - Bundler
-  - Webpack
-  - Source Maps
+    - Webpack
+    - Source Maps
+- Recursion
+- Shallow Copy
+- Deep Copy
+- ES6
+- separation of concerns
 
 ## React Vocab
 
 - JSX
-  - className
+  - classname
+  - props
 - Virtual DOM
 - React Component
+- Component Hierarchy / Component Tree
 - React Element
 - React Root
-- Component Hierarchy / Component Tree
+- Hooks
+- State
+- State Value
+- Setter
+- Stateful
+- Toggle

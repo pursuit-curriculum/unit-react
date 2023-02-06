@@ -3,6 +3,7 @@
 This is a list of new technical vocabulary we come across during the React unit.
 
 ## Software and Computer Science Vocab
+
 - Encapsulation
 - Imperative Programming
 - Declarative Programming
@@ -14,8 +15,10 @@ This is a list of new technical vocabulary we come across during the React unit.
 - Smart Components and Dumb Components
 
 ## JavaScript Ecosystem Vocab
+
 - NPM
-    - npx
+  - node module
+  - npx
 - create-react-app and react-scripts
 - ESM and CJS
 - Bundler
@@ -28,11 +31,13 @@ This is a list of new technical vocabulary we come across during the React unit.
 - separation of concerns
 
 ## React Vocab
+
 - JSX
-    - classname
-    - props
+  - classname
+  - props
 - Virtual DOM
 - React Component
+- Component Hierarchy / Component Tree
 - React Element
 - React Root
 - Hooks
@@ -41,4 +46,3 @@ This is a list of new technical vocabulary we come across during the React unit.
 - Setter
 - Stateful
 - Toggle
-

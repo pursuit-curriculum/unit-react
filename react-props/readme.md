@@ -2,13 +2,13 @@
 
 ## Introduction
 
-In previous lessons, we've seen how to build React components and display them in the browser. We learned that we can reuse components. However, we had no way to make two different versions of the same component. Let's look again at a previous example.
+In previous lessons, we've seen how to build React components and display them in the browser. We learned that we could reuse components. However, we could not make two different versions of the same component. Let's look again at a previous example.
 
 ![facebook](./assets/fbInterface.jpg)
 
-Under the `Home` section, there is a list of menu items. We can imagine that each menu items is inside an unordered list (`<ul>`) and is list element (`<li>`). Inside each list element, there is an icon, some text and the text links to something else. It is likely these menu items would be their own React component. So the HTML is the same for each element, however the content (data) is different.
+Under the `Home` section, there is a list of menu items. We can imagine that each menu item is inside an unordered list (`<ul>`) and is a list element (`<li>`). Inside each list element is an icon, some text, and the text links to something else. It is likely these menu items would be their own React component. So the HTML is the same for each element. However, the content (data) is different.
 
-You can imagine the same pattern for the `Stories`, `Posts` and `Contacts` sections.
+You can imagine the same pattern for the `Stories`, `Posts`, and `Contacts` sections.
 
 ## Learning Objectives
 
@@ -19,9 +19,9 @@ You can imagine the same pattern for the `Stories`, `Posts` and `Contacts` secti
 
 ## Props
 
-Props is short for the word properties. All HTML elements can have properties. This anchor tag has two properties, `id` and `href`.
+Props are short for the word properties. All HTML elements can have properties(referred to as `attributes` when it is plain HTML). The following anchor tag has two properties, `id` and `href`.
 
-```html
+```HTML
 <a id="best-link" href="www.example.com">My favorite website</a>
 ```
 
@@ -29,7 +29,7 @@ React extends the function of properties (props) to allow values to be passed do
 
 ## Simple example
 
-Let's build a simplified version of the menu. It will have two views, one mimicking what it would look like if a user is logged in and one if the user is not logged in.
+The following will explain how to build a simplified menu version. It will have two views, one mimicking what it would look like if a user is logged in and one if the user is not logged in. You may either read through the examples or code along by creating a new React app.
 
 ![simple menu logged in](./assets/menu-logged-in.png)
 
@@ -55,7 +55,7 @@ export default App;
 
 ## Passing static props
 
-The following example is a simple demonstration. Normally, you would just put any text that stays the same (like the app name) as regular text. But we will set it as a variable to demonstrate the syntax and fundamentals of props.
+The following example is a simple demonstration. Typically, you just put any text that stays the same (like the app name) as regular text. But we will set it as a variable to demonstrate the syntax and fundamentals of props.
 
 Create a new file inside `src` called `Header.jsx`
 
@@ -65,9 +65,11 @@ export default function Header() {
 }
 ```
 
-Return to `App.jsx` and import the `Header` component and replace the `h1` with the new component
+Return to `App.jsx`, import the `Header` component, and replace the `h1` with the new component.
 
 ```jsx
+import Header from "./Header";
+
 function App() {
   return (
     <div className="App">
@@ -77,25 +79,23 @@ function App() {
 }
 ```
 
-Let's set the name of the h1 text to a variable
+Let's set the name of the `h1` text to a variable.
 
 ```js
 const headerText = "My Menu";
 ```
 
-Let's pass it to the `Header` component
+We want the `App` data to be passed to the `Header` component.
 
-We want the data in the `App` component to be passed to the `Header` component.
+We will use the same key-value pair structure as regular HTML element properties, with several slight differences.
 
-We will use the same key-value pair structure that regular HTML element properties (typically called attributes), with a couple small differences.
-
-We can name the key whatever we want. Here we will name it `text` but we could also name it `name`, 'headerText', or `asdf`.
+We can name the key whatever we want. Here we will name it `text`, but we could also name it `name`, `headerText`, or `asdf`.
 
 ```jsx
 <Header text />
 ```
 
-Then we set the value. The value is coming from a variable and must be evaluated, so we must put curly braces around the value.
+Then we set the value. The value comes from a variable and must be evaluated, so we must put curly braces around the value.
 
 ```jsx
 <Header text={headerText} />
@@ -112,13 +112,13 @@ export default function Header(props) {
 }
 ```
 
-To access the text we must type `props.text`
+To access the text, we must type `props.text`.
 
 ```js
 console.log(props.text);
 ```
 
-This is a lot of typing. We can simplify this but using object destructuring.
+This strategy can cause a lot of typing and make reading the code harder. We can simplify this by using object destructuring.
 
 ```jsx
 export default function Header({ text }) {
@@ -126,7 +126,7 @@ export default function Header({ text }) {
 }
 ```
 
-This simple example demonstrated the basic functionality and syntax for using props. There is no use case for this example, as the title of the menu could just be hard-coded because it would not change while a user uses the app.
+This simple example demonstrated the basic functionality and syntax for using props. Again, there is no use case for this example, as the menu title could be hard-coded because it would not change while a user uses the app.
 
 ## Dynamic rendering from data
 
@@ -241,7 +241,7 @@ console.log(data);
 
 ## Creating multiple components based on data
 
-We want list items to be created that all have the same HTML structure. However, we want the content inside to be based on the data (array of objects).
+We want list items to be created with the same HTML structure. However, we want the content inside to be based on the data (array of objects).
 
 How can we do this? The first thing that likely comes to mind is a loop.
 
@@ -252,7 +252,7 @@ for (let i = 0; i < data.length; i++) {
 }
 ```
 
-However, everything inside a return statement is JSX and not JavaScript, and JSX does not allow for loops.
+However, everything inside a return statement is JSX, not JavaScript, and JSX does not allow for loops.
 
 You do have another tool that will allow you to loop over values and return a new array: The array method `.map()`. JSX will allow you to use array methods.
 
@@ -264,7 +264,7 @@ export default function Menu() {
 }
 ```
 
-Set up the .map() function to iterate over dogs:
+Set up the `.map()` function to iterate over the data:
 
 ```
 <ul>{data.map()}</ul>
@@ -294,11 +294,11 @@ export default function Menu() {
 
 ## Passing props that are objects
 
-We want the list items to have an icon, a link and a title. React lets you split up complex HTML into smaller components that are easier to maintain. Let's make menu items into their own components.
+We want the list items to have an icon, a link, and a title. React lets you split up complex HTML into smaller components that are easier to maintain. Let's make menu items into their components.
 
 ### Refactor current code:
 
-Create a new file `menuItem.jsx` in the src folder. We will include some placeholder text before trying to add the data.
+Create a new file, `menuItem.jsx` in the src folder. We will include some placeholder text before trying to add the data.
 
 ```js
 export default function MenuItem() {
@@ -330,7 +330,7 @@ export default function Menu() {
 }
 ```
 
-> **Note**: Sometimes code will get worse/less functional before it gets better when you are refactoring. When refactoring it is important to take small testable steps.
+> **Note**: Sometimes, code will get worse/less functional before it gets better when you are refactoring. When refactoring, it is essential to take small testable steps.
 
 ### Pass props
 
@@ -342,17 +342,17 @@ We want the data in the `Menu` component to be passed to the `MenuItem` componen
 
 ## Unique key warning
 
-When we do this, we will see an error in the console
+When we do this, we will see an error in the console.
 
 ```
 Warning: Each child in a list should have a unique "key" prop.
 ```
 
-Your app will still work when there is a warning. However, it would be best if you aimed to solve as many warnings as you can as you are building your app, as warnings may lead to unpredictable app behavior.
+Your app will still work when there is a warning. However, it would be best to solve as many warnings as you can as you build your app, as warnings may lead to unpredictable app behavior.
 
 In this case, React wants a unique identifier for each list item so that its algorithm for fast rendering works as expected.
 
-Typically, when you work with actual data, the data will have a unique id. In this case, we have a simple data set and don't have an id available. We can use the menu titles as a unique key prop for now, but be aware that if a menu with teh same title was added, this strategy would not work.
+Typically, when you work with actual data, the data will have a unique id. In this case, we have a simple data set and don't have an id available. We can now use the menu titles as a unique key prop, but be aware that if a menu with the same title were added, this strategy would not work.
 
 ```jsx
 <MenuItem menuItem={menuItem} key={menuItem.title} />
@@ -376,9 +376,9 @@ export default function MenuItem({ menuItem }) {
 }
 ```
 
-To access the data, we would need to type `menuItem.title`, `menuItem.link`, and `menuItem.icon` to access the data.
+To access the data, we need to type `menuItem.title`, `menuItem.link`, and `menuItem.icon` to access the data.
 
-We can use object destructuring to make the code more readable
+We can use object destructuring to make the code more readable.
 
 ```js
 export default function MenuItem({ menuItem }) {
@@ -394,9 +394,9 @@ export default function MenuItem({ menuItem }) {
 
 ## Conditional Rendering
 
-There are times where we might not want to show all the data.
+There are times when we might not want to show all the data.
 
-If we don't want to show any component, we will use null.
+We will use null if we don't want to show any component.
 
 `if` statements are also not going to work in JSX. Instead, ternary operators are used.
 
@@ -422,7 +422,7 @@ When you see a ternary operator, try reading out loud like so:
 
 If NOT `menuItem.custom` is `true`, then return the first value after the question mark. `else` return the value after the colon.
 
-Let's use it in our code
+Let's use it in our code.
 
 ```js
 <ul>
@@ -444,7 +444,7 @@ In `App.jsx`, set a variable for a user being logged in:
 const userLoggedIn = true;
 ```
 
-Set up the conditional rendering
+Set up the conditional rendering.
 
 ```js
 {
@@ -454,8 +454,8 @@ Set up the conditional rendering
 
 In this case, the menu should stay the same.
 
-Change `userLoggedIn` to be `false`
+Change `userLoggedIn` to be `false`.
 
-Now you should see that the menu is not loaded and instead the log in message appears.
+Now you should see that the menu is not loaded; instead, the login message appears.
 
-In later lessons, you'll learn how to change the values in your React app through user interaction and get data from a third-party api.
+In later lessons, you'll learn how to change the values in your React app through user interaction and get data from a third-party API.

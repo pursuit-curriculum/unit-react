@@ -21,7 +21,7 @@ Start by forking and cloning the following repository:
 
 ## Props
 
-Props is short for the word properties. All HTML elements can have properties. This anchor tag has two properties, `id` and `href`.
+Props are short for the word properties. All HTML elements can have properties. This anchor tag has two properties, `id` and `href`.
 
 ```html
 <a id="best-link" href="www.example.com">My favorite website</a>
@@ -82,7 +82,7 @@ function Header({ todaysDate, name }) {
 
 ## Dynamic Rendering
 
-There is some dog data in `App.js`. We want to pass the data to the `Aside` and show a list of dogs at Doggy Day Care today.
+There are some dog data in `App.js`. We want to pass the data to the `Aside` and show a list of dogs at Doggy Day Care today.
 
 ```js
 // App.js
@@ -154,7 +154,7 @@ All the code together:
 
 Not all the dogs were present today. Often, you will want to change what is rendered based on the data.
 
-In the case of the roster, we only want to create list items for dogs that were present. In React, if you don't want to return an element, you must return `null`.
+In the case of the roster, we only want to create a list of items for dogs that were present. In React, if you don't want to return an element, you must return `null`.
 
 ```js
 return dog.present ? <li>{dog}</li> : null;
@@ -186,7 +186,7 @@ Typically, when you work with actual data, the data will have a unique id. In th
 
 Now, to get the class average for the main component. When you pass props, they are unmodified from their original source. How we manipulated the data in the Aside component will not impact what you do in the Main component.
 
-Pass the dogs data to `Main`.
+Pass the `dogs` data to `Main`.
 
 ```js
 <Main dogs={dogs} />
@@ -248,4 +248,4 @@ function Main({ dogs }) {
 }
 ```
 
-Why can a for loop be used in this case?
+Why can a `for` loop be used in this case?

@@ -33,3 +33,6 @@ This is a list of new technical vocabulary we come across during the React unit.
 - React Component
 - React Element
 - React Root
+- State
+- Stateful
+- Toggle

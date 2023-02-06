@@ -1,253 +1,461 @@
 # Props and Component Structuring
 
-## Vocabulary
+## Introduction
 
-- Props
-- Functional Components
-- Container Components
-- Display Components
+In previous lessons, we've seen how to build React components and display them in the browser. We learned that we can reuse components. However, we had no way to make two different versions of the same component. Let's look again at a previous example.
 
-## Objectives
+![facebook](./assets/fbInterface.jpg)
+
+Under the `Home` section, there is a list of menu items. We can imagine that each menu items is inside an unordered list (`<ul>`) and is list element (`<li>`). Inside each list element, there is an icon, some text and the text links to something else. It is likely these menu items would be their own React component. So the HTML is the same for each element, however the content (data) is different.
+
+You can imagine the same pattern for the `Stories`, `Posts` and `Contacts` sections.
+
+## Learning Objectives
 
 - Understand what props are and what problem they solve
 - Build an application that uses props
-- Articulate the distinction between container and display components
-
-# Introduction to props
-
-In previous lessons, we've seen how to build React components and display them on a website. However, we had no way to make two different versions of the same component. For example, we should be able to create a `UserProfile` component with the name "Robert Kahn", then create a separate `UserProfile` component with the name "Vinton Cerf".
-
-Another example of this is Amazon's product search. Take a look at, say, a search for t-shirts:
-
-![amazon](./assets/amazon_screen.png)
-
-Each of these t-shirt listings represents a separate instance of the **exact same component**. This component is reused in many different places in the application.
-
-In order to have the same component display different information, we can use **props**.
+- Map over data to render it
+- Conditionally render components
 
 ## Props
 
-Props allow components to **pass information** to child components that they're rendering. Components can use props to consume data from their parents and render it to the user. This permits us to reuse the same component with relative ease. For example, we don't need distinct `UserProfile` components if each user's profile consumes the same shape of information and renders that information in the same way. We can use the same component and pass down unique user information as props.
+Props is short for the word properties. All HTML elements can have properties. This anchor tag has two properties, `id` and `href`.
 
-Props also allow us to intelligently divide responsibilities between components. We can create components whose only job is to fetch, store, and update information, and we can have components whose only job is to receive props and render information. More on that separation of concerns in a future lesson.
-
-Returning to our Amazon search page example, let's say our components (`ProductItem`) are the _child components_ of a component for the entire page (`ProductPage`). `ProductPage` stores the result of a large network request on the first render of the page, getting an array with fifty products. We then map through this array and send each individual product to a `ProductItem` component by way of props, which processes the product's information into something user-facing.
-
-Let's take a look at a small-scale example of this.
-
-# Simple example
-
-Props are passed from a parent component to a child component. This is similar to how we call a function and pass arguments to it! Under the hood, this is actually what react is doing.
-
-The syntax here looks very similar to writing HTML attributes, and that is by design.
-
-Parent component:
-
-```js
-// App.js
-const App = () => {
-  let userDetails = {
-    name: "Jimmy B",
-    userId: 7348,
-    email: "jimmy@pursuit.org",
-  };
-  return <User name={userDetails.name} />;
-};
+```html
+<a id="best-link" href="www.example.com">My favorite website</a>
 ```
 
-Child component:
+React extends the function of properties (props) to allow values to be passed down. This may seem strange at first. As you spend more time coding in React, you will realize the importance of this feature.
 
-```js
-const User = (props) => {
-  const { name } = props;
+## Simple example
 
+Let's build a simplified version of the menu. It will have two views, one mimicking what it would look like if a user is logged in and one if the user is not logged in.
+
+![simple menu logged in](./assets/menu-logged-in.png)
+
+![simple menu logged out](./assets/menu-not-logged-in.png)
+
+## Getting Started
+
+Start with a new app. Replace the boilerplate code with this:
+
+```jsx
+import "./App.css";
+
+function App() {
   return (
-    <div className="user-details">
-      <h1>{name}</h1>
-    </div>
-  );
-};
-```
-
-Note that we are only passing in one prop. If we want to add more, we can just pass them to the child component with more key/value pairs.
-
-```js
-// App.js
-const App = () => {
-  let userDetails = {
-    name: "Jimmy B",
-    userId: 7348,
-    email: "jimmy@pursuit.org",
-  };
-  return <User name={userDetails.name} userId={userDetails.userId} />;
-};
-```
-
-When the code gets too long, we can put each k/v pair on its own line.
-
-```js
-// App.js
-const App = () => {
-  let userDetails = {
-    name: "Jimmy B",
-    userId: 7348,
-    email: "jimmy@pursuit.org",
-  };
-
-  return (
-    <User
-      name={userDetails.name}
-      userId={userDetails.userId}
-      email={userDetails.email}
-    />
-  );
-};
-```
-
-> Bonus: What if we used the spread operator here?
-
-# Building an app using props
-
-Here, we will build a simple application that uses props to display a list of shoes.
-
-![reactPropsAppOne](./assets/reactPropsAppOne.png)
-
-### `ProductPage.js`
-
-```js
-import ProductItem from './ProductItem';
-
-const ProductPage = () => {
-
-  // You can see here that we start our functional `ProductPage` component with an array of objects, each with certain consistent traits: `name`, `manufacturer`, and `price`.
-
-  const products = [
-      { name: "Ultra Boost", manufacturer: "Adidas", price: 160 },
-      { name: "Air Force One Low", manufacturer: "Nike", price: 100 },
-      { name: "Classic Leather", manufacturer: "Reebok", price: 120 },
-      { name: "Sk8-Hi", manufacturer: "Vans", price: 60 }
-    ];
-
-  // We then then use this array to render our products in JSX:
-
-  const listItems = products.map(product => {
-    return (
-      <ProductItem
-        name={product.name}
-        price={product.price}
-      />
-    );
-  });
-
-  return (
-    <div>
-      <ul>{listItems}</ul>
+    <div className="App">
+      <h1>Menu</h1>
     </div>
   );
 }
+
+export default App;
+```
+
+## Passing static props
+
+The following example is a simple demonstration. Normally, you would just put any text that stays the same (like the app name) as regular text. But we will set it as a variable to demonstrate the syntax and fundamentals of props.
+
+Create a new file inside `src` called `Header.jsx`
+
+```jsx
+export default function Header() {
+  return <h1>My Header</h1>;
 }
 ```
 
-First, we're creating a variable called `listItems`, which maps through our `products` and returns React components named `ProductItem`. These `ProductItem` components have three attributes that correspond to keys of the objects in our `products` array. At first glance, however, these attributes might look confusing. They definitely aren't anything we've seen before in HTML. That's because, **while these items share the same syntax, they don't translate directly to HTML attributes.** Instead, they represent _props_ that we're passing down to our `ProductItem` components.
+Return to `App.jsx` and import the `Header` component and replace the `h1` with the new component
 
-Think of props as arguments for a component. They compile into an attribute on the component which we can reference using `this.props` (in the case of a class component) or as our function's argument (for a functional component). In this case, for each item in our `products` array, we're inputting the name, manufacturer, and price into our `ProductItem` component. You'll notice, because this component is only responsible for receiving props and rendering data, we're making this one functional, rather than using a class:
-
-### `ProductItem.js`
-
-```js
-const ProductItem = (props) => {
-  const { name, price } = props;
+```jsx
+function App() {
   return (
-    <li>
-      {name} - ${price}
-    </li>
+    <div className="App">
+      <Header />
+    </div>
   );
-};
-
-export default ProductItem;
+}
 ```
 
-This is the entire `ProductItem` component. Pretty clean, right? Let's break this down.
-
-We define `ProductItem` as an anonymous function that takes its `props` as an argument. `ProductItem` then uses object destructuring to break out two of those _same props that we passed into `ProductItem` in the `ProductPage` component_. Finally, we place our three items in an `li` tag, which our component returns.
-
-Importantly, what you're seeing rendered is **four separate instances** of this component, each with different props. We create those instances in our `map` method in our parent component.
-
-_Exercise: Notice that the objects in our `products` array have a third key: `manufacturer`. Pass this key down to each `ProductItem` and render it alongside `name` and `price`._
-
-# Props in class components
-
-For React function components, we saw that you can add `props` as the argument to the function:
+Let's set the name of the h1 text to a variable
 
 ```js
-const UserProfile = (props) => {
-  const { name, age, location } = props;
+const headerText = "My Menu";
+```
+
+Let's pass it to the `Header` component
+
+We want the data in the `App` component to be passed to the `Header` component.
+
+We will use the same key-value pair structure that regular HTML element properties (typically called attributes), with a couple small differences.
+
+We can name the key whatever we want. Here we will name it `text` but we could also name it `name`, 'headerText', or `asdf`.
+
+```jsx
+<Header text />
+```
+
+Then we set the value. The value is coming from a variable and must be evaluated, so we must put curly braces around the value.
+
+```jsx
+<Header text={headerText} />
+```
+
+Go to the `Header` component. We have passed the data to this component, but how do we access it?
+
+Let's add it as a parameter in the function definition and console log it.
+
+```js
+export default function Header(props) {
+  console.log(props);
+  return <h1>My Header</h1>;
+}
+```
+
+To access the text we must type `props.text`
+
+```js
+console.log(props.text);
+```
+
+This is a lot of typing. We can simplify this but using object destructuring.
+
+```jsx
+export default function Header({ text }) {
+  return <h1>{text}</h1>;
+}
+```
+
+This simple example demonstrated the basic functionality and syntax for using props. There is no use case for this example, as the title of the menu could just be hard-coded because it would not change while a user uses the app.
+
+## Dynamic rendering from data
+
+In contrast to the simple example of using props to set the `h1`, the better use of props is to handle more complex data.
+
+Create a new file inside `src` called `Menu.jsx`
+
+```js
+export default function Menu() {
   return (
     <ul>
-      <li>Name: {name}</li>
-      <li>Age: {age}</li>
-      <li>Location: {location}</li>
+      <li>This is a list item</li>
     </ul>
   );
-};
-
-export default ProductItem;
+}
 ```
 
-In a React class component, props are accessed differently. Instead of using arguments to a function, you can access props with the expression `this.props`. This is because class components extend `React.Component`, which has a `props` attribute.
-
-Note that we aren't even including a constructor, because we don't have to!
+Import and render it in `App.jsx`
 
 ```js
-import React from "react";
+import Menu from "./Menu";
+import "./App.css";
 
-class UserProfile extends React.Component {
-  render() {
-    const { name, age, location } = this.props;
-    return (
-      <ul>
-        <li>Name: {name}</li>
-        <li>Age: {age}</li>
-        <li>Location: {location}</li>
-      </ul>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <h1>My Menu</h1>
+      <Menu />
+    </div>
+  );
 }
 
-export default ProductItem;
+export default App;
 ```
 
-_Exercise 1: For `UserProfile`, the function and class component access props differently. What differences do you notice?_
+Create a new file `data.js` inside the `src` folder.
 
-_Exercise 2: In the `UserProfile` class component, `this.props` is accessed inside the `render()` method. What do you think will happen if we move that line of code outside the render method? Where else could you put it?_
+<details><summary>Add some data and be sure to export it</summary>
 
-_Exercise 3: Refactor the `ProductItem` component above to be a class component. Make sure it still handles props._
+```js
+const data = [
+  {
+    title: "Not So Secret Family Recipes",
+    icon: "🥘",
+    link: "#",
+    custom: true,
+  },
+  {
+    title: "Red Table Talk Group",
+    icon: "🌺",
+    link: "#",
+    custom: true,
+  },
+  {
+    title: "Events",
+    icon: "📅",
+    link: "#",
+    custom: false,
+  },
+  {
+    title: "Saved",
+    icon: "🔖",
+    link: "#",
+    custom: false,
+  },
+  {
+    title: "Gaming",
+    icon: "🕹️",
+    link: "#",
+    custom: false,
+  },
+  {
+    title: "Fundraisers",
+    icon: "💌",
+    link: "#",
+    custom: false,
+  },
+  {
+    title: "Memories",
+    icon: "🕰️",
+    link: "#",
+    custom: false,
+  },
+  {
+    title: "Help & Support",
+    icon: "❓",
+    link: "#",
+    custom: false,
+  },
+  {
+    title: "Settings and Privacy",
+    icon: "⚙️",
+    link: "#",
+    custom: false,
+  },
+];
 
-# Component Architecture
+export default data;
+```
 
-In our previous example, you might have noticed that our `ProductPage` component doesn't really render much of anything independently. Its main purpose is to handle its data and send props down to child components. It's only when we get to the `ProductItem` components that we actually render something that looks even close to HTML.
+</details>
 
-This is a design philosophy called **separation of concerns**, which means that we should break out different functionalities into different parts of our app.
+<br>
 
-Why is this important? Well, let's go back to our Amazon example. Product items can show up on the homepage, on search index pages, **or** as a recommended/related item on a product page. If we simply have `Home`, `Search` and `Product` components that handle all rendering, we'll have to re-write the same JSX to render the same product previews. Much easier and more efficient to make a `ProductItem` or `ProductThumbnail` component and use it across all of these pages. So, the top-level pages handle their data, but they all feed into the same child components.
+Import and `console.log` the data in `Menu.jsx` to confirm your data is being imported correctly. Once the data is logging, remove the log to keep your console clear.
 
-Additionally, if we have a parent component that does a single API request and passes the result down as props to several different components, as we saw above, we can avoid a situation where each separate component fires an AJAX request, which would be taxing to our backend server or remote API.
+```jsx
+import data from "./data";
 
-Finally, it keeps us organized and it keeps our app consistent. The higher up in our component structure we can store state, and the more components share the same state, the more consistently we present information to the user, and the less we have to update the same information in different places.
+console.log(data);
+```
 
-Separating our components into these two categories is a pattern known as `Smart Components` and `Dumb Components`. Sometimes also called `Container Components` and `Pure Components`.
+## Creating multiple components based on data
 
-At the end of the day, a full-fledged app should have this general kind of component structure:
+We want list items to be created that all have the same HTML structure. However, we want the content inside to be based on the data (array of objects).
 
-![diagram](./assets/props_diagram.png)
+How can we do this? The first thing that likely comes to mind is a loop.
 
-## Conclusion
+```js
+const listItemsWithData = [];
+for (let i = 0; i < data.length; i++) {
+  listItemsWithData.push(`<li>${dogs[i].name}<li>`);
+}
+```
 
-Clearly, there's a lot of syntax we're introducing to you here, but there's also a lot of creative work that goes into deciding exactly what information should be stored in which component, which component should display what, and so on. We highly recommend thinking about this stuff as early as possible when you get around to building your own full-scale React projects!
+However, everything inside a return statement is JSX and not JavaScript, and JSX does not allow for loops.
 
-## Resources
+You do have another tool that will allow you to loop over values and return a new array: The array method `.map()`. JSX will allow you to use array methods.
 
-- [Components and Props](https://reactjs.org/docs/components-and-props.html)
-- [Thinking In React](https://reactjs.org/docs/thinking-in-react.html)
-- [Container Components](https://medium.com/@learnreact/container-components-c0e67432e005)
-- [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
+First, start with a set of curly braces `{}`. The braces tell React to evaluate what is inside the curly braces first before rendering it.
+
+```js
+export default function Menu() {
+  return <ul>{}</ul>;
+}
+```
+
+Set up the .map() function to iterate over dogs:
+
+```
+<ul>{data.map()}</ul>
+```
+
+Write the callback that will return a list item with the title of each menu item:
+
+```js
+{
+  data.map((menuItem) => <li>{menuItem.title}</li>);
+}
+```
+
+All the code together
+
+```js
+export default function Menu() {
+  return (
+    <ul>
+      {data.map((menuItem) => (
+        <li>{menuItem.title}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
+## Passing props that are objects
+
+We want the list items to have an icon, a link and a title. React lets you split up complex HTML into smaller components that are easier to maintain. Let's make menu items into their own components.
+
+### Refactor current code:
+
+Create a new file `menuItem.jsx` in the src folder. We will include some placeholder text before trying to add the data.
+
+```js
+export default function MenuItem() {
+  return (
+    <li>
+      <span>ICON</span>
+      <a href="LINK">TITLE</a>
+    </li>
+  );
+}
+```
+
+Import it into `Menu`.
+
+Complete Menu code:
+
+```js
+import data from "./data";
+import MenuItem from "./MenuItem";
+
+export default function Menu() {
+  return (
+    <ul>
+      {data.map((menuItem) => (
+        <MenuItem />
+      ))}
+    </ul>
+  );
+}
+```
+
+> **Note**: Sometimes code will get worse/less functional before it gets better when you are refactoring. When refactoring it is important to take small testable steps.
+
+### Pass props
+
+We want the data in the `Menu` component to be passed to the `MenuItem` component.
+
+```jsx
+<MenuItem menuItem={menuItem} />
+```
+
+## Unique key warning
+
+When we do this, we will see an error in the console
+
+```
+Warning: Each child in a list should have a unique "key" prop.
+```
+
+Your app will still work when there is a warning. However, it would be best if you aimed to solve as many warnings as you can as you are building your app, as warnings may lead to unpredictable app behavior.
+
+In this case, React wants a unique identifier for each list item so that its algorithm for fast rendering works as expected.
+
+Typically, when you work with actual data, the data will have a unique id. In this case, we have a simple data set and don't have an id available. We can use the menu titles as a unique key prop for now, but be aware that if a menu with teh same title was added, this strategy would not work.
+
+```jsx
+<MenuItem menuItem={menuItem} key={menuItem.title} />
+```
+
+## Using props
+
+Go to the `MenuItem` component. We have passed the data to this component, but how do we access it?
+
+Let's add it as a parameter in the function definition and console log it.
+
+```js
+export default function MenuItem({ menuItem }) {
+  console.log(menuItem);
+  return (
+    <li>
+      <span>ICON</span>
+      <a href="">TITLE</a>
+    </li>
+  );
+}
+```
+
+To access the data, we would need to type `menuItem.title`, `menuItem.link`, and `menuItem.icon` to access the data.
+
+We can use object destructuring to make the code more readable
+
+```js
+export default function MenuItem({ menuItem }) {
+  const { title, icon, link } = menuItem;
+  return (
+    <li>
+      <span>{icon}</span>
+      <a href={link}>{title}</a>
+    </li>
+  );
+}
+```
+
+## Conditional Rendering
+
+There are times where we might not want to show all the data.
+
+If we don't want to show any component, we will use null.
+
+`if` statements are also not going to work in JSX. Instead, ternary operators are used.
+
+Ternary operators are a different syntax for if statements.
+
+The following if statement can be rewritten:
+
+```
+if (!menuItem.custom) {
+return <li>{menuItem}</li>;
+} else {
+return null;
+}
+```
+
+to
+
+```
+return menuItem.custom ? <li>{menuItem}</li> : null;
+```
+
+When you see a ternary operator, try reading out loud like so:
+
+If NOT `menuItem.custom` is `true`, then return the first value after the question mark. `else` return the value after the colon.
+
+Let's use it in our code
+
+```js
+<ul>
+  {data.map((menuItem) => {
+    return !menuItem.custom ? (
+      <MenuItem menuItem={menuItem} key={menuItem.title} />
+    ) : null;
+  })}
+</ul>
+```
+
+You can also set conditional rendering to display different components.
+
+Imagine if the user is not logged in. Rather than showing the menu, you want to display a "please log in" message.
+
+In `App.jsx`, set a variable for a user being logged in:
+
+```js
+const userLoggedIn = true;
+```
+
+Set up the conditional rendering
+
+```js
+{
+  userLoggedIn ? <Menu /> : <p>Please log in</p>;
+}
+```
+
+In this case, the menu should stay the same.
+
+Change `userLoggedIn` to be `false`
+
+Now you should see that the menu is not loaded and instead the log in message appears.
+
+In later lessons, you'll learn how to change the values in your React app through user interaction and get data from a third-party api.

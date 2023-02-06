@@ -1,8 +1,18 @@
+# NPM for React
+
 ## Introduction
 
 Let's build a small node application together. We will work on an imaginary business venture where the local zoo is looking to partner with a candy manufacturer to make unique and memorable jellybeans to help raise some money.
 
 The company has sent over some data on some possible jellybeans, but it's a bit hard to read and analyze the data in its current format. We'll build a little app that imports the data, and then we will write a couple of functions to explore the data.
+
+## Learning Objectives
+
+- Create a `package.json` file using the npm command-line tool.
+- Describe the importance and purpose of the `package.json `file.
+- Ignore common folders and files with the `.gitignore` file.
+- Define your own scripts through the `package.json` file.
+- Import and export JavaScript data types from files using `import` and `export` statements by modifying the `package.json` to have a `type` of `module`.
 
 ## Getting started
 
@@ -14,8 +24,6 @@ The company has sent over some data on some possible jellybeans, but it's a bit 
 - Update the `package.json` to be type module, so that you can use `import` and `export` statements.
 
 <details><summary>Copy and paste only the array into <code>jellybeans.js</code>:</summary>
-
-<code><pre>
 
 ```js
 [
@@ -82,80 +90,75 @@ The company has sent over some data on some possible jellybeans, but it's a bit 
 ];
 ```
 
-</pre></code>
-
 </details>
 
 <details><summary>Copy and paste only the array into <code>jellybeans.json</code>:</summary>
 
-<code><pre>
-
-```js
+```json
 [
   {
-    name: "Perfumed Savannah",
-    color: "yellow",
-    flavorType: "fruity",
-    inStock: true,
+    "name": "Perfumed Savannah",
+    "color": "yellow",
+    "flavorType": "fruity",
+    "inStock": true
   },
   {
-    name: "Agitated Northeast Congo Lion",
-    color: "fuchsia",
-    flavorType: "fruity",
-    inStock: false,
+    "name": "Agitated Northeast Congo Lion",
+    "color": "fuchsia",
+    "flavorType": "fruity",
+    "inStock": false
   },
   {
-    name: "Royal Australian Draught Horse",
-    color: "magenta",
-    flavorType: "spicy",
-    inStock: true,
+    "name": "Royal Australian Draught Horse",
+    "color": "magenta",
+    "flavorType": "spicy",
+    "inStock": true
   },
   {
-    name: "Unselfish Kurilian Bobtail",
-    color: "turquoise",
-    flavorType: "salty",
-    inStock: true,
+    "name": "Unselfish Kurilian Bobtail",
+    "color": "turquoise",
+    "flavorType": "salty",
+    "inStock": true
   },
   {
-    name: "Glorious Northeast Congo Lion",
-    color: "magenta",
-    flavorType: "nutty",
-    inStock: false,
+    "name": "Glorious Northeast Congo Lion",
+    "color": "magenta",
+    "flavorType": "nutty",
+    "inStock": false
   },
   {
-    name: "Rotating Silver",
-    color: "gold",
-    flavorType: "fruity",
-    inStock: false,
+    "name": "Rotating Silver",
+    "color": "gold",
+    "flavorType": "fruity",
+    "inStock": false
   },
   {
-    name: "Speedy Toyger",
-    color: "gold",
-    flavorType: "spicy",
-    inStock: true,
+    "name": "Speedy Toyger",
+    "color": "gold",
+    "flavorType": "spicy",
+    "inStock": true
   },
   {
-    name: "Flowery Australian Freshwater Crocodile",
-    color: "grey",
-    flavorType: "salty",
-    inStock: true,
+    "name": "Flowery Australian Freshwater Crocodile",
+    "color": "grey",
+    "flavorType": "salty",
+    "inStock": true
   },
   {
-    name: "Upset Chinese River Dolphin",
-    color: "indigo",
-    flavorType: "nutty",
-    inStock: true,
+    "name": "Upset Chinese River Dolphin",
+    "color": "indigo",
+    "flavorType": "nutty",
+    "inStock": true
   },
   {
-    name: "Smoggy Württemberger",
-    color: "pink",
-    flavorType: "savory",
-    inStock: false,
-  },
-];
+    "name": "Smoggy Württemberger",
+    "color": "pink",
+    "flavorType": "savory",
+    "inStock": false
+  }
+]
 ```
 
-</pre></code>
 </details>
 
 ## Import the data
@@ -245,25 +248,30 @@ const organizeByColor = (candies) => {
 console.log(organizeByColor(jellybeansJSON));
 ```
 
+What happened to the `jellyBeansJSON` data? Is it permanently sorted? Or has this data remained the same?
+
+When would you want the original data changed? When would you not want the original data changed?
+
 - [Sort method documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
 ## Write a custom script
 
 Open the `package.json` file. Write a custom script that prints the name of your favorite animal in the terminal.
 
-```js
+```json
 {
- "name": "make-fake-data",
- "type": "module",
- "version": "1.0.0",
- "description": "",
- "main": "index.js",
- "scripts": {
- "animal": "echo 'My favorite animal is a cat'"
- },
- "author": "",
- "license": "ISC"
+  "name": "jellybeans-lesson-notes",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "animal": "echo 'My favorite animal is a cat'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
-
-
 ```
+
+How do you run this script?

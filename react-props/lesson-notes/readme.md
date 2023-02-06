@@ -8,7 +8,6 @@ React is a framework that helps create interactive user interfaces. One of the m
 - Build an application that uses props
 - Map over data to render it
 - Conditionally render components
-- Articulate the distinction between container and display components
 
 ## Getting started
 
@@ -32,9 +31,7 @@ React extends the function of properties (props) to allow values to be passed do
 
 In `App.js`, there is a variable called `dayCareName`.
 
-You can pass the name to the `Header` component:
-
-You can name the key whatever you want, like `asdf`. But it's a good idea to pick an accurate and descriptive name for the key. The following code will add the key-value pair to an object called `props`.
+Pass the name to the `Header` component:
 
 ```js
 // App.js
@@ -109,19 +106,6 @@ function Aside({ dogs }) {
 
 How can we get a list of each dog's name as a list item?
 
-We can think of looping over the data and then adding `li` elements around each dog name:
-
-```js
-const dogListItems = [];
-for (let i = 0; i < dogs.length; dog++) {
-  dogListItems.push(`<li>${dogs[i].name}<li>`);
-}
-```
-
-However, everything inside a `return` statement is JSX and not JavaScript, and JSX does not allow for loops.
-
-You do have another tool that will allow you to loop over values and return a new array: The array method `.map()`. JSX will allow you to use array methods.
-
 First, start with a set of curly braces. `{}`. The braces tell React to evaluate what is inside the curly braces first before rendering it.
 
 ```js
@@ -137,7 +121,7 @@ function Aside({ dogs }) {
 }
 ```
 
-Set up the .map() function to iterate over `dogs`:
+Set up the `.map()` function to iterate over `dogs`:
 
 ```js
 // Aside.js
@@ -172,29 +156,9 @@ Not all the dogs were present today. Often, you will want to change what is rend
 
 In the case of the roster, we only want to create list items for dogs that were present. In React, if you don't want to return an element, you must return `null`.
 
-If statements are also not going to work in JSX. Instead, ternary operators are used.
-
-Ternary operators are a different syntax for if statements.
-
-The following if statement can be rewritten:
-
-```js
-if (dog.present) {
-  return <li>{dog}</li>;
-} else {
-  return null;
-}
-```
-
-to
-
 ```js
 return dog.present ? <li>{dog}</li> : null;
 ```
-
-When you see a ternary operator, try reading out loud like so:
-
-If `dog.present` is true, then return the first value after the question mark. Else return the value after the colon.
 
 Put it all together:
 
@@ -209,8 +173,6 @@ If you open your browser console, you will notice a warning.
 ```
 Warning: Each child in a list should have a unique key prop
 ```
-
-Your app will still work when there is a warning. However, it would be best if you aimed to solve as many warnings as you can as you are building your app, as warnings may lead to unpredictable app behavior.
 
 Typically, when you work with actual data, the data will have a unique id. In this case, we have a simple data set and don't have an id available. We can use the dog names as a unique key prop for now, but be aware that if a dog with the same name joined, this strategy would not work.
 

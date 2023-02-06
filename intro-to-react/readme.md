@@ -1,5 +1,7 @@
 # Introduction to React
 
+## Introduction
+
 React is an open-source third party front-end framework that makes developing and maintaining large and robust front-end applications easier.
 
 At first, there is a steep learning curve to learn the basics, but once you learn the patterns and understand the fundamental concepts it will become much more enjoyable to build with React.
@@ -51,7 +53,7 @@ People tend to create third-party open-source libraries or third-party framework
 
 React is a third-party library that you can download and use to make building robust websites easier.
 
-## Introduction to React
+## What is React?
 
 React is a JavaScript library that was created by Facebook. Developers use React to build web applications' UI and front-end logic. Until now, you have been building UI by writing a single large HTML file, then linking it to a JavaScript file. The JavaScript file uses [DOM manipulation](https://github.com/joinpursuit/Pursuit-Core-Web/tree/master/html_css_dom/dom_1) to edit, add, and remove elements in response to user interaction. This approach has worked well for so far, but has some challenges when scaling to larger applications. Consider the following image:
 
@@ -89,7 +91,7 @@ In this unit, you will use Create React App primarily for the following features
 - File and folder structure already configured for easy use and maintenance.
 - Configured for easy deployment.
 
-## Getting Started with React
+## Getting started with React
 
 Please feel free to read through or code along with the following code examples.
 

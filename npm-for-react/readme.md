@@ -206,6 +206,8 @@ Did you mean to import ../messages.js?
 
 This is not a helpful error message. You must, instead, add the `.js` at the end of the file name.
 
+<hr>
+
 </details>
 
 > **Note**: If you forget to update your `package.json` to have `    "type": "module",`

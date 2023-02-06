@@ -18,6 +18,9 @@ This is a list of new technical vocabulary we come across during the React unit.
 - Bundler
     - Webpack
     - Source Maps
+- Recursion
+- Shallow Copy
+- Deep Copy
 
 ## React Vocab
 - JSX
@@ -25,3 +28,9 @@ This is a list of new technical vocabulary we come across during the React unit.
 - React Component
 - React Element
 - React Root
+- Hooks
+- State Value
+- Setter
+
+
+

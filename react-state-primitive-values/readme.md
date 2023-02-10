@@ -1,10 +1,12 @@
 # React State: Primitive Values
 
+## Introduction
+
 So far, you've been using React to render components. The components may have hard-coded values, like the app's name in the header. You also rendered some data.
 
 However, there was no way to interact with the web page. There was no way to add, update or delete the presented data. This lesson will demonstrate how to update React components when the data changes.
 
-## Objectives
+## Learning Objectives
 
 - Define state
 - Explain the role of state in a React application
@@ -13,11 +15,7 @@ However, there was no way to interact with the web page. There was no way to add
 
 - Call set State to update State
 
-## Vocabulary
-
-- State
-- Stateful
-- Toggle
+<hr>
 
 ## State
 

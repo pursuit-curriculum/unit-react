@@ -20,6 +20,7 @@ sequence:
       pursuit_path: react-props
       kind: lesson
       activity: repository
+      starter: react-props
     - name: React State - Booleans, Numbers & Strings
       pursuit_path: react-state-primitive-values
       kind: lesson
@@ -27,19 +28,22 @@ sequence:
     - name: React State - Objects
       pursuit_path: react-state-objects
       kind: lesson
-      activity: ~ # none, continue last lab
+      activity: repository
+      starter: react-state-objects
     - name: React Forms
       pursuit_path: react-forms
       kind: lesson
       activity: repository
+      starter: react-forms
     - name: React Lifting State
       pursuit_path: react-lifting-state
       kind: lesson
       activity: repository
+      starter: react-lifting-state
     - name: React Deployment
       pursuit_path: react-deployment
       kind: lesson
-      activity: ~ # none coming soon
+      activity: ~ # TO DO link to guide instead!
     - name: Bird Sanctuary Project
       pursuit_path: bird-sanctuary
       kind: project
@@ -55,10 +59,12 @@ sequence:
       pursuit_path: react-lifecycle-networking
       kind: lesson
       activity: repository
+      starter: react-lifecycle-networking
     - name: Routing in React
       pursuit_path: react-router
       kind: lesson
       activity: repository
+      starter: react-router
     - name: React CRUD (Multi-part lesson and lab)
       pursuit_path: react-crud
       kind: lesson

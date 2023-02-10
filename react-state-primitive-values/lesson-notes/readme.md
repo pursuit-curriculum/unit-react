@@ -1,13 +1,14 @@
 # React State: Primitive Values
 
-## Objectives
+## Learning Objectives
 
 - Define state
 - Explain the role of state in a React application
 - Learn how to use event listeners and handlers in React
 - Instantiate state in a React component
-
 - Call set State to update State
+
+<hr>
 
 ## Background-color changing app
 

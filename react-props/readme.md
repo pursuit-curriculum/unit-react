@@ -17,7 +17,9 @@ You can imagine the same pattern for the `Stories`, `Posts`, and `Contacts` sect
 - Map over data to render it
 - Conditionally render components
 
-## Props
+<hr>
+
+## Intro to Props
 
 Props are short for the word properties. All HTML elements can have properties(referred to as `attributes` when it is plain HTML). The following anchor tag has two properties, `id` and `href`.
 

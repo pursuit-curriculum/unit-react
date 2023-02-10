@@ -9,6 +9,8 @@ React is a framework that helps create interactive user interfaces. One of the m
 - Map over data to render it
 - Conditionally render components
 
+<hr>
+
 ## Getting started
 
 Today we'll build a simple doggy daycare app:

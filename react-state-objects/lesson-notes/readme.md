@@ -20,9 +20,7 @@ There will be a list of dogs, we will build functionality to
 
 ## Getting started
 
-Start by forking and cloning the following repository:
-
-[React State 2 Class Build](https://github.com/joinpursuit/class-build-react-state-objects)
+Start by forking and cloning the starter code that is linked in Canvas.
 
 - `npm i`
 
@@ -65,6 +63,8 @@ const [dogs, setDogs] = useState(dogsData);
 
 ## Create an unordered list and make a list of dogs
 
+Inside the `aside`:
+
 ```js
 
 <ul>
@@ -92,7 +92,7 @@ function addDog() {
 }
 ```
 
-Create a button and confirm that the button's event listener/handler works:
+Create a button and confirm that the button's event listener/handler works above the `ul`:
 
 ```js
 <button onClick={addDog}>Add a new dog</button>
@@ -103,7 +103,7 @@ In a later lesson, you'll learn how to use forms in React. For now, we'll just a
 ```js
 function addDog() {
   const rover = {
-    id: dogs.length + 50,
+    id: ??????????
     name: "Rover",
     present: false,
     grade: "100",
@@ -251,3 +251,5 @@ Add it to the list item and pass `dog` down as a prop:
 You'll notice that the show/hide details functionality already works. As a class work through how this function works.
 
 - Why is there state in `DogDetails` and what does it do. What happens if this state were put in the App.js component instead?
+
+> **Note**: You can view the completed build in GitHub by changing to the `completed` branch on the original version where you made the fork.

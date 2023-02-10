@@ -28,9 +28,7 @@ There will be a number of fields to fill out including
 
 ## Getting started
 
-Start by forking and cloning the following repository:
-
-[React Forms Class Build](https://github.com/joinpursuit/class-build-react-state-forms/tree/main)
+Start by forking and cloning the starter code that is linked in Canvas.
 
 ```
 npm i
@@ -243,6 +241,8 @@ function handleSubmit(event) {
 ## Completed Build
 
 [See a completed build here](https://github.com/joinpursuit/class-build-react-state-forms/tree/build)
+
+> **Note**: You can view the completed build in GitHub by changing to the `completed` branch on the original version where you made the fork.
 
 ## Upcoming Lessons
 

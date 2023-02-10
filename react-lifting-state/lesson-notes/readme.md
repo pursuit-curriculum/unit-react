@@ -15,9 +15,7 @@ Today we'll refactor the Doggy Day Care app to have more components and utilize 
 
 ![finished build](../assets/dogg-day-care-components.png)
 
-Start by forking and cloning the following repository:
-
-- [React Lifting State Class Build](https://github.com/joinpursuit/class-build-lifting-state)
+Start by forking and cloning the starter code that is linked in Canvas.
 
 ```
 npm i
@@ -94,4 +92,4 @@ Try to get the form to toggle back to hidden after the form submit.
 
 ### Completed build
 
-See a complete build [here](https://github.com/joinpursuit/class-build-lifting-state/tree/build)
+> **Note**: You can view the completed build in GitHub by changing to the `completed` branch on the original version where you made the fork.

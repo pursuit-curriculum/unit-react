@@ -17,9 +17,7 @@ Today we'll build a simple doggy daycare app:
 
 ![finished build](../assets/class-build.png)
 
-Start by forking and cloning the following repository:
-
-- [React Props Class Build](https://github.com/joinpursuit/class-build-react-props)
+Start by forking and cloning the starter code that is linked in Canvas.
 
 ## Props
 
@@ -251,3 +249,5 @@ function Main({ dogs }) {
 ```
 
 Why can a `for` loop be used in this case?
+
+> **Note**: You can view the completed build in GitHub by changing to the `completed` branch on the original version where you made the fork.

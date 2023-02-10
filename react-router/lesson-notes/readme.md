@@ -45,15 +45,13 @@ More views have been hidden for ease of document use.
 <br />
 <br />
 
-Start by forking and cloning the following repository:
-
-- [React Router Build](https://github.com/joinpursuit/react-router-code-along)
+Start by forking and cloning the starter code that is linked in Canvas.
 
 ## Set Up React Router DOM
 
 When you start this project, all the different components are visible on one page. Let's use React Router to create different views.
 
-1. `npm install react-router-dom`
+1. `npm install react-router-dom@6`
 
 Import React Router DOM
 
@@ -88,7 +86,7 @@ function App() {
 }
 ```
 
-Next, let's define the area that will display the views. Depending on the URL, we will be swapping out the content inside the `main` tag.
+Next, let's define the area that will display the views. Depending on the URL, we will be swapping out the content inside the `main` tag. Wrap the contents of `main` with `Routes`.
 
 **NOTE** Your app will break and not work until you complete the next step
 
@@ -232,6 +230,8 @@ We can use the URL parameters to select a specific item. In the data of each lam
 
 When a user clicks on the item they are interested in, they won't be looking at the URL, but we have set up our code in a way that will add this functionality.
 
+> **Note**: You must complete the changes in all components in this section to get the functionality.
+
 **src/components/common/productlist.js**
 
 ```js
@@ -284,7 +284,7 @@ Imagine you are using this site and want to purchase birthday candles. Once you 
 Add `Navigate`
 
 ```js
-import { useParams, useNavigate, Navigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 ```
 
 Add `navigate` function to the `mockBuyNow` function
@@ -327,3 +327,5 @@ Add types to the nav so that it reads:
 - Celebratory
 
 Then, when a user clicks on the type, it shows a view of just the lamps (or candles) that match the type
+
+> **Note**: You can view the completed build in GitHub by changing to the `completed` branch on the original version where you made the fork.

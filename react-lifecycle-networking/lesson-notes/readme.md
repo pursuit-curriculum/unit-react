@@ -24,9 +24,7 @@ Today we'll build a Daily Home Page:
 
 ![finished build](../assets/ezgif.com-class-build.gif)
 
-Start by forking and cloning the following repository:
-
-- [React Hooks Lifecycle Class Build](https://github.com/joinpursuit/class-build-hooks-lifecycle/blob/main/src/App.js)
+Start by forking and cloning the starter code that is linked in Canvas.
 
 ## On component mount
 
@@ -78,7 +76,7 @@ useEffect(() => {
 }, [someValue, anotherValue]);
 ```
 
-To avoid an infinite loop, you add another `useEffect()` function to handle different state changes.  
+To avoid an infinite loop, you add another `useEffect()` function to handle different state changes.
 
 ```js
 // DEMO, do not code:
@@ -87,7 +85,7 @@ useEffect(() => {
 }, [someValue]);
 
 useEffect(() => {
- getAnotherValue();
+  getAnotherValue();
 }, [anotherValue]);
 ```
 
@@ -231,4 +229,4 @@ You could also call this function on user interaction:
 
 ## Completed build
 
-A completed build can be found [here](https://github.com/joinpursuit/class-build-hooks-lifecycle/tree/build)
+> **Note**: You can view the completed build in GitHub by changing to the `completed` branch on the original version where you made the fork.

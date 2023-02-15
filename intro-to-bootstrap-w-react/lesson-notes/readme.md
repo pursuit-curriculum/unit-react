@@ -1,7 +1,5 @@
 # Intro to Bootstrap CSS with React
 
-![rosier complete](../assets/rosier-complete.png)
-
 ## Learning Objectives
 
 - Adding Bootstrap CSS to a project
@@ -9,20 +7,27 @@
 
 ## Getting started
 
+<hr>
 We'll be building Rosier. The HTML is complete. All we have to do is add the bootstrap code library and apply the appropriate classes.
 
+![rosier complete](../assets/rosier-complete.png)
+
 **Important**: Bootstrap is responsive, so the way things appear will vary based on the browser window's width. If things don't look right, try changing the width. If your CSS does not look perfect, that's ok. This is a practice lesson for you to learn. **Close enough is good enough.**
+
+<hr>
 
 Starting appearance
 
 ![](../assets/rosier-starter.png)
 
+<hr>
+
 ## Getting started
 
 - Clone the starter code linked in Canvas
-- `cd` into the project and run `npm i`
+- `cd` into the project and run `npm i` and then `npm start`
 
-**Note:** some classes for images are already set so that they are not too large to work with as we build. The images are also set to `width:100px` in the `index.css` until we can size them correctly. Once they are sized with Bootstrap, we can remove this code from the `index.css`.
+**Note:** some classes for images are already set so that they are not too large to work with as we build. The remaining images are also set to `width:100px` in the `index.css` until we can size them correctly. Once they are sized with Bootstrap, we can remove this code from the `index.css`.
 
 There are a few ways to get Bootstrap into your project. We'll start with just adding a `link` tag. This tag works just like any CSS you'd write yourself. It is hosted elsewhere on the internet but will bring in all the code.
 [Get the link](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
@@ -40,6 +45,8 @@ The most notable thing will be that the font has changed.
 ![](../assets/bootstrap-linked.png)
 
 ## Hero
+
+First, go to the `index.css` and comment-in the `nav` `display: none` rule. We won't work on the nav during this lesson.
 
 Go to the `Hero` component.
 
@@ -95,6 +102,8 @@ Additionally, an image editor can help set the correct aspect ratio/sizes so tha
 
 Another thing we notice is that the text for the Yellow rose, in most views, wraps to another line, also causing our card to lack consistent design. One way we can overcome this is to customize the appearance ourselves.
 
+We can use the Bootstrap class and add or override the properties there.
+
 **index.css**
 
 ```
@@ -124,15 +133,9 @@ Add a value of `display-5` for the h3 in the Best Sellers section.
 <!-- Best Sellers table -->
 <!-- Set class display-5 on h3 class -->
 <!-- ************************** -->
-
-<h3 class="display-5">Best Sellers</h3>
 ```
 
 For certain elements, like `tables`, despite already being a `table` element, you still have to use a class to opt-in to Bootstrap's table styling. You will find this true for `button`s and other elements.
-
-```html
-<table class="table"></table>
-```
 
 Let's add another class, `table-striped`, to allow for better division between rows.
 
@@ -140,7 +143,7 @@ Let's add another class, `table-striped`, to allow for better division between r
 <table class="table table-striped"></table>
 ```
 
-If we want to center the text elements in our table, we could write our CSS in the `main.css` file. But it is better to use Bootstrap whenever possible. Bootstrap has a class called `text-center` that will center our text. This will allow for more consistent styling and less unexpected behaviors with our styles.
+If we want to center the text elements in our table, we could write our CSS in the `index.css` file. But it is better to use Bootstrap whenever possible. Bootstrap has a class called `text-center` that will center our text. This will allow for more consistent styling and less unexpected behaviors with our styles.
 
 ```html
 <table class="table table-striped text-center"></table>
@@ -196,7 +199,7 @@ Finally, let's style the submit button by adding the classes `btn btn-primary`.
 
 ## Nav (Bonus)
 
-The Nav is a bonus section for you to work on after you have completed the rest of the build. Go to `src/index.css` and comment in the rule for the `nav` to have a display of `none` for now.
+The Nav is a bonus section for you to work on after you have completed the rest of the build. Go to `src/index.css` and comment out the rule for the `nav` to have a display of `none` for now.
 
 ## Bonus - Finished early?
 

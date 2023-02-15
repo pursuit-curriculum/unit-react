@@ -8,9 +8,17 @@ An app that is well-designed and has been polished will stand out much more than
 
 Each app will have its own unique challenges and incorporating the tools and assets you need will require some research on your part. Being able to teach yourself new things is an integral skill as a developer.
 
+How do you find free tools like photos, fonts, icons and more?
+
+Why do people create free tools (like sharable icons and images)? Are there any downsides?
+
 ## Learning Objectives
 
-Get an overview of some well-known resources for:
+- Know about some common resources for free web applications assets
+- Look up tools on your own
+- Apply those tools to improve look and feel of a web app
+
+In this lesson you will get an overview of some well-known resources for:
 
 - Fonts
 - Color pickers

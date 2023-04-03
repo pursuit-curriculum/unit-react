@@ -74,9 +74,10 @@ sequence:
       kind: lesson
       activity: ~ # none
     - name: Project Workflow with Teams
-      pursuit_path: project-workflow
-      kind: lesson
-      activity: ~ # none
+      elements:
+        - kind: reading
+          pursuit_path: project-workflow
+        - kind: recording
     - name: React YouTube Clone Project
       pursuit_path: youtube-clone
       kind: project

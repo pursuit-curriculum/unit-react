@@ -45,6 +45,15 @@ sequence:
       kind: project
       activity: repository
       points: 7
+    - name: Introduction to Bootstrap with React
+      pursuit_path: intro-to-bootstrap-w-react
+      kind: lesson
+      activity: repository
+      starter: intro-to-bootstrap-w-react
+    - name: App Polishing
+      pursuit_path: app-polishing
+      kind: lesson
+      activity: ~
     - name: React Student Dashboard
       pursuit_path: student-dashboard
       activity: repository

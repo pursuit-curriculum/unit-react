@@ -20,22 +20,26 @@ sequence:
       pursuit_path: react-props
       kind: lesson
       activity: repository
+      starter: react-props
     - name: React State - Booleans, Numbers & Strings
       pursuit_path: react-state-primitive-values
       kind: lesson
       activity: repository
     - name: React State - Objects
       pursuit_path: react-state-objects
+      starter: react-state-objects
       kind: lesson
       activity: ~ # none, continue last lab
     - name: React Forms
       pursuit_path: react-forms
       kind: lesson
+      starter: react-forms
       activity: repository
     - name: React Lifting State
       pursuit_path: react-lifting-state
       kind: lesson
       activity: repository
+      starter: react-lifting-state
     - name: React Deployment
       pursuit_path: react-deployment
       kind: lesson
@@ -64,10 +68,12 @@ sequence:
       pursuit_path: react-lifecycle-networking
       kind: lesson
       activity: repository
+      starter: react-lifecycle-networking
     - name: Routing in React
       pursuit_path: react-router
       kind: lesson
       activity: repository
+      starter: react-router
     - name: React CRUD (Multi-part lesson and lab)
       pursuit_path: react-crud
       kind: lesson

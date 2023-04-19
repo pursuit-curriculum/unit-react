@@ -234,7 +234,7 @@ In order to be able to export both these messages, the `export` statement would 
 ```js
 const message = "Oh, hai!";
 const anotherMessage = "Oh, goodbye!";
-export { message, anotherMessage };
+export default { message, anotherMessage };
 ```
 
 To import these variables, go to `index.js`

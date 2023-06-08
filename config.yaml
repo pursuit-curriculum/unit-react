@@ -9,7 +9,7 @@ sequence:
         - kind: deck
         - kind: recording
     - name: NPM for React
-      pursuit_path: npm-for-react
+      pursuit_path: esm-modules
       kind: lesson
       activity: ~ # none
     - name: Introduction to React

@@ -1,16 +1,10 @@
-# NPM For React
+# ESM Modules
 
-In the upcoming lessons, you'll learn how to use a third-party open source library called React.
+Technology is always changing. While fundamental concepts stay the same, best practices tend to change over time.
 
-Before building a web application, you'll learn some basics about how to use Node.js and its libraries.
+One such change is Node.js's introduction and likely eventual transition to ESM modules. As you may recall, Node.js let's you create modules simply by creating new files and then exporting the code. The old system of doing this is called CJS (CommonJS) and it uses the syntax `module.exports` to export things and `require()` to import.
 
-## Node.js
-
-Initially, JavaScript only ran in web browsers. Then, Google built a JavaScript runtime engine called V8. V8 is used to run JavaScript in Google browsers. Additionally, JavaScript V8 can run outside of the browser.
-
-The V8 engine powers Node.js. The main goal of Node.js is to be able to build scalable web applications. Node.js comes bundled with npm (node package manager). npm is both an online resource with third-party code you can download and use in your projects as well as a command line program.
-
-It's essential to know that Node.js and npm are two separate programs. Node.js is what runs your JavaScript files, while npm manages metadata about the project and third-party libraries associated with the projects. It is possible to build a project that can be run by Node.js but doesn't use npm. It is not possible to use npm without using Node.js.
+The new way of creating modules with files uses the syntax `export` to export things and `import` to import. Noticeably, this syntax tends to be more easy to read.
 
 ## Creating a Node.js project
 
@@ -166,13 +160,13 @@ touch messages.js
 
 ```js
 // messages.js
-const message = "Oh, hai!";
+const message = "Oh, hai again!";
 ```
 
 You will need to export this message to be able to use it in another file. You will use the `export` statement. The keyword `default` will allow you to rename the variable when you import it elsewhere.
 
 ```js
-const message = "Oh, hai!";
+const message = "Oh, hai again!";
 
 export default message;
 ```
@@ -225,15 +219,15 @@ Add another variable to `messages.js`
 
 ```js
 // messages.js
-const message = "Oh, hai!";
-const anotherMessage = "Oh, goodbye!";
+const message = "Oh, hai again!";
+const anotherMessage = "Oh, goodbye again!";
 ```
 
 In order to be able to export both these messages, the `export` statement would have to be set to an object.
 
 ```js
-const message = "Oh, hai!";
-const anotherMessage = "Oh, goodbye!";
+const message = "Oh, hai again!";
+const anotherMessage = "Oh, goodbye again!";
 export { message, anotherMessage };
 ```
 
@@ -315,23 +309,34 @@ JSON can be integral to a project. However, the JSON format is very strict. If y
 Create a file called `donuts.json`, then copy and paste these values into it.
 
 ```json
-[
-  {
-    "id": "0001",
-    "type": "donut",
-    "name": "Cake"
-  },
-  {
-    "id": "0002",
-    "type": "donut",
-    "name": "Raised"
-  },
-  {
-    "id": "0003",
-    "type": "donut",
-    "name": "Old Fashioned"
-  }
-]
+{
+  "donuts": [
+    {
+      "id": 1,
+      "name": "Glazed Donut",
+      "price": 1.99,
+      "description": "Classic donut with a sweet glaze.",
+      "ingredients": ["flour", "sugar", "glaze"],
+      "image": "glazed_donut.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Chocolate Donut",
+      "price": 2.49,
+      "description": "Rich chocolate-flavored donut.",
+      "ingredients": ["flour", "sugar", "cocoa powder"],
+      "image": "chocolate_donut.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Strawberry Donut",
+      "price": 2.99,
+      "description": "Delicious donut with strawberry filling.",
+      "ingredients": ["flour", "sugar", "strawberry jam"],
+      "image": "strawberry_donut.jpg"
+    }
+  ]
+}
 ```
 
 Import the JSON and log the value to confirm it has been imported:

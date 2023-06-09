@@ -12,10 +12,18 @@ sequence:
       pursuit_path: esm-modules
       kind: lesson
       activity: ~ # none
+    - name: Employment Connection
+      elements:
+        - kind: deck
+        - kind: recording
     - name: Introduction to React
       pursuit_path: intro-to-react
       kind: lesson
       activity: repository
+    - name: React Deployment
+      pursuit_path: react-deployment
+      kind: lesson
+      activity: ~ # none coming soon
     - name: React Props
       pursuit_path: react-props
       kind: lesson
@@ -40,24 +48,13 @@ sequence:
       kind: lesson
       activity: repository
       starter: react-lifting-state
-    - name: React Deployment
-      pursuit_path: react-deployment
-      kind: lesson
-      activity: ~ # none coming soon
-    - name: Bird Sanctuary Project
-      pursuit_path: bird-sanctuary
-      kind: project
-      activity: repository
-      points: 7
-    - name: Introduction to Bootstrap with React
-      pursuit_path: intro-to-bootstrap-w-react
-      kind: lesson
-      activity: repository
-      starter: intro-to-bootstrap-w-react
-    - name: App Polishing
-      pursuit_path: app-polishing
-      kind: lesson
-      activity: ~
+      # Maybe replace lifting state lab with this (although it is likely a long lab)
+      # Maybe return as an extra practice some time in the future.
+      # - name: Bird Sanctuary Project
+      #   pursuit_path: bird-sanctuary
+      #   kind: project
+      #   activity: repository
+      # points: 100
     - name: React Student Dashboard
       pursuit_path: student-dashboard
       activity: repository
@@ -79,13 +76,22 @@ sequence:
       kind: lesson
       activity: repository
       starter: television-shows-api
-  Application Development:
+      # There is a react app starter code but it is the lab for these lessons
+    - name: Introduction to Bootstrap with React
+      pursuit_path: intro-to-bootstrap-w-react
+      kind: lesson
+      activity: repository
+      starter: intro-to-bootstrap-w-react
     - name: Collaboration with GitHub
       pursuit_path: collaboration-with-github
       kind: lesson
       activity: ~ #none
     - name: Merge Conflicts
       pursuit_path: merge-conflicts
+      kind: lesson
+      activity: ~ # none
+    - name: Group Norms and Teamwork
+      pursuit_path: group-norms-and-teamwork
       kind: lesson
       activity: ~ # none
     - name: Project Workflow with Teams
@@ -97,16 +103,50 @@ sequence:
       pursuit_path: youtube-clone
       kind: project
       activity: repository
-      points: 7
-    - name: Final Assessment
-      pursuit_path: final-react
-      kind: assessment
-      activity: repository
-      points: 26
+      points: 80
+    - name: React YouTube Clone Teamwork
+      kind: project
+      points: 20
     - name: Bonus - Convert Classes to Hooks
       pursuit_path: react-classes-to-hooks
       kind: lesson
       activity: repository
+  Application Development:
+    - name: Front-end Applications with Firebase
+      pursuit_path: front-end-apps-with-firebase
+      kind: lesson
+      activity: repository
+    - name: Researching External APIs
+      pursuit_path: researching-external-apis
+      kind: lesson
+      activity: repository
+    - name: Ideation and Problem Solving
+      pursuit_path: ideation-and-problem-solving
+      kind: lesson
+      activity: repository
+    - name: Feasibility Testing
+      pursuit_path: feasibility-testing
+      kind: lesson
+      activity: repository
+    - name: Planning as a Team
+      pursuit_path: planning-as-a-team
+      kind: lesson
+      activity: repository
+    - name: Product Feedback/Roundtable
+      pursuit_path: project-feedback-roundtable
+      kind: lesson
+      activity: repository
+    - name: Group Application Development Project
+      pursuit_path: group-application-development-project
+      kind: project
+      activity: repository
+      points: 60
+    - name: Group Application Development Teamwork
+      kind: project
+      points: 20
+    - name: Group Application Development Presentation
+      kind: project
+      points: 20
     - name: End of Module Reflection
       elements:
         - kind: deck

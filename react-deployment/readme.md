@@ -2,16 +2,12 @@
 
 You've been learning React, and soon you'll build a project using React. How do you share your work with others? To share, you must deploy your application to an online service.
 
-## Vocabulary
-
-- Deployment
-- Environmental variables
-- Continuous Deployment
-
 ## Objectives
 
+By the end of this lesson, you should be able to:
+
 - Deploy a React application to the web using Netlify.
-- Create `.env` configuration files that can be used within a React application created by the create-react-app program.
+- Create `.env` configuration files that can be used within a React application.
 - Configure environment variables on the Netlify platform.
 - Configure Netlify’s continuous deployment options to deploy whenever a commit is pushed to main regularly.
 
@@ -29,7 +25,7 @@ Another possibility is that your application is about a big event (for example, 
 
 These are real problems that many companies face with their applications, and one way to solve them is to outsource these issues. Many companies like AWS (Amazon Web Services), Heroku, Cloudflare, and more take applications and put them online and figure out the scaling, and other potential challenges of hosting for companies.
 
-Many of these services provide a free tier for hobby applications (they also may be referred to as toy apps). These will be for things like your portfolio or demo applications to show to potential employers. These apps will be available to limited audience for small amounts of time, usually with the goal of being able to see a sample of your work.
+Many of these services provide a free tier for hobby applications (they also may be referred to as toy apps). These will be for things like your labs, portfolio or demo applications to show to potential employers. These apps will be available to limited audience for small amounts of time, usually with the goal of being able to see a sample of your work.
 
 ## Configuration
 

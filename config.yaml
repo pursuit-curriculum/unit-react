@@ -8,10 +8,10 @@ sequence:
       elements:
         - kind: deck
         - kind: recording
-    - name: NPM for React
+    - name: ESM Modules
       pursuit_path: esm-modules
       kind: lesson
-      activity: ~ # none
+      activity: ~ # none - focus on reading intro to React pre-reading
     - name: Employment Connection
       elements:
         - kind: deck
@@ -23,13 +23,13 @@ sequence:
     - name: React Deployment
       pursuit_path: react-deployment
       kind: lesson
-      activity: ~ # none coming soon
+      activity: react-deployment
     - name: React Props
       pursuit_path: react-props
       kind: lesson
       activity: repository
       starter: react-props
-    - name: React State - Booleans, Numbers & Strings
+    - name: React State - Booleans, Numbers, & Strings
       pursuit_path: react-state-primitive-values
       kind: lesson
       activity: repository
@@ -59,7 +59,7 @@ sequence:
       pursuit_path: student-dashboard
       activity: repository
       kind: project
-      points: 10
+      points: 100
   Asynchronous Actions:
     - name: React Lifecycle Methods & Networking in React
       pursuit_path: react-lifecycle-networking
@@ -82,6 +82,11 @@ sequence:
       kind: lesson
       activity: repository
       starter: intro-to-bootstrap-w-react
+    - name: Project Workflow with Teams
+      elements:
+        - kind: reading
+          pursuit_path: project-workflow
+        - kind: recording
     - name: Collaboration with GitHub
       pursuit_path: collaboration-with-github
       kind: lesson
@@ -94,11 +99,6 @@ sequence:
       pursuit_path: group-norms-and-teamwork
       kind: lesson
       activity: ~ # none
-    - name: Project Workflow with Teams
-      elements:
-        - kind: reading
-          pursuit_path: project-workflow
-        - kind: recording
     - name: React YouTube Clone Project
       pursuit_path: youtube-clone
       kind: project
@@ -107,10 +107,12 @@ sequence:
     - name: React YouTube Clone Teamwork
       kind: project
       points: 20
-    - name: Bonus - Convert Classes to Hooks
-      pursuit_path: react-classes-to-hooks
-      kind: lesson
-      activity: repository
+    # Maybe move this to a guide?
+    # Syntax could be useful for fellows to know, though less and less so over time
+    # - name: Bonus - Convert Classes to Hooks
+    #   pursuit_path: react-classes-to-hooks
+    #   kind: lesson
+    #   activity: repository
   Application Development:
     - name: Front-end Applications with Firebase
       pursuit_path: front-end-apps-with-firebase

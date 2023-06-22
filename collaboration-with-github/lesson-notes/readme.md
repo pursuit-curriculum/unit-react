@@ -2,7 +2,7 @@
 
 ## Learning objectives
 
-By the end of this lesson you should be able to:
+By the end of this lesson, you should be able to:
 
 - Create branches locally on their own machine.
 - Merge branches locally and push those changes to GitHub.

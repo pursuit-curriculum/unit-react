@@ -1,10 +1,19 @@
 # ESM Modules
 
+## Introductions
+
 Technology is always changing. While fundamental concepts stay the same, best practices tend to change over time.
 
 One such change is Node.js's introduction and likely eventual transition to ESM modules. As you may recall, Node.js let's you create modules simply by creating new files and then exporting the code. The old system of doing this is called CJS (CommonJS) and it uses the syntax `module.exports` to export things and `require()` to import.
 
 The new way of creating modules with files uses the syntax `export` to export things and `import` to import. Noticeably, this syntax tends to be more easy to read.
+
+## Learning Objectives
+
+By the end of this lesson, you should be able to:
+
+- Create a new node project and set it up to use ESM modules rather than the current default CJS
+- Import and export modules using the ESM syntax
 
 ## Creating a Node.js project
 

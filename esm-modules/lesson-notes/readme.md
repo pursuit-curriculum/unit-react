@@ -6,6 +6,13 @@ Let's build a small node application together. We will work on an imaginary busi
 
 The company has sent over some data on some possible ice creams, but it's a bit hard to read and analyze the data in its current format. We'll build a little app that imports the data and then write some functions to explore the data.
 
+## Learning Objectives
+
+By the end of this lesson, you should be able to:
+
+- Create a new node project and set it up to use ESM modules rather than the current default CJS
+- Import and export modules using the ESM syntax
+
 ## Getting started
 
 - `mkdir icecream-flavors`.

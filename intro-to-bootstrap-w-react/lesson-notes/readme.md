@@ -2,6 +2,8 @@
 
 ## Learning Objectives
 
+By the end of this lesson, you should be able to:
+
 - Adding Bootstrap CSS to a project
 - Adding classes to HTML elements to style with Bootstrap CSS
 

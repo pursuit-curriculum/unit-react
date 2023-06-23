@@ -23,7 +23,7 @@ sequence:
     - name: React Deployment
       pursuit_path: react-deployment
       kind: lesson
-      activity: react-deployment
+      activity: repository
     - name: React Props
       pursuit_path: react-props
       kind: lesson
@@ -90,7 +90,7 @@ sequence:
     - name: Collaboration with GitHub
       pursuit_path: collaboration-with-github
       kind: lesson
-      activity: ~ #none
+      activity: repository # combined lab for this lesson and merge conflicts
     - name: Merge Conflicts
       pursuit_path: merge-conflicts
       kind: lesson
@@ -98,7 +98,28 @@ sequence:
     - name: Group Norms and Teamwork
       pursuit_path: group-norms-and-teamwork
       kind: lesson
-      activity: ~ # none
+      activity: canvas_text
+      activity_description: "<p>To complete this lab, you will need work with your partner(s) to establish some group norms for your project. </p>
+
+      <ul> 
+        <li>Read and discuss Group Norms</li>
+        <li>Read and discuss Working in Groups</li>
+        <li>Review the Working in Teams project rubric and discuss how your group norms will help you succeed with this project.""
+        <li>Create group norms based on your discussions, list them below.</li>
+        <p>Be sure to cover:</p>
+        <ul>
+          <li>Learn everyone's work hours outside of class time. </li>
+          <li>Discuss best methods of communication, in and out of class.</li>
+          <li>Determine initial work cadence (can be changed later)</li>
+        </ul>
+      </ul>
+       <p>Be sure to submit this assignment before starting on your app.</p>
+        <p>If you finish early, get started with:</p>
+        <ul>
+          <li>User stories</li>
+          <li>Wireframes</li>
+          <li>Creating a GitHub repository with a new React app and setting up collaborators</li>
+        </ul>""
     - name: React YouTube Clone Project
       pursuit_path: youtube-clone
       kind: project

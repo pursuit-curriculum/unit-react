@@ -87,42 +87,51 @@ Day 1:
 
 - App planning:
 
-- Trello
-- Wireframes
-- Feasibility testing
-- Reviewing project requirements and making sure you fully understand the prompt.
-- Asking clarifying questions
-- Planning your schedule for the week
-- Setting milestones
-- Checking in with your team (if you are working with others)
-- Set up a GitHub repository
+  - Trello
+  - Wireframes
+  - Feasibility testing
+  - Reviewing project requirements and making sure you fully understand the prompt.
+  - Asking clarifying questions
+  - Planning your schedule for the week
+  - Setting milestones
+  - Checking in with your team (if you are working with others)
+  - Set up a GitHub repository
 
 - Day 2:
 
-- Learn how to use map/geolocation API
-- Don't need to put it into your app right away. You should build a little test app or follow a tutorial that leads you to a working demo
-- If you do not progress sufficiently, pivot to another app idea.
+  - Learn how to use map/geolocation API
+  - Don't need to put it into your app right away. You should build a little test app or follow a tutorial that leads you to a working demo
+  - If you do not progress sufficiently, pivot to another app idea.
 
 - Day 3:
 
-- Build a basic app and deploy it
-- Build out a static version of the features (placeholders and stubs)
+  - Build a basic app and deploy it
+  - Build out a static version of the features (placeholders and stubs)
 
 - Day 4:
 
-- Integrate map/geolocation
-- Start building user interaction with the app
+  - Integrate map/geolocation
+  - Start building user interaction with the app
 
 - Day 5:
 
-- Plan to finish building user interaction with the app
+  - Plan to finish building user interaction with the app
 
 - Day 6:
-- Recheck project requirements, and address anything outstanding.
-- Polish
-- Squash bugs
-- Add error handling and improve UX/UI
-- Code freeze
+
+  - Recheck project requirements, and address anything outstanding.
+  - Polish
+  - Squash bugs
+  - Add error handling and improve UX/UI
+  - Code freeze
+
 - Day 7:
-- Review your work one final time, check the project requirements
-- Submit your work
+  - Review your work one final time, check the project requirements
+  - Submit your work
+
+It may be surprising that the app's core functionality is scheduled to be finished on day 5 and there is a code freeze initially planned for Day 6. There are several reasons for this:
+
+    - This conservative schedule gives you some buffer time in case you run into bugs or other major road blocks.
+    - Polishing an app is important. First impressions matter and an app with decent UX/UI will make a better impression, especially to non-technical people, so it is important to set aside time for it.
+    - When you are tired and rushed, you are more likely to make big mistakes that can take a long time to unravel.
+    - At some point, adding an extra hour of frenzied work won't significantly improve your app before the deadline.

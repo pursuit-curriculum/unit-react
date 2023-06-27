@@ -34,6 +34,7 @@ Write down the following questions.
 - Why is this problem important?
 - What were customers doing before the product existed?
 - How does this product compare to the alternatives?
+- Determine if this app is generally safe to use
 - How would you monetize this app?
 
 Submit your answer to the class slack so that everyone gets a chance to share their work. Choose 1-2 groups to discuss their case study.

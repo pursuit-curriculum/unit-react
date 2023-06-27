@@ -16,6 +16,7 @@ By the end of this lesson, you should be able to:
 - Brainstorm technological applications that would help solve the chosen problem.
 - Research what existing applications and businesses are geared towards solving the chosen problem.
 - Differentiate between different profit models for applications and choose one that applies to their chosen application.
+- Determine if this app is generally safe to use
 - Determine a monetization scheme for your app
 
 ## The Vision Comes Before The Skills
@@ -154,11 +155,25 @@ There is a new food craze: soup for lunch. Unfortunately, canned soup doesn't ha
 - The expected outcome is that more people will start enjoying soup for lunch.
 - This app is a new idea, but it could be an extended feature of one of the apps that does grocery delivery. It will generate a list of ingredients based on user preferences.
 
-## Research
+### Research
 
 Before hiring a team of people and having them spend hundreds or thousands of hours building something, extensive research would be done. This is a separate field from software engineering.
 
 For now, you will just use your own experiences to be the driver of building your idea.
+
+## Safety
+
+Will your app be safe to use on its own? If you were making a car sharing app, is just building the app sufficient?
+
+Probably not, you'd need to, at least, find a way to confirm that everyone has a driver's license.
+
+You would need to check whether the cars and drivers could get sufficient insurance.
+
+What happens if someone used the service to rob a bank!? Would you be held liable?
+
+How would you integrate background checks and verifying people's identities?
+
+There is more to an app than just code and taking the time to consider safety aspects of your app are important if you want the app to potentially become a viable business idea.
 
 ## Monetization
 

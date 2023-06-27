@@ -10,11 +10,10 @@ By the end of this lesson, you should be able to:
 - Identify how users will use your application and whether or not it is feasible.
 - Identify what features need not be fully implemented to develop an MVP for a prototype.
 - Plan milestones and time box things in order to keep the project moving forward
--
 
 ### Develop a plan to build a prototype
 
-As a class, choose a popular app that you would like to create a competitive app for. Imagine that you will have 1 week to build a prototpye to show to potential investors.
+As a class, choose a popular app that you would like to create a competitive app for. Imagine that you will have 1 week to build a prototype to show to potential investors.
 
 Write down the following questions.
 

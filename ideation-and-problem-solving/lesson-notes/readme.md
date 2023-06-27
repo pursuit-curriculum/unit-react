@@ -1,17 +1,14 @@
-# Ideation and Problem Solving
-
-## Introduction
+# Ideation and Problem-Solving
 
 ## Learning Objectives
 
 By the end of this lesson, you should be able to:
 
-- Be able to define what an industry is
-- Be able to name a technology that has aided an industry and briefly explain how that tech aided the industry
-- Explain the difference between an idea and ideation
-- Explain the purpose of ideation
-- Use the process of ideation to develop some ideas
-- Explain what MVP is and how it fits into the product building process
+- Identify a problem they experience or a problem that affects a community they care about.
+- Brainstorm technological applications that would help solve the chosen problem.
+- Research what existing applications and businesses are geared towards solving the chosen problem.
+- Differentiate between different profit models for applications and choose one that applies to their chosen application.
+- Determine a monetization scheme for your app
 
 ## Guiding Questions
 
@@ -23,13 +20,13 @@ By the end of this lesson, you should be able to:
 
 - Name some favorite apps. What industries do they belong to?
 
-## In class activity
+## In-class activity
 
-### Build a 'Case Study'
+### Build a 'Case Study
 
-In small groups choose an app to do a case study. Make sure no group is doing the same app.
+In small groups, choose an app to do a case study. Make sure no group is doing the same app.
 
-Write down the following questions
+Write down the following questions.
 
 - What is this product's vision?
 - Who is the target customer?
@@ -37,8 +34,9 @@ Write down the following questions
 - Why is this problem important?
 - What were customers doing before the product existed?
 - How does this product compare to the alternatives?
+- How would you monetize this app?
 
-Submit your answer to the class slack, so that everyone gets a chance to share their work. Choose 1-2 groups to discuss their case study.
+Submit your answer to the class slack so that everyone gets a chance to share their work. Choose 1-2 groups to discuss their case study.
 
 Recommended Apps/Companies:
 

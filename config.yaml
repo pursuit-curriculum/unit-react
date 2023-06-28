@@ -99,27 +99,28 @@ sequence:
       pursuit_path: group-norms-and-teamwork
       kind: lesson
       activity: canvas_text
-      activity_description: "<p>To complete this lab, you will need work with your partner(s) to establish some group norms for your project. </p>
+      activity_description: |
+        <p>To complete this lab, you will need work with your partner(s) to establish some group norms for your project. </p>
 
-      <ul> 
-        <li>Read and discuss Group Norms</li>
-        <li>Read and discuss Working in Groups</li>
-        <li>Review the Working in Teams project rubric and discuss how your group norms will help you succeed with this project.""
-        <li>Create group norms based on your discussions, list them below.</li>
-        <p>Be sure to cover:</p>
-        <ul>
-          <li>Learn everyone's work hours outside of class time. </li>
-          <li>Discuss best methods of communication, in and out of class.</li>
-          <li>Determine initial work cadence (can be changed later)</li>
+        <ul> 
+          <li>Read and discuss Group Norms</li>
+          <li>Read and discuss Working in Groups</li>
+          <li>Review the Working in Teams project rubric and discuss how your group norms will help you succeed with this project.
+          <li>Create group norms based on your discussions, list them below.</li>
+          <p>Be sure to cover:</p>
+          <ul>
+            <li>Learn everyone's work hours outside of class time. </li>
+            <li>Discuss best methods of communication, in and out of class.</li>
+            <li>Determine initial work cadence (can be changed later)</li>
+          </ul>
         </ul>
-      </ul>
-       <p>Be sure to submit this assignment before starting on your app.</p>
-        <p>If you finish early, get started with:</p>
-        <ul>
-          <li>User stories</li>
-          <li>Wireframes</li>
-          <li>Creating a GitHub repository with a new React app and setting up collaborators</li>
-        </ul>""
+        <p>Be sure to submit this assignment before starting on your app.</p>
+          <p>If you finish early, get started with:</p>
+          <ul>
+            <li>User stories</li>
+            <li>Wireframes</li>
+            <li>Creating a GitHub repository with a new React app and setting up collaborators</li>
+        </ul>
     - name: React YouTube Clone Project
       pursuit_path: youtube-clone
       kind: project
@@ -154,11 +155,11 @@ sequence:
     - name: Planning as a Team
       pursuit_path: planning-as-a-team
       kind: lesson
-      activity: repository
+      activity: ~ # none
     - name: Product Feedback/Roundtable
       pursuit_path: project-feedback-roundtable
       kind: lesson
-      activity: repository
+      activity: ~ # none
     - name: Group Application Development Project
       pursuit_path: group-application-development-project
       kind: project

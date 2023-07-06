@@ -136,11 +136,12 @@ sequence:
     #   pursuit_path: react-classes-to-hooks
     #   kind: lesson
     #   activity: repository
-  Application Development:
-    - name: Front-end Applications with Firebase
-      pursuit_path: front-end-apps-with-firebase
-      kind: lesson
-      activity: repository
+    # Postpone for now, move into Unit 4?
+    # Application Development:
+    #   - name: Front-end Applications with Firebase
+    #     pursuit_path: front-end-apps-with-firebase
+    #     kind: lesson
+    #     activity: repository
     - name: Researching External APIs
       pursuit_path: researching-external-apis
       kind: lesson
@@ -162,7 +163,7 @@ sequence:
       kind: lesson
       activity: ~ # none
     - name: Group Application Development Project
-      pursuit_path: group-application-development-project
+      pursuit_path: application-development
       kind: project
       activity: repository
       points: 60

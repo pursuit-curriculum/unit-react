@@ -139,7 +139,6 @@ sequence:
     #   pursuit_path: react-classes-to-hooks
     #   kind: lesson
     #   activity: repository
-<<<<<<< HEAD
     # Postpone for now, move into Unit 4?
     # Application Development:
     #   - name: Front-end Applications with Firebase
@@ -150,17 +149,6 @@ sequence:
       pursuit_path: researching-external-apis
       kind: lesson
       activity: repository
-=======
-  Application Development:
-    - name: Front-end Applications with Firebase
-      pursuit_path: front-end-apps-with-firebase
-      kind: lesson
-      activity: repository
-    - name: Researching External APIs
-      pursuit_path: researching-external-apis
-      kind: lesson
-      activity: repository
->>>>>>> aca3cc99a5fc68278b83104a1ec6c0d317f283c2
     - name: Ideation and Problem Solving
       pursuit_path: ideation-and-problem-solving
       kind: lesson

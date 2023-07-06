@@ -2,6 +2,8 @@
 
 ## Learning Objectives
 
+By the end of this lesson, you should be able to:
+
 - Know about some common resources for free web applications assets
 - Look up tools on your own
 - Apply those tools to improve look and feel of a web app

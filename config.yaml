@@ -8,12 +8,20 @@ sequence:
       elements:
         - kind: deck
         - kind: recording
-    - name: NPM for React
-      pursuit_path: npm-for-react
+    - name: ESM Modules
+      pursuit_path: esm-modules
       kind: lesson
-      activity: ~ # none
+      activity: ~ # none - focus on reading intro to React pre-reading
+    - name: Employment Connection
+      elements:
+        - kind: deck
+        - kind: recording
     - name: Introduction to React
       pursuit_path: intro-to-react
+      kind: lesson
+      activity: repository
+    - name: React Deployment
+      pursuit_path: react-deployment
       kind: lesson
       activity: repository
     - name: React Props
@@ -21,7 +29,7 @@ sequence:
       kind: lesson
       activity: repository
       starter: react-props
-    - name: React State - Booleans, Numbers & Strings
+    - name: React State - Booleans, Numbers, & Strings
       pursuit_path: react-state-primitive-values
       kind: lesson
       activity: repository
@@ -40,29 +48,18 @@ sequence:
       kind: lesson
       activity: repository
       starter: react-lifting-state
-    - name: React Deployment
-      pursuit_path: react-deployment
-      kind: lesson
-      activity: ~ # none coming soon
-    - name: Bird Sanctuary Project
-      pursuit_path: bird-sanctuary
-      kind: project
-      activity: repository
-      points: 7
-    - name: Introduction to Bootstrap with React
-      pursuit_path: intro-to-bootstrap-w-react
-      kind: lesson
-      activity: repository
-      starter: intro-to-bootstrap-w-react
-    - name: App Polishing
-      pursuit_path: app-polishing
-      kind: lesson
-      activity: ~
+      # Maybe replace lifting state lab with this (although it is likely a long lab)
+      # Maybe return as an extra practice some time in the future.
+      # - name: Bird Sanctuary Project
+      #   pursuit_path: bird-sanctuary
+      #   kind: project
+      #   activity: repository
+      # points: 100
     - name: React Student Dashboard
       pursuit_path: student-dashboard
       activity: repository
       kind: project
-      points: 10
+      points: 100
   Asynchronous Actions:
     - name: React Lifecycle Methods & Networking in React
       pursuit_path: react-lifecycle-networking
@@ -79,34 +76,101 @@ sequence:
       kind: lesson
       activity: repository
       starter: television-shows-api
-  Application Development:
-    - name: Collaboration with GitHub
-      pursuit_path: collaboration-with-github
+      # There is a react app starter code but it is the lab for these lessons
+    - name: Introduction to Bootstrap with React
+      pursuit_path: intro-to-bootstrap-w-react
       kind: lesson
-      activity: ~ #none
-    - name: Merge Conflicts
-      pursuit_path: merge-conflicts
-      kind: lesson
-      activity: ~ # none
+      activity: repository
+      starter: intro-to-bootstrap-w-react
     - name: Project Workflow with Teams
       elements:
         - kind: reading
           pursuit_path: project-workflow
         - kind: recording
+    - name: Collaboration with GitHub
+      pursuit_path: collaboration-with-github
+      kind: lesson
+      activity: repository # combined lab for this lesson and merge conflicts
+    - name: Merge Conflicts
+      pursuit_path: merge-conflicts
+      kind: lesson
+      activity: ~ # none
+    - name: Group Norms and Teamwork
+      pursuit_path: group-norms-and-teamwork
+      kind: lesson
+      activity: canvas_text
+      activity_description: |
+        <p>To complete this lab, you will need work with your partner(s) to establish some group norms for your project. </p>
+
+        <ul> 
+          <li>Read and discuss Group Norms</li>
+          <li>Read and discuss Working in Groups</li>
+          <li>Review the Working in Teams project rubric and discuss how your group norms will help you succeed with this project.
+          <li>Create group norms based on your discussions, list them below.</li>
+          <p>Be sure to cover:</p>
+          <ul>
+            <li>Learn everyone's work hours outside of class time. </li>
+            <li>Discuss best methods of communication, in and out of class.</li>
+            <li>Determine initial work cadence (can be changed later)</li>
+          </ul>
+        </ul>
+        <p>Be sure to submit this assignment before starting on your app.</p>
+          <p>If you finish early, get started with:</p>
+          <ul>
+            <li>User stories</li>
+            <li>Wireframes</li>
+            <li>Creating a GitHub repository with a new React app and setting up collaborators</li>
+        </ul>
     - name: React YouTube Clone Project
       pursuit_path: youtube-clone
       kind: project
       activity: repository
-      points: 7
-    - name: Final Assessment
-      pursuit_path: final-react
-      kind: assessment
-      activity: repository
-      points: 26
-    - name: Bonus - Convert Classes to Hooks
-      pursuit_path: react-classes-to-hooks
+      points: 80
+    - name: React YouTube Clone Teamwork
+      kind: project
+      points: 20
+    # Maybe move this to a guide?
+    # Syntax could be useful for fellows to know, though less and less so over time
+    # - name: Bonus - Convert Classes to Hooks
+    #   pursuit_path: react-classes-to-hooks
+    #   kind: lesson
+    #   activity: repository
+  Application Development:
+    - name: Front-end Applications with Firebase
+      pursuit_path: front-end-apps-with-firebase
       kind: lesson
       activity: repository
+    - name: Researching External APIs
+      pursuit_path: researching-external-apis
+      kind: lesson
+      activity: repository
+    - name: Ideation and Problem Solving
+      pursuit_path: ideation-and-problem-solving
+      kind: lesson
+      activity: repository
+    - name: Feasibility Testing
+      pursuit_path: feasibility-testing
+      kind: lesson
+      activity: repository
+    - name: Planning as a Team
+      pursuit_path: planning-as-a-team
+      kind: lesson
+      activity: ~ # none
+    - name: Product Feedback/Roundtable
+      pursuit_path: project-feedback-roundtable
+      kind: lesson
+      activity: ~ # none
+    - name: Group Application Development Project
+      pursuit_path: group-application-development-project
+      kind: project
+      activity: repository
+      points: 60
+    - name: Group Application Development Teamwork
+      kind: project
+      points: 20
+    - name: Group Application Development Presentation
+      kind: project
+      points: 20
     - name: End of Module Reflection
       elements:
         - kind: deck

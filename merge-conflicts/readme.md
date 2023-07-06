@@ -6,7 +6,7 @@ In this lesson you'll learn how to manage merge conflicts through the GitHub UI 
 
 ## Learning objectives
 
-By the end of this lesson you should be able to:
+By the end of this lesson, you should be able to:
 
 - Manage merge conflicts through the GitHub GUI.
 - Manage merge conflicts locally through the `git` program.

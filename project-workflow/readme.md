@@ -6,7 +6,7 @@ In this lesson, you'll learn about how software development teams work. You'll a
 
 ## Learning objectives
 
-By the end of this lesson you should be able to:
+By the end of this lesson, you should be able to:
 
 - Describe the daily workflow used by the industry to build complex applications.
 - Distinguish between business concerns and implementation details.

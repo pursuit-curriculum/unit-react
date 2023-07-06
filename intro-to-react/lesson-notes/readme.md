@@ -2,7 +2,7 @@
 
 ## Learning Objectives
 
-By the end of this lesson you should be able to:
+By the end of this lesson, you should be able to:
 
 - Understand what React is and what problem it solves.
 - Use Create React App to start a React project.

@@ -20,10 +20,7 @@ sequence:
       pursuit_path: intro-to-react
       kind: lesson
       activity: repository
-<<<<<<< HEAD
       starter: intro-to-react
-=======
->>>>>>> aca3cc99a5fc68278b83104a1ec6c0d317f283c2
     - name: React Deployment
       pursuit_path: react-deployment
       kind: lesson
@@ -145,10 +142,12 @@ sequence:
     #     pursuit_path: front-end-apps-with-firebase
     #     kind: lesson
     #     activity: repository
+
     - name: Researching External APIs
       pursuit_path: researching-external-apis
       kind: lesson
       activity: repository
+
     - name: Ideation and Problem Solving
       pursuit_path: ideation-and-problem-solving
       kind: lesson
@@ -166,11 +165,7 @@ sequence:
       kind: lesson
       activity: ~ # none
     - name: Group Application Development Project
-<<<<<<< HEAD
       pursuit_path: application-development
-=======
-      pursuit_path: group-application-development-project
->>>>>>> aca3cc99a5fc68278b83104a1ec6c0d317f283c2
       kind: project
       activity: repository
       points: 60

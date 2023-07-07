@@ -127,9 +127,8 @@ sequence:
       points_possible: 80
     - name: React YouTube Clone Teamwork
       kind: project
+      pursuit_path: youtube-clone
       activity: repository
-      activity_description: |
-        <p></p>
       points_possible: 20
     # Maybe move this to a guide?
     # Syntax could be useful for fellows to know, though less and less so over time

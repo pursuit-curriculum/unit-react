@@ -20,7 +20,6 @@ sequence:
       pursuit_path: intro-to-react
       kind: lesson
       activity: repository
-      starter: intro-to-react
     - name: React Deployment
       pursuit_path: react-deployment
       kind: lesson
@@ -87,7 +86,6 @@ sequence:
       elements:
         - kind: reading
           pursuit_path: project-workflow
-        - kind: recording
     - name: Collaboration with GitHub
       pursuit_path: collaboration-with-github
       kind: lesson
@@ -129,6 +127,9 @@ sequence:
       points: 80
     - name: React YouTube Clone Teamwork
       kind: project
+      activity: canvas_url
+      activity_description: |
+        <p></p>
       points: 20
     # Maybe move this to a guide?
     # Syntax could be useful for fellows to know, though less and less so over time
@@ -171,9 +172,15 @@ sequence:
       points: 60
     - name: Group Application Development Teamwork
       kind: project
+      activity: canvas_url
+      activity_description: |
+        <p></p>
       points: 20
     - name: Group Application Development Presentation
       kind: project
+      activity: canvas_url
+      activity_description: |
+        <p></p>
       points: 20
     - name: End of Module Reflection
       elements:

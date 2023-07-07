@@ -54,12 +54,12 @@ sequence:
       #   pursuit_path: bird-sanctuary
       #   kind: project
       #   activity: repository
-      # points: 100
+      # points_possible: 100
     - name: React Student Dashboard
       pursuit_path: student-dashboard
       activity: repository
       kind: project
-      points: 100
+      points_possible: 100
   Asynchronous Actions:
     - name: React Lifecycle Methods & Networking in React
       pursuit_path: react-lifecycle-networking
@@ -124,13 +124,13 @@ sequence:
       pursuit_path: youtube-clone
       kind: project
       activity: repository
-      points: 80
+      points_possible: 80
     - name: React YouTube Clone Teamwork
       kind: project
-      activity: canvas_url
+      activity: repository
       activity_description: |
         <p></p>
-      points: 20
+      points_possible: 20
     # Maybe move this to a guide?
     # Syntax could be useful for fellows to know, though less and less so over time
     # - name: Bonus - Convert Classes to Hooks
@@ -165,23 +165,23 @@ sequence:
       pursuit_path: project-feedback-roundtable
       kind: lesson
       activity: ~ # none
-    - name: Group Application Development Project
+    - name: Group Application Development
       pursuit_path: application-development
       kind: project
       activity: repository
-      points: 60
+      points_possible: 60
     - name: Group Application Development Teamwork
       kind: project
-      activity: canvas_url
+      activity: repository
       activity_description: |
         <p></p>
-      points: 20
+      points_possible: 20
     - name: Group Application Development Presentation
       kind: project
-      activity: canvas_url
+      activity: repository
       activity_description: |
         <p></p>
-      points: 20
+      points_possible: 20
     - name: End of Module Reflection
       elements:
         - kind: deck

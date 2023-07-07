@@ -126,8 +126,8 @@ sequence:
       activity: repository
       points_possible: 80
     - name: React YouTube Clone Teamwork
-      kind: project
       pursuit_path: youtube-clone
+      kind: project
       activity: repository
       points_possible: 20
     # Maybe move this to a guide?
@@ -142,12 +142,11 @@ sequence:
     #     pursuit_path: front-end-apps-with-firebase
     #     kind: lesson
     #     activity: repository
-
+  Application Development:
     - name: Researching External APIs
       pursuit_path: researching-external-apis
       kind: lesson
       activity: repository
-
     - name: Ideation and Problem Solving
       pursuit_path: ideation-and-problem-solving
       kind: lesson

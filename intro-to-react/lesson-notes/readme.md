@@ -19,16 +19,16 @@ The final app will look similar to this:
 
 ![In class build](../assets/class-build.png)
 
-There are several ways to [create an application with React or add React to a current project](https://reactjs.org/docs/getting-started.html). We'll use `Create-React-App`, which is a feature-rich application that has the following features:
+There are several ways to [create an application with React or add React to a current project](https://vitejs.dev/guide/). We'll use `Vite`, which is a feature-rich application that has the following features:
 
 - Automatic browser reloading when you make a change and other pre-configurations that make using it very easy
 - Helpful error messages
 - File and folder structure that is easy to use and maintain
 - Configured for easy deployment
 
-To use Create-React-App to create a new app:
+To use Vite to create a new app:
 
-- `npx create-react-app@5.0 my-app`
+- `npm create vite@latest my-app`
 
 Inside this project, you will see the following files.
 

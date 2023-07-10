@@ -27,7 +27,7 @@ npm i
 
 You may find this lesson quite challenging to code along with, as refactoring as a class is challenging work. Or, if you are looking to be challenged more, you can go back to the last version of this app (completed build from react-forms) and try to refactor the app to have a separate form and list item components.
 
-Refactoring in React is challenging and time-consuming. The best way to avoid it is to plan by [Thinking in React](https://reactjs.org/docs/thinking-in-react.html).
+Refactoring in React is challenging and time-consuming. The best way to avoid it is to plan by [Thinking in React](https://react.dev/learn/thinking-in-react).
 
 ## Data flows down
 

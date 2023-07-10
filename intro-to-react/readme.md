@@ -9,9 +9,9 @@ At first, there is a steep learning curve to learn the basics, but once you lear
 By the end of this lesson, you should be able to:
 
 - Understand what React is and what problem it solves.
-- Use Create React App to start a React project.
-- Understand the role of the files and folders in Create React App starter code.
-- Create a simple application that uses React to render its front end.
+- Use Vite to start a React project.
+- Understand the role of the files and folders in Vite starter code.
+- Create a simple application that uses React to render its front-end.
 
 <hr>
 
@@ -28,16 +28,14 @@ You have built interactive web pages with Vanilla JavaScript (Vanilla refers to 
 - The files became very large.
 - The code was hard to organize.
 - The lines of code were lengthy, and it could be hard to find what you were looking for.
-- It was likely hard to update a small piece because all the surrounding code was particular to specific HTML element `id`s and `classes` and thus had to be updated as well.
+- It was likely hard to update a small piece because all the surrounding code was particular to specific HTML element's `id`s and `classes` and thus had to be updated as well.
 - It could be hard to create a reusable bit of code for all the reasons above.
 - Creating logic to update multiple components likely led to [spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code).
 - Updating the DOM could become slow and inefficient.
 
-Other developers have shared these same pain points and decided to create a different approach to building front-end applications amd share them with others. Typically, these projects are called `third-party open-source libraries.`
+Other developers have shared these same pain points and decided to create a different approach to building front-end applications amd share them with others. Typically, these projects are called `third-party open-source libraries.` Open source software is free for anyone to use and free for anyone to contribute.
 
 Typically, the first-party is you. The second-party is the client or employer you are working for. A third-party is a separate entity that will assist in some way.
-
-[Open source software is free for anyone to use and free for anyone to contribute.](free for anyone to use and free for anyone to contribute.)
 
 A library is a collection of code that will assists you in building something. It can also be referred to as a framework.
 
@@ -49,11 +47,11 @@ You can compare your options to cooking a meal.
 
 People tend to create third-party open-source libraries or third-party frameworks whenever code becomes difficult to manage or certain essential qualities are helpful in many projects.
 
-React is a third-party library that you can download and use to make building robust websites easier.
+React is a third-party library that you can download and use to make building robust websites easier. You will also use Vite which is an app that makes developing apps for web browsers easier.
 
 ## Introduction to React
 
-React is a JavaScript library that was created by Facebook. Developers use React to build web applications' UI and front-end logic. Until now, you have been building UI by writing a single large HTML file, then linking it to a JavaScript file. The JavaScript file uses [DOM manipulation](https://github.com/joinpursuit/Pursuit-Core-Web/tree/master/html_css_dom/dom_1) to edit, add, and remove elements in response to user interaction. This approach has worked well for so far, but has some challenges when scaling to larger applications. Consider the following image:
+React is a JavaScript library that was created by Facebook. Developers use React to build web applications' UI and front-end logic. Until now, you have been building UI by writing a single large HTML file, then linking it to a JavaScript file. The JavaScript file uses DOM manipulation to edit, add, and remove elements in response to user interaction. This approach has worked well for so far, but has some challenges when scaling to larger applications. Consider the following image:
 
 ![Facebook homepage redesign](<https://cdn.vox-cdn.com/thumbor/0KnV_DIxDm00kPsX8hR0f4ZzMIU=/0x0:2048x1410/920x613/filters:focal(861x542:1187x868):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/63696407/facebook_website_redesign_1.9.jpg>)
 
@@ -76,13 +74,13 @@ To handle the updates based on user interaction, React has a different approach 
 
 ## React in terms of code
 
-You can begin coding in react by [Trying React](https://reactjs.org/docs/getting-started.html#try-react) from the examples in the docs. To summarize here, you have a few options:
+You can begin coding in react by [Trying React](https://react.dev/learn) from the examples in the docs. To summarize here, you have a few options:
 
 - Use an online playground like CodePen or CodeSandbox. These are useful for essential learning and experimentation: just like you used repl.it (or similar) at the start of your coding journey, this zero-configuration that works in any browser and on any computer and can be a great option to get started.
 - You can add React to a website with script tags. This is another fast and easy way to try React.
-- You can use a Create React App. This application has many useful basic configurations and features to help make your code ready for production.
+- You can use a Vite. This application has many useful basic configurations and features to help make your code ready for production.
 
-In this unit, you will use Create React App primarily for the following features:
+In this unit, you will use Vite primarily for the following features:
 
 - Automatic browser reloading when you make a change and other pre-configurations that make using it very easy.
 - Helpful error messages.
@@ -97,9 +95,9 @@ In the terminal, navigate to a convenient location on your computer and type:
 
 - `npx create-react-app@5.0 my-social-media-app`
   - **npx** allows you to download what you need to create a new create-react-app one time and then delete the unnecessary set-up files.
-  - **create-react-app** allows you to start a new Create React App project
-  - **@5.0** allows you to download version 5.0 of Create React App. Setting the version is helpful for class. Utilizing the same version will allow you, your instructors, and the class notes to have the same version to learn and study. If you don't include this, it will download the latest version, which may have some variations to what you see in class.
-  - **my-social-media-app** this is the name of your project and the folder that will contain your Create React App. You can name it anything you want.
+  - **create-react-app** allows you to start a new Vite project
+  - **@5.0** allows you to download version 5.0 of Vite. Setting the version is helpful for class. Utilizing the same version will allow you, your instructors, and the class notes to have the same version to learn and study. If you don't include this, it will download the latest version, which may have some variations to what you see in class.
+  - **my-social-media-app** this is the name of your project and the folder that will contain your Vite. You can name it anything you want.
 
 Inside this project, you will see the following folders and files.
 
@@ -124,7 +122,7 @@ npm start
 
 > **Note** The app can take a long time to download and start.
 
-## Create React App files and folders
+## Vite files and folders
 
 This section will break down what each file and folder does. There is a lot of boilerplate code you will not need to use or change for labs, assessments, or even some projects for this course. However, they will be explained below so you can comfortably navigate the application.
 
@@ -132,11 +130,11 @@ This section will break down what each file and folder does. There is a lot of b
 
 #### `README.md`
 
-There is some boilerplate information about Create React App in this file. If you create your own project that you want to share with people, you should replace most or all of the content here with information about your project.
+There is some boilerplate information about Vite in this file. If you create your own project that you want to share with people, you should replace most or all of the content here with information about your project.
 
 ### `node_modules/`
 
-This folder contains many folders containing all of the code to run Create React App. You can peek inside, but you won't need to change any code here.
+This folder contains many folders containing all of the code to run Vite. You can peek inside, but you won't need to change any code here.
 
 #### `package-lock.json`
 
@@ -182,7 +180,7 @@ All the React code will be loaded inside of this `div`.
 
 #### `logo192.png` and `logo512.png`
 
-These are linked in the `index.html` and `manifest.json`. If you are building a professional app, you would swap the React icons for your app's icons; Create React App demonstrates the best practice with these examples.
+These are linked in the `index.html` and `manifest.json`. If you are building a professional app, you would swap the React icons for your app's icons; Vite demonstrates the best practice with these examples.
 
 #### `manifest.json`
 
@@ -231,15 +229,15 @@ Then there is a `root` variable. This will be discussed in more detail below.
 
 ### App.js
 
-If you have started the Create React App and it has loaded in the browser, you can see the contents of this file.
+If you have started the Vite and it has loaded in the browser, you can see the contents of this file.
 
 **Note** If a view has not opened in the browser, try going to http://localhost:3000
 
-![Create React App initial view](./assets/create-react-app-initial.png)
+![Vite initial view](./assets/create-react-app-initial.png)
 
 You can edit this file and see changes reload when you have saved the file. Try to edit the text `Learn React` to something else; for example, `React is very cool!`
 
-Now that you have oriented yourself inside Create React App and have looked at some of the provided code examples, you can return to learning how React's syntax and strategy is different from vanilla JavaScript.
+Now that you have oriented yourself inside Vite and have looked at some of the provided code examples, you can return to learning how React's syntax and strategy is different from vanilla JavaScript.
 
 ## Introduction to JSX
 
@@ -247,7 +245,7 @@ Look at the `src/App.js` file and lok at it in the browser again. To the user, t
 
 However, looking at `App.js`, you will note that some of this code doesn't look quite like HTML or JavaScript. It actually looks like a mix of the two.
 
-This mix is called `JSX`, and it [extends the syntax of JavaScript](https://reactjs.org/docs/introducing-jsx.html). In short, it allows for creating dynamic HTML components in a syntax that is easy to read and update.
+This mix is called `JSX`, and it [extends the syntax of JavaScript](https://react.dev/learn/writing-markup-with-jsx). In short, it allows for creating dynamic HTML components in a syntax that is easy to read and update.
 
 Simplify the `App.js` file so that you can focus on each line of code and understand what it does. The following code should give you a blank but functional web page:
 
@@ -333,7 +331,7 @@ return <div className="App">{hello}</div>;
 
 This should seem familiar: with regular JavaScript, you could use string interpolation that used backticks \` and then curly braces with a dollar sign `${}` to evaluate an expression before turning it into a string. The syntax here is slightly different but effectively does the same thing.
 
-[React JSX documentation](https://reactjs.org/docs/introducing-jsx.html) gives more examples of how JSX can be used. This time, call a function, `formatName`, in the embedded expression. The return value of this function, `My Name`, is then added to the `h1` element after `Hello`:
+[React JSX documentation](https://react.dev/learn/javascript-in-jsx-with-curly-braces) gives more examples of how JSX can be used. This time, call a function, `formatName`, in the embedded expression. The return value of this function, `My Name`, is then added to the `h1` element after `Hello`:
 
 ```jsx
 // src/App.js
@@ -591,7 +589,9 @@ root.render(
 );
 ```
 
-> **Note** `React.StrictMode` is a special wrapper that enforces best practices for React and also will disallow older React syntax that will eventually become obsolete. It will also cause your components to render twice while in development: when you debug by adding console logs, you may notice things log twice, it might be caused by this wrapper. [Strict Mode](https://reactjs.org/docs/strict-mode.html)
+Depending on the version (old, somewhat new, very new), you may or may not have your app wrapped in `StrictMode`.
+
+> **Note** `React.StrictMode` is a special wrapper that enforces best practices for React and also will disallow older React syntax that will eventually become obsolete. It will also cause your components to render twice while in development: when you debug by adding console logs, you may notice things log twice, it might be caused by this wrapper. [Strict Mode](https://react.dev/reference/react/StrictMode#strictmode)
 
 You can remove it to simplify this example:
 
@@ -603,14 +603,14 @@ root.render(<App />);
 
 `ReactDOM.createRoot()` function accepts an argument that will be an existing DOM element where you want to load React. It uses vanilla JavaScript to find this element in the DOM (from `public/index.html`). It returns an object that has a method `render()`. Render will accept a single element like `App`, which will be the top level component loaded into the DOM.
 
-Learn more about [Rendering Elements](https://reactjs.org/docs/rendering-elements.html) from the official React documentation.
+Learn more about [Rendering Elements](https://react.dev/learn/conditional-rendering) from the official React documentation.
 
 ## Readings
 
-- [React - Official Website](https://reactjs.org/)
+- [React - Official Website](https://react.dev)
+  - Old documentation (pre 2023) - [React - Official Website](https://reactjs.org/)
 - [The Virtual DOM](https://www.codecademy.com/articles/react-virtual-dom)
-- [Rendering Elements - React Docs](https://reactjs.org/docs/rendering-elements.html)
-- [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
+- [Rendering Elements - React Docs](https://react.dev/learn/rendering-lists)
 
 ## Vocabulary
 

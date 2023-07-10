@@ -78,7 +78,7 @@ useEffect(() => {
 }, [someValue, anotherValue]);
 ```
 
-To avoid an infinite loop, you add another `useEffect()` function to handle different state changes.  
+To avoid an infinite loop, you add another `useEffect()` function to handle different state changes.
 
 ```js
 // DEMO, do not code:
@@ -87,7 +87,7 @@ useEffect(() => {
 }, [someValue]);
 
 useEffect(() => {
- getAnotherValue();
+  getAnotherValue();
 }, [anotherValue]);
 ```
 
@@ -187,7 +187,7 @@ Example warning:
 
 This warning is usually a good one that while you have code that works, it likely is not the best way to achieve what you are looking for and further coding may lead to bugs.
 
-Before confirming that your code is ok, review [the docs](https://reactjs.org/docs/hooks-faq.html#performance-optimizations) which recommend trying the following steps first:
+Before confirming that your code is ok, review the docs, which recommend trying the following steps first:
 
 - Move the entire function into `useEffect()`
 - Move the function outside the component (if the function does not reference any props or state)

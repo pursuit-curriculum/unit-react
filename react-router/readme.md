@@ -52,9 +52,3 @@ Let's stick with the following patterns:
 - Show pages will be `nested` from their `index` page and have a unique identifier. GitHub used repository and file names, but another typical pattern is to use `id`s. An `id` is a unique identifying number or string for some data (a user, a product, etc.). Ids are used to be able to look up a specific piece of data, even if the data changes. For example, someone's email may change, so choosing that as a unique identifier could be a problem. Names, phone numbers, and addresses also may not be unique. If you think about cars, many cars have the same model, color, and year, but all have their unique id (VIN). Some examples of show pages:
 - `/shoes/1234`
 - `/cars/sedans/2022/hLm88324`
-
-## Resources
-
-- [React Router - Official Website](https://reactrouter.com/docs/en/v6)
-- [React Router - github](https://github.com/ReactTraining/react-router)
-- [Composition vs Inheritance - React Docs](https://reactjs.org/docs/composition-vs-inheritance.html)

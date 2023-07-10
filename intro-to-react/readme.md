@@ -17,7 +17,7 @@ By the end of this lesson, you should be able to:
 
 ## Demo app
 
-This is the full code for the examples in this pre-reading. You may try to code out the examples to learn or to use the final code as a reference. [link](https://github.com/joinpursuit/Pursuit-Core-Web-React-Introduction-Project)
+This is the full code for the examples in this pre-reading. You may try to code out the examples to learn or to use the final code as a reference. [link](https://github.com/pursuit-curriculum-resources/demo-intro-to-react)
 
 ![Demo App Complete](./assets/demo-app-complete.png)
 
@@ -33,7 +33,7 @@ You have built interactive web pages with Vanilla JavaScript (Vanilla refers to 
 - Creating logic to update multiple components likely led to [spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code).
 - Updating the DOM could become slow and inefficient.
 
-Other developers have shared these same pain points and decided to create a different approach to building front-end applications amd share them with others. Typically, these projects are called `third-party open-source libraries.` Open source software is free for anyone to use and free for anyone to contribute.
+Other developers have shared these same pain points and decided to create a different approach to building front-end applications amd share them with others. These projects are called `third-party open-source libraries.` Open source software is free for anyone to use and free for anyone to contribute.
 
 Typically, the first-party is you. The second-party is the client or employer you are working for. A third-party is a separate entity that will assist in some way.
 
@@ -42,7 +42,7 @@ A library is a collection of code that will assists you in building something. I
 You can compare your options to cooking a meal.
 
 - You can make a meal from scratch - this gives you the most flexibility and control, but it also is the most time consuming. This is like coding an entire project from scratch.
-- You can choose some items to be pre-made, like pasta, butter, or pickles. These are generic food items that someone else has made that help you speed up your cooking process, but these products don't have an opinion on what kind of dishes to used for. These items are like code libraries
+- You can choose some items to be pre-made, like pasta, butter, or pickles. These are generic food items that someone else has made that help you speed up your cooking process, but these products don't have an opinion on what kind of dishes to you'll make with them. These items are like code libraries.
 - You can buy some pre-made food like brownie mix or frozen dinners, these items have been made with a specific meal in mind. These items are like frameworks.
 
 People tend to create third-party open-source libraries or third-party frameworks whenever code becomes difficult to manage or certain essential qualities are helpful in many projects.
@@ -53,7 +53,7 @@ React is a third-party library that you can download and use to make building ro
 
 React is a JavaScript library that was created by Facebook. Developers use React to build web applications' UI and front-end logic. Until now, you have been building UI by writing a single large HTML file, then linking it to a JavaScript file. The JavaScript file uses DOM manipulation to edit, add, and remove elements in response to user interaction. This approach has worked well for so far, but has some challenges when scaling to larger applications. Consider the following image:
 
-![Facebook homepage redesign](<https://cdn.vox-cdn.com/thumbor/0KnV_DIxDm00kPsX8hR0f4ZzMIU=/0x0:2048x1410/920x613/filters:focal(861x542:1187x868):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/63696407/facebook_website_redesign_1.9.jpg>)
+![Facebook homepage redesign](./assets/facebook_website_redesign_1.9.jpg.webp)
 
 There are at least four entirely distinct UI elements on the page, including:
 
@@ -74,11 +74,13 @@ To handle the updates based on user interaction, React has a different approach 
 
 ## React in terms of code
 
-You can begin coding in react by [Trying React](https://react.dev/learn) from the examples in the docs. To summarize here, you have a few options:
+You can begin coding in React by [Trying React](https://react.dev/learn) from the examples in the docs.
 
 - Use an online playground like CodePen or CodeSandbox. These are useful for essential learning and experimentation: just like you used repl.it (or similar) at the start of your coding journey, this zero-configuration that works in any browser and on any computer and can be a great option to get started.
 - You can add React to a website with script tags. This is another fast and easy way to try React.
 - You can use a Vite. This application has many useful basic configurations and features to help make your code ready for production.
+
+There are numerous other ways to create a new React app. Many references you'll find are focused on creating production-level applications. While these rich resources are powerful, they are also needlessly complex for someone who is just starting out and building small demo applications. When you've mastered the fundamentals and are ready to build a production level app, you can take the steps to grow your knowledge to learn the additional things that go into a professional-level application.
 
 In this unit, you will use Vite primarily for the following features:
 
@@ -93,20 +95,34 @@ Please feel free to read through or code along with the following code examples.
 
 In the terminal, navigate to a convenient location on your computer and type:
 
-- `npx create-react-app@5.0 my-social-media-app`
-  - **npx** allows you to download what you need to create a new create-react-app one time and then delete the unnecessary set-up files.
-  - **create-react-app** allows you to start a new Vite project
-  - **@5.0** allows you to download version 5.0 of Vite. Setting the version is helpful for class. Utilizing the same version will allow you, your instructors, and the class notes to have the same version to learn and study. If you don't include this, it will download the latest version, which may have some variations to what you see in class.
+- `npm create vite@4 my-app-social-media-app`
+  - **create vite** allows you to start a new Vite project
+    - Use the walkthroughs to select `React` and `JavaScript`
+  - **@4** allows you to download version 4.x of Vite. Setting the version is helpful for class. Utilizing the same version will allow you, your instructors, and the class notes to have the same version to learn and study. If you don't include this, it will download the latest version, which may have some variations to what you see in class.
   - **my-social-media-app** this is the name of your project and the folder that will contain your Vite. You can name it anything you want.
 
-Inside this project, you will see the following folders and files.
+Inside this project,run
+
+- `npm install`
+
+The flow should look similar to this
+
+![new vite react app](./assets/new-vite-choose-react.png)
+
+![choose JavaScript](./assets/new-vite-choose-javascript.png)
+
+![Start new app app](./assets/new-vite-start-app.png)
+
+Then, you will see the following folders and files:
 
 ```
-.
-├── README.md
-├── node_modules/
+├── .gitignore
+├── .eslintrc.cjs
+├── vite.config.js
 ├── package-lock.json
 ├── package.json
+├── node_modules/
+├── index.html
 ├── public/
 └── src/
 ```
@@ -117,24 +133,33 @@ To start the app, follow the instructions in the terminal. They should look like
 
 ```
 cd my-social-media-app
-npm start
+npm install
+npm run dev
 ```
 
-> **Note** The app can take a long time to download and start.
+> **Note**: `npm run dev` may be `npm start` instead. You can always check inside `package.json`.
 
 ## Vite files and folders
 
 This section will break down what each file and folder does. There is a lot of boilerplate code you will not need to use or change for labs, assessments, or even some projects for this course. However, they will be explained below so you can comfortably navigate the application.
 
-> **Note** The only boilerplate file you will be heavily editing for your in-class builds is `src/App.js`.
+> **Note** The only boilerplate file you will be heavily editing for your in-class builds is `src/App.jsx`.
 
-#### `README.md`
+#### `.gitignore`
 
-There is some boilerplate information about Vite in this file. If you create your own project that you want to share with people, you should replace most or all of the content here with information about your project.
+This is a file that tells git which files to ignore. Not every file should be tracked or stored on GitHub.
 
-### `node_modules/`
+An example is the file `.DS_Store`. `.DS_Store` is a Mac-specific file that tracks if files (or folders) have been moved or deleted. It allows for the functionality on a Mac computer to undo moved or deleted files. As helpful as this functionality is to you, it is not needed for a React application. Therefore it should not be tracked by git.
 
-This folder contains many folders containing all of the code to run Vite. You can peek inside, but you won't need to change any code here.
+#### `.eslintrc.cjs`
+
+This sets some common and best practices for formatting React. If you have a formatter in place, whenever you save, it will update your code to align with these rules, as best as possible. If you do not have a formatter installed, it will typically underline or highlight what it thinks you should correct so you can match the styles set here.
+
+It's important to note that local configuration files like this will override any global rules you may have set.
+
+#### `vite.config.js`
+
+This is a customizable configuration file for Vite to load React. For now, it is already set up for you. You could update it at a future time, if your needs change.
 
 #### `package-lock.json`
 
@@ -148,53 +173,27 @@ Metadata is data about data. One of the most common examples of metadata is the 
 
 The `package.json` is the metadata for this project. You can edit some of the content here (like adding an `author` field - so you can put your name in this project). However, you must keep the format in proper [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
 
-#### `.gitignore`
+### `node_modules/`
 
-This is a file that tells git which files to ignore. Not every file should be tracked or stored on GitHub.
+This folder contains many folders containing all of the code to run Vite and React. You can peek inside, but you won't need to change any code here. These files are determined by `package.json` and `package-lock.json`.
 
-An example is the file `.DS_Store`. `.DS_Store` is a Mac-specific file that tracks if files (or folders) have been moved or deleted. It allows for the functionality on a Mac computer to undo moved or deleted files. As helpful as this functionality is to you, it is not needed for a React application. Therefore it should not be trackd by git.
+The top level dependencies like `react` can be found in the `package.json` file. React depends on numerous other packages: `package-lock.json` keeps track of all the other packages (and their versions) that React depends on (and the packages those packages depend on).
+
+### `index.html`
+
+This is the page that gets loaded into the browser. The React app will be loaded inside of the `div` with the `id` of `root`. You can change things here, like the title and favicon. However, you must always keep the `div` with the `id` of `root` and the `script` with the `type`, `module` and `src` set to `src/main.jsx`.
 
 ### `public/`
 
-This is a folder that contains:
+This is a folder that contains any public static assets. This folder is more important for production level applications that need to work in multiple browsers.
 
-#### `favicon.ico`
+#### `vite.svg`
 
-This is the little icon that shows up in the browser tab.
-
-#### `index.html`
-
-This is the file that gets loaded into the browser. If you open it, you will see:
-
-A title, you can change this to whatever you want.
-
-A few default meta and link tags. There is no need to change or update them at this time.
-
-Scroll down to the body and look for:
-
-```
- <div id="root"></div>
-```
-
-All the React code will be loaded inside of this `div`.
-
-#### `logo192.png` and `logo512.png`
-
-These are linked in the `index.html` and `manifest.json`. If you are building a professional app, you would swap the React icons for your app's icons; Vite demonstrates the best practice with these examples.
-
-#### `manifest.json`
-
-This file contains more metadata. In contrast to `package.json`, `package.json` is only visible to developers, `manifest.json` has data that can be made available to people using your application and for SEO (search engine optimization).
-
-#### `robots.txt`
-
-There are many [web crawlers](https://en.wikipedia.org/wiki/Web_crawler) and [web scrapers](https://en.wikipedia.org/wiki/Web_scraping) on the internet. The most well-known crawler is Google. Its job is to explore and learn about your web page and index it so it can appear in a Google search. Web scrapers take data from your website and can use it for their own purposes: a good example is a website that compares hotel prices across many websites.
-
-The `robots.txt` allows you to set some preference for what to crawl and scrape. These rules don't actually block any activity, but it is expected that the bots would be written to abide by what is set up here. Since you are not putting this app online, there is no need to modify this file.
+This is a [scalable vector graphic](https://en.wikipedia.org/wiki/SVG). It is simple and drawn using code, which allows it to scale to be smaller than a postage stamp, or as big as a billboard and never lose any loss of quality. This example is imported into `App.jsx` to demonstrate how to import and use one.
 
 ### `src/`
 
-The `src/` folder (short for source) is where you will build your React application. All the code in this folder will be bundled to build your React application. If you try to add code or assets outside of this folder, they will not be able to be loaded into your React application (which will be loaded inside the `div` with the id of `root` from `public/index.html`).
+The `src/` folder (short for source) is where you will build your React application. All the code in this folder will be bundled to build your React application. If you try to add code or assets outside of this folder, they will not be able to be loaded into your React application (which will be loaded inside the `div` with the id of `root` from `index.html`).
 
 There are several files here that demonstrate how to set up some common application elements, including:
 
@@ -207,50 +206,43 @@ These files demonstrate two different strategies for organizing CSS:
 
 This allows you to organize your CSS in two different ways, which can help with organization and maintainability.
 
-#### `App.test.js` and `setUpTests.js`
+#### `assets/react.svg`
 
-This is an example of one way to set up testing. These files will not be used because this course currently uses Cypress, which requires a different configuration.
+This example graphic is imported into `App.jsx` to demonstrate how to import and use a static graphic or image with React and Vite.
 
-#### `logo.svg`
-
-SVG [scalable vector graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) are a modern way to create assets like logos that can size up or down without losing the quality of the image. This example is imported into `App.js` to demonstrate how to import and use one.
-
-#### `index.js`
+#### `main.jsx`
 
 This is the file that is the entry point for the application. This will be the starting point of what is loaded into `index.html`.
 
 You can see that `React,` and `ReactDOM` are added here (React can be run in other environments like a mobile device, which is why the DOM library must be loaded as well).
 
-It loads the `index.css` file and the `App` component, which will be discussed later.
+It loads the `index.css` file and the `App.jsx` component.
 
-There is an import and set-up of `reportWebVitals`. This is for reporting the performance of the app online. This functionality will not be covered in this course.
+### App.jsx
 
-Then there is a `root` variable. This will be discussed in more detail below.
+If you have started the Vite app and it has loaded in the browser, you can see the contents of this file.
 
-### App.js
+**Note** If a view has not opened in the browser, try going to http://localhost:5173
 
-If you have started the Vite and it has loaded in the browser, you can see the contents of this file.
+![Vite initial view](./assets/vite-react-boilerplate.png)
 
-**Note** If a view has not opened in the browser, try going to http://localhost:3000
-
-![Vite initial view](./assets/create-react-app-initial.png)
-
-You can edit this file and see changes reload when you have saved the file. Try to edit the text `Learn React` to something else; for example, `React is very cool!`
+You can edit this file and see changes reload when you have saved the file. Try to edit the text `Vite + React` to something else; for example, `Vite + React is very cool!!!`
 
 Now that you have oriented yourself inside Vite and have looked at some of the provided code examples, you can return to learning how React's syntax and strategy is different from vanilla JavaScript.
 
 ## Introduction to JSX
 
-Look at the `src/App.js` file and lok at it in the browser again. To the user, the React app looks like any other web page.
+Look at the `src/App.jsx` file and look at it in the browser again. To the user, the React app looks like any other web page.
 
-However, looking at `App.js`, you will note that some of this code doesn't look quite like HTML or JavaScript. It actually looks like a mix of the two.
+However, looking at `App.jsx`, you will note that some of this code doesn't look quite like HTML or JavaScript. It actually looks like a mix of the two.
 
 This mix is called `JSX`, and it [extends the syntax of JavaScript](https://react.dev/learn/writing-markup-with-jsx). In short, it allows for creating dynamic HTML components in a syntax that is easy to read and update.
 
-Simplify the `App.js` file so that you can focus on each line of code and understand what it does. The following code should give you a blank but functional web page:
+Simplify the `App.jsx` file so that you can focus on each line of code and understand what it does. The following code should give you a blank but functional web page:
 
 ```js
-// src/App.js
+// src/App.jsx
+
 import "./App.css";
 
 function App() {
@@ -265,7 +257,7 @@ export default App;
 The top line imports and applies the CSS from the file `App.css`.
 
 ```js
-// src/App.js
+// src/App.jsx
 import "./App.css";
 ```
 
@@ -285,14 +277,14 @@ Add some more CSS:
 
 ```css
 .App {
-  background: mintcream;
+  background: mintcream; /* if mintcream is too light you can try mistyrose or another color */
   min-height: 100vh;
 }
 ```
 
 This will add a background color and minimum height to the HTML element with a class of `App`.
 
-Return to the `App.js` file. You will notice that instead of a `class` attribute in the `div`, there is a `className` attribute.
+Return to the `App.jsx` file. You will notice that instead of a `class` attribute in the `div`, there is a `className` attribute.
 
 ```js
 function App() {
@@ -300,16 +292,16 @@ function App() {
 }
 ```
 
-This is because `App.js` is a JavaScript file, and class is a [reserved word](https://www.w3schools.com/js/js_reserved.asp). You must use the alternate `className` in your React app. However, if you open the developer tools, you will see that the React app does convert `className` to `class` for the browser. You can also see that your `App.css` file was compiled and added inside the browser inside a `style` tag.
+This is because `App.jsx` is a JavaScript file, and class is a [reserved word](https://www.w3schools.com/js/js_reserved.asp). You must use the alternate `className` in your React app. However, if you open the developer tools, you will see that the React app does convert `className` to `class` for the browser. You can also see that your `App.css` file was compiled and added inside the browser inside a `style` tag.
 
 ![Browser Developer tools view](./assets/create-react-app-simplified-dev-console.png)
 
 ## Using JSX
 
-In `src/App.js`, below the `import` statement, add a simple and familiar expression:
+In `src/App.jsx`, below the `import` statement, add a simple and familiar expression:
 
 ```jsx
-// src/app.js
+// src/App.jsx
 const hello = <h1>Hello, world!</h1>;
 ```
 
@@ -334,7 +326,7 @@ This should seem familiar: with regular JavaScript, you could use string interpo
 [React JSX documentation](https://react.dev/learn/javascript-in-jsx-with-curly-braces) gives more examples of how JSX can be used. This time, call a function, `formatName`, in the embedded expression. The return value of this function, `My Name`, is then added to the `h1` element after `Hello`:
 
 ```jsx
-// src/App.js
+// src/App.jsx
 function formatName(user) {
   return user.firstName + " " + user.lastName;
 }
@@ -349,16 +341,18 @@ const hello = <h1>Hello, {formatName(user)}!</h1>;
 
 ## Child Components
 
-`App.js` is just one small component. However, if the goal were to build your own simple social media site, this file would quickly grow very large. One of the main features of React is the ability to create and render many components at a time in an organized and maintainable way.
+`App.jsx` is just one small component. However, if the goal were to build your own simple social media site, this file would quickly grow very large. One of the main features of React is the ability to create and render many components at a time in an organized and maintainable way.
 
-Try to a new child component that `App.js` will import and render. This component will list some contacts.
+Try to a new child component that `App.jsx` will import and render. This component will list some contacts.
 
-First, create a file called `ContactList.js` inside the `src` folder.
+First, create a file called `ContactList.jsx` inside the `src` folder.
 
-> **Note** This code has some errors, which are important to understand and debug.
+> **Note**: The extension must be `.jsx` and not `.js` when you are creating a React component.
+
+> **Note**: This code has some errors, which are important to understand and debug.
 
 ```js
-// src/ContactList.js
+// src/ContactList.jsx
 function ContactList() {
  return
  <h2>Contacts</h2>
@@ -375,7 +369,9 @@ You will first notice that your text editor probably triggered a lot of error me
 
 This is because there are some gotchas with JSX and JavaScript.
 
-First, return statements can only return one line of code. If you try to put all the code on one line, it becomes tough to read:
+First, return statements can only return one line of code.
+
+If you try to put all the code on one line, it becomes tough to read:
 
 ```js
 function ContactList() {
@@ -386,7 +382,7 @@ function ContactList() {
 To return the expression as one line of code, but to also allow for formatting, you must wrap the expression in parentheses, and the opening parenthesis must start on the same line as the return statement, or else the return statement will return `null`.
 
 ```jsx
-// src/ContactList.js
+// src/ContactList.jsx
 function ContactList() {
  return(
  <h2>Contacts</h2>
@@ -419,10 +415,10 @@ function ContactList() {
 }
 ```
 
-Returning to `App.js` file, you first must `import` the `ContactList` before being able to display the component.
+Returning to `App.jsx` file, you first must `import` the `ContactList` before being able to display the component.
 
 ```js
-// src/App.js
+// src/App.jsx
 import ContactList from "./ContactList";
 ```
 
@@ -441,7 +437,7 @@ or
 If you are not putting any more components or HTML elements inside the component, self-closing tags are usually the best practice.
 
 ```jsx
-// src/App.js
+// src/App.jsx
 import ContactList from "./ContactList";
 
 function App() {
@@ -458,10 +454,10 @@ export default App;
 
 However, there is still an error with this code. This is because `ContactList` must be exported before it can be imported.
 
-Return to the `ContactList.js` file and add `export default`:
+Return to the `ContactList.jsx` file and add `export default`:
 
 ```js
-// src/ContactList.js
+// src/ContactList.jsx
 export default function ContactList() {
   return (
     <>
@@ -498,7 +494,9 @@ const postData = {
 export default postData;
 ```
 
-Create another file, `Post.js`.
+**Note**: Why does this file have an extension of `.js` and not `.jsx`?
+
+Create another file, `Post.jsx`.
 
 ```js
 export default function Post() {
@@ -512,11 +510,10 @@ export default function Post() {
 }
 ```
 
-Import this to `src/App.js` and render it:
+Import this to `src/App.jsx` and render it:
 
 ```js
-// src/App.js
-
+// src/App.jsx
 import Post from "./Post";
 function App() {
   return (
@@ -549,10 +546,10 @@ export default function Post() {
 }
 ```
 
-You can add more `Post` components to `App.js`
+You can add more `Post` components to `App.jsx`
 
 ```js
-// src/App.js
+// src/App.jsx
 
 function App() {
   return (
@@ -577,10 +574,10 @@ The previous examples demonstrated how you will build React components, but it m
 
 ## `ReactDOM.render`
 
-The `index.js` file is what is loaded into `public/index.html`'s `div` with the `id` of `root`.
+The `main.jsx` file is what is loaded into `public/index.html`'s `div` with the `id` of `root`.
 
 ```jsx
-// src/index.js
+// src/main.js
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -596,7 +593,7 @@ Depending on the version (old, somewhat new, very new), you may or may not have 
 You can remove it to simplify this example:
 
 ```jsx
-// src/index.js
+// src/main.jsx
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
 ```

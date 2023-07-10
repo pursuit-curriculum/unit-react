@@ -78,11 +78,11 @@ You can begin coding in React by [Trying React](https://react.dev/learn) from th
 
 - Use an online playground like CodePen or CodeSandbox. These are useful for essential learning and experimentation: just like you used repl.it (or similar) at the start of your coding journey, this zero-configuration that works in any browser and on any computer and can be a great option to get started.
 - You can add React to a website with script tags. This is another fast and easy way to try React.
-- You can use a Vite. This application has many useful basic configurations and features to help make your code ready for production.
+- You can use a Vite (pronounced `veet`). This application has many useful basic configurations and features to help make your code ready for production.
 
 There are numerous other ways to create a new React app. Many references you'll find are focused on creating production-level applications. While these rich resources are powerful, they are also needlessly complex for someone who is just starting out and building small demo applications. When you've mastered the fundamentals and are ready to build a production level app, you can take the steps to grow your knowledge to learn the additional things that go into a professional-level application.
 
-In this unit, you will use Vite primarily for the following features:
+In this unit, you will use Vite (pronounced `veet`) primarily for the following features:
 
 - Automatic browser reloading when you make a change and other pre-configurations that make using it very easy.
 - Helpful error messages.

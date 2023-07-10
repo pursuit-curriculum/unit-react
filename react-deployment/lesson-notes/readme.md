@@ -13,4 +13,4 @@ By the end of this lesson, you should be able to:
 
 ## Class Activity
 
-Use the deployment guide and deploy a [boilerplate React App with Netlify](https://github.com/pursuit-curriculum-resources/guide-deployment) as a class.
+Use the deployment guide and deploy a [boilerplate React App with Netlify](https://github.com/pursuit-curriculum-resources/guide-deployment/tree/main/netlify-vite-react) as a class.

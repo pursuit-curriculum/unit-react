@@ -19,7 +19,7 @@ The final app will look similar to this:
 
 ![In class build](../assets/class-build.png)
 
-There are several ways to [create an application with React or add React to a current project](https://vitejs.dev/guide/). We'll use `Vite`, which is a feature-rich application that has the following features:
+There are several ways to [create an application with React or add React to a current project](https://vitejs.dev/guide/). We'll use `Vite` (pronounced `veet`), which is a feature-rich application that has the following features:
 
 - Automatic browser reloading when you make a change and other pre-configurations that make using it very easy
 - Helpful error messages

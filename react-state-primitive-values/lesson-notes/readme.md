@@ -15,14 +15,16 @@
 
 ## Getting started
 
-- `npx create-react-app@5.0 color-app`
+- `npm create vite@4 color-app`
+  - choose `React` then choose `JavaScript`
 - `cd color-app`
+- `npm install`
 - `npm start`
 
 Change the App component:
 
 ```js
-// src/App.js
+// src/App.jsx
 
 function App() {
   return (
@@ -51,7 +53,7 @@ function App() {
 Add an array of colors:
 
 ```js
-// App.js
+// App.jsx
 const colors = [
   "papayawhip",
   "thistle",
@@ -76,7 +78,7 @@ const [color, setColor] = useState("azure");
 Add style to the App component's div:
 
 ```js
-\div style={{height: "100vh", backgroundColor: color}}>
+div style={{height: "100vh", backgroundColor: color}}>
 ```
 
 Add some logic to change the color:

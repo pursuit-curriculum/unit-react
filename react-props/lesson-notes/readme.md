@@ -18,7 +18,7 @@ Today we'll build a simple doggy daycare app:
 
 Start by forking and cloning the following repository:
 
-- [React Props Class Build](https://github.com/joinpursuit/class-build-react-props)
+- [React Props Class Build](https://github.com/pursuit-curriculum-resources/starter-react-props)
 
 ## Props
 

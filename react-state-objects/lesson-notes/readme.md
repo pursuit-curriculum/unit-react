@@ -22,16 +22,14 @@ There will be a list of dogs, we will build functionality to
 
 Start by forking and cloning the following repository:
 
-[React State 2 Class Build](https://github.com/joinpursuit/class-build-react-state-objects)
-
-- `npm i`
+[React State Objects Class Build](https://github.com/pursuit-curriculum-resources/starter-react-state-objects)
 
 ## Import data
 
 Typically, you will bring in data from a third-party API or your own data from a server/database. However, to keep the code examples simple and focused on the learning objectives, we will use an array in a file called `data.js` to mimic incoming data.
 
 ```js
-// App.js
+// App.jsx
 
 import { dogsData } from "./data";
 ```
@@ -53,7 +51,7 @@ The dogs array is going to be updated based on user interaction. Therefore we mu
 At the top:
 
 ```js
-// App.js
+// App.jsx
 import { useState } from "react";
 ```
 
@@ -86,7 +84,7 @@ const [dogs, setDogs] = useState(dogsData);
 ## Add a new dog
 
 ```js
-// App.js
+// App.jsx
 function addDog() {
   console.log("add Rover");
 }
@@ -119,7 +117,7 @@ npm install uuid
 ```
 
 ```js
-// App.js
+// App.jsx
 import { v1 as generateUniqueID } from "uuid";
 ```
 

@@ -51,7 +51,7 @@ Data flows down from the parent component to the children components. The advant
 - Debugging is easier when the developer knows where the data is coming from and where it is going.
 - Unidirectional data flow makes the program less prone to errors because there is only one way to do it.
 
-![data folows down](./assets/data-flows-down.png)
+![data follows down](./assets/data-flows-down.png)
 
 Here is an example situation. In this sketchpad, there are four components:
 

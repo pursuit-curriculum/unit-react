@@ -47,7 +47,7 @@ More views have been hidden for ease of document use.
 
 Start by forking and cloning the following repository:
 
-- [React Router Build](https://github.com/joinpursuit/react-router-code-along)
+- [React Router Build](https://github.com/pursuit-curriculum-resources/starter-react-router)
 
 ## Set Up React Router DOM
 
@@ -57,7 +57,7 @@ When you start this project, all the different components are visible on one pag
 
 Import React Router DOM
 
-**src/App.js**
+**src/App.jsx**
 
 ```js
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -92,7 +92,7 @@ Next, let's define the area that will display the views. Depending on the URL, w
 
 **NOTE** Your app will break and not work until you complete the next step
 
-**src/App.js**
+**src/App.jsx**
 
 ```js
 <main>
@@ -159,7 +159,7 @@ Let's create some navigation.
 
 Have the `h1` take us to the `home` view
 
-**src/components/common/header.js**
+**src/components/common/header.jsx**
 Import the link component
 
 ```js
@@ -184,7 +184,7 @@ Now, when we click on the `h1`, it takes us back to the home view.
 
 Let's add some more links in the `footer`.
 
-**src/components/common/footer.js**
+**src/components/common/footer.jsx**
 
 ```js
 import { Link } from "react-router-dom";
@@ -206,7 +206,7 @@ import { Link } from "react-router-dom";
 
 Let's be able to see all the candles and lamps by using the navigation bar.
 
-**src/components/common/nav.js**
+**src/components/common/nav.jsx**
 
 ```js
 import { Link } from "react-router-dom";
@@ -232,7 +232,7 @@ We can use the URL parameters to select a specific item. In the data of each lam
 
 When a user clicks on the item they are interested in, they won't be looking at the URL, but we have set up our code in a way that will add this functionality.
 
-**src/components/common/productlist.js**
+**src/components/common/productlist.jsx**
 
 ```js
 import { Link } from "react-router-dom";
@@ -249,7 +249,7 @@ import { Link } from "react-router-dom";
 </li>
 ```
 
-**src/components/common/product.js**
+**src/components/common/product.jsx**
 
 ```js
 import { useParams } from "react-router-dom";
@@ -262,7 +262,7 @@ let { id } = useParams();
 const [product] = products.filter((product) => product.id === id);
 ```
 
-**src/App.js**
+**src/App.jsx**
 
 ```js
  <Route
@@ -279,7 +279,7 @@ const [product] = products.filter((product) => product.id === id);
 
 Imagine you are using this site and want to purchase birthday candles. Once you press the `buy now` button, something should happen. For simplicity, once a user presses the `buy now` button, it will take the user back to the home page.
 
-**src/components/common/product.js**
+**src/components/common/product.jsx**
 
 Add `Navigate`
 

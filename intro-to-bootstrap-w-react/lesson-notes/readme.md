@@ -26,7 +26,7 @@ Starting appearance
 
 ## Getting started
 
-- Clone the starter code linked in Canvas
+- Clone the starter code [Intro to Bootstrap with React](https://github.com/pursuit-curriculum-resources/starter-intro-to-bootstrap-w-react)
 - `cd` into the project and run `npm i` and then `npm start`
 
 **Note:** some classes for images are already set so that they are not too large to work with as we build. The remaining images are also set to `width:100px` in the `index.css` until we can size them correctly. Once they are sized with Bootstrap, we can remove this code from the `index.css`.

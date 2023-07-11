@@ -26,14 +26,14 @@ Today we'll build a Daily Home Page:
 
 Start by forking and cloning the following repository:
 
-- [React Hooks Lifecycle Class Build](https://github.com/joinpursuit/class-build-hooks-lifecycle/blob/main/src/App.js)
+- [React Hooks Lifecycle Class Build](https://github.com/pursuit-curriculum-resources/starter-react-lifecycle-networking)
 
 ## On component mount
 
 Be sure to import `useEffect()` into your component.
 
 ```js
-// App.js
+// App.jsx
 import { useState, useEffect } from "react";
 ```
 
@@ -94,7 +94,7 @@ useEffect(() => {
 It's also best practice to call useEffect once for every concern/feature. In the case of our Daily Home Page App, we have two concerns on page load: getting a random number and setting the day.
 
 ```js
-// App.js
+// App.jsx
 
 // On page load
 useEffect(() => {

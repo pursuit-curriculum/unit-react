@@ -30,7 +30,7 @@ There will be a number of fields to fill out including
 
 Start by forking and cloning the following repository:
 
-[React Forms Class Build](https://github.com/joinpursuit/class-build-react-state-forms/tree/main)
+[React Forms Class Build](https://github.com/pursuit-curriculum-resources/starter-react-state-objects)
 
 ```
 npm i
@@ -41,7 +41,7 @@ The form is already built. You'll be adding the functionality to make all the fo
 ## Checkbox
 
 ```js
-// App.js
+// App.jsx
 
 const [checked, setChecked] = useState(false);
 ```
@@ -82,7 +82,7 @@ function handleCheckboxChange() {
 Add state and a function to change the state for the checkbox:
 
 ```js
-// App.js
+// App.jsx
 const [selectOption, setSelectOption] = useState("");
 ```
 
@@ -115,7 +115,7 @@ function handleSelectChange(event) {
 Add the function to handle a form submit:
 
 ```js
-// App.js
+// App.jsx
 function handleSubmit(event) {
   console.log("form submitted");
 }
@@ -149,7 +149,7 @@ function handleSubmit(event) {
 The `handleTextChange` function has already been included in `App.js`. Additionally, it has been added as the event listener/handler for each text `input`.
 
 ```js
-// App.js
+// App.jsx
 function handleTextChange(event) {
   setNewDog({
     ...newDog,
@@ -174,7 +174,7 @@ Rather than putting all the logic into this function, new functions with their s
 Use the `addDog` function to put all the values together (remove the hard-coded Rover object):
 
 ```js
-// App.js
+// App.jsx
 function addDog() {
   const createDog = {
     id: generateUniqueID(),

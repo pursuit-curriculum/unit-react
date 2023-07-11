@@ -27,7 +27,7 @@ npm i
 
 You may find this lesson quite challenging to code along with, as refactoring as a class is challenging work. Or, if you are looking to be challenged more, you can go back to the last version of this app (completed build from react-forms) and try to refactor the app to have a separate form and list item components.
 
-Refactoring in React is challenging and time-consuming. The best way to avoid it is to plan by [Thinking in React](https://reactjs.org/docs/thinking-in-react.html).
+Refactoring in React is challenging and time-consuming. The best way to avoid it is to plan by [Thinking in React](https://react.dev/learn/thinking-in-react).
 
 ## Data flows down
 
@@ -53,7 +53,7 @@ Knowing that data flows down in React, use the following wireframe of the Doggy 
 Right now, when you click on a dog's name, the attendance doesn't change. The dog's attendance is being tracked in the `dogs` array. So the `updateDogAttendance` function must stay in `App.js` because it is calling `setDogs`. However, we can pass this function down.
 
 ```js
-// App.js
+// App.jsx
 
 <DogListItem dog={dog} updateDogAttendance={updateDogAttendance} />
 ```
@@ -61,14 +61,14 @@ Right now, when you click on a dog's name, the attendance doesn't change. The do
 Pass in `updateDogAttendance` into the object of the functional component:
 
 ```js
-// Components/DogListItem.js
+// Components/DogListItem.jsx
 export default function DogListItem({ dog, updateDogAttendance }) {
 ```
 
 Then uncomment the `onClick` on or around line 7:
 
 ```js
-// Components/DogListItem.js
+// Components/DogListItem.jsx
 onClick={() => updateDogAttendance(dog.id)}
 ```
 

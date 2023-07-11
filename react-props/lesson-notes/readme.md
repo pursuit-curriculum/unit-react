@@ -18,7 +18,7 @@ Today we'll build a simple doggy daycare app:
 
 Start by forking and cloning the following repository:
 
-- [React Props Class Build](https://github.com/joinpursuit/class-build-react-props)
+- [React Props Class Build](https://github.com/pursuit-curriculum-resources/starter-react-props)
 
 ## Props
 
@@ -30,14 +30,14 @@ Props is short for the word properties. All HTML elements can have properties. T
 
 React extends the function of properties (props) to allow values to be passed down. This may seem strange at first. As you spend more time coding in React, you will realize the importance of this feature.
 
-In `App.js`, there is a variable called `dayCareName`.
+In `App.jsx`, there is a variable called `dayCareName`.
 
 You can pass the name to the `Header` component:
 
 You can name the key whatever you want, like `asdf`. But it's a good idea to pick an accurate and descriptive name for the key. The following code will add the key-value pair to an object called `props`.
 
 ```js
-// App.js
+// App.jsx
 <Header name={dayCareName} />
 ```
 
@@ -85,17 +85,17 @@ function Header({ todaysDate, name }) {
 
 ## Dynamic Rendering
 
-There is some dog data in `App.js`. We want to pass the data to the `Aside` and show a list of dogs at Doggy Day Care today.
+There is some dog data being imported to `App.jsx`. We want to pass the data to the `Aside` and show a list of dogs at Doggy Day Care today.
 
 ```js
-// App.js
+// App.jsx
 <Aside dogs={dogs} />
 ```
 
 You can log the value of dogs to be sure it has been passed down.
 
 ```js
-// Aside.js
+// Aside.jsx
 function Aside({ dogs }) {
   console.log(dogs);
   return (
@@ -125,7 +125,7 @@ You do have another tool that will allow you to loop over values and return a ne
 First, start with a set of curly braces. `{}`. The braces tell React to evaluate what is inside the curly braces first before rendering it.
 
 ```js
-// Aside.js
+// Aside.jsx
 function Aside({ dogs }) {
   console.log(dogs);
   return (
@@ -140,7 +140,7 @@ function Aside({ dogs }) {
 Set up the .map() function to iterate over `dogs`:
 
 ```js
-// Aside.js
+// Aside.jsx
 
 <ol>{dogs.map()}</ol>
 ```

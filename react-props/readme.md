@@ -44,7 +44,7 @@ The syntax here looks very similar to writing HTML attributes, and that is by de
 Parent component:
 
 ```js
-// App.js
+// App.jsx
 const App = () => {
   let userDetails = {
     name: "Jimmy B",
@@ -72,7 +72,7 @@ const User = (props) => {
 Note that we are only passing in one prop. If we want to add more, we can just pass them to the child component with more key/value pairs.
 
 ```js
-// App.js
+// App.jsx
 const App = () => {
   let userDetails = {
     name: "Jimmy B",
@@ -86,7 +86,7 @@ const App = () => {
 When the code gets too long, we can put each k/v pair on its own line.
 
 ```js
-// App.js
+// App.jsx
 const App = () => {
   let userDetails = {
     name: "Jimmy B",
@@ -112,7 +112,7 @@ Here, we will build a simple application that uses props to display a list of sh
 
 ![reactPropsAppOne](./assets/reactPropsAppOne.png)
 
-### `ProductPage.js`
+### `ProductPage.jsx`
 
 ```js
 import ProductItem from './ProductItem';
@@ -152,7 +152,7 @@ First, we're creating a variable called `listItems`, which maps through our `pro
 
 Think of props as arguments for a component. They compile into an attribute on the component which we can reference using `this.props` (in the case of a class component) or as our function's argument (for a functional component). In this case, for each item in our `products` array, we're inputting the name, manufacturer, and price into our `ProductItem` component. You'll notice, because this component is only responsible for receiving props and rendering data, we're making this one functional, rather than using a class:
 
-### `ProductItem.js`
+### `ProductItem.jsx`
 
 ```js
 const ProductItem = (props) => {
@@ -244,10 +244,3 @@ At the end of the day, a full-fledged app should have this general kind of compo
 ## Conclusion
 
 Clearly, there's a lot of syntax we're introducing to you here, but there's also a lot of creative work that goes into deciding exactly what information should be stored in which component, which component should display what, and so on. We highly recommend thinking about this stuff as early as possible when you get around to building your own full-scale React projects!
-
-## Resources
-
-- [Components and Props](https://reactjs.org/docs/components-and-props.html)
-- [Thinking In React](https://reactjs.org/docs/thinking-in-react.html)
-- [Container Components](https://medium.com/@learnreact/container-components-c0e67432e005)
-- [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)

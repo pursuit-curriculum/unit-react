@@ -26,14 +26,14 @@ Today we'll build a Daily Home Page:
 
 Start by forking and cloning the following repository:
 
-- [React Hooks Lifecycle Class Build](https://github.com/joinpursuit/class-build-hooks-lifecycle/blob/main/src/App.js)
+- [React Hooks Lifecycle Class Build](https://github.com/pursuit-curriculum-resources/starter-react-lifecycle-networking)
 
 ## On component mount
 
 Be sure to import `useEffect()` into your component.
 
 ```js
-// App.js
+// App.jsx
 import { useState, useEffect } from "react";
 ```
 
@@ -78,7 +78,7 @@ useEffect(() => {
 }, [someValue, anotherValue]);
 ```
 
-To avoid an infinite loop, you add another `useEffect()` function to handle different state changes.  
+To avoid an infinite loop, you add another `useEffect()` function to handle different state changes.
 
 ```js
 // DEMO, do not code:
@@ -87,14 +87,14 @@ useEffect(() => {
 }, [someValue]);
 
 useEffect(() => {
- getAnotherValue();
+  getAnotherValue();
 }, [anotherValue]);
 ```
 
 It's also best practice to call useEffect once for every concern/feature. In the case of our Daily Home Page App, we have two concerns on page load: getting a random number and setting the day.
 
 ```js
-// App.js
+// App.jsx
 
 // On page load
 useEffect(() => {
@@ -187,7 +187,7 @@ Example warning:
 
 This warning is usually a good one that while you have code that works, it likely is not the best way to achieve what you are looking for and further coding may lead to bugs.
 
-Before confirming that your code is ok, review [the docs](https://reactjs.org/docs/hooks-faq.html#performance-optimizations) which recommend trying the following steps first:
+Before confirming that your code is ok, review the docs, which recommend trying the following steps first:
 
 - Move the entire function into `useEffect()`
 - Move the function outside the component (if the function does not reference any props or state)

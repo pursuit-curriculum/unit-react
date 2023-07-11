@@ -191,7 +191,7 @@ useEffect(() => {
 }, [user]);
 ```
 
-It's also best practice to call useEffect once for every concern/feature even if you are not creating an infinite loop. [useEffect best practices, react docs](https://reactjs.org/docs/hooks-effect.html#tip-use-multiple-effects-to-separate-concerns)
+It's also best practice to call useEffect once for every concern/feature even if you are not creating an infinite loop.
 
 ## Update a value after state has changed
 
@@ -235,7 +235,5 @@ A missing dependency warning can have several solutions:
 
 The above reading is a non-exhaustive list of uses for `useEffect()`. However, they will be the most likely ones you will need during this course. For further study, read these docs and articles:
 
-- [React Docs Hooks and useEffect](https://reactjs.org/docs/hooks-effect.html)
-- [React Docs Hooks FAQ](https://reactjs.org/docs/hooks-faq.html#should-i-use-one-or-many-state-variables)
-- [How to useEffect in React](https://www.robinwieruch.de/react-useeffect-hook/)
-- [How to stop re-rendering lists in React](https://alexsidorenko.com/blog/react-list-rerender/)
+- [React Docs Hooks](https://react.dev/reference/react)
+- [React Docs useEffect](https://react.dev/reference/react/useEffect)

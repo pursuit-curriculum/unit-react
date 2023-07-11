@@ -43,7 +43,7 @@ Return to [the docs tab](https://getbootstrap.com/docs/5.3/getting-started/intro
 
 The general style of the documentation is to show a demonstration of the styling and then have the example code below.
 
-Here is the page for [Tables](https://getbootstrap.com/docs/5.3/content/tables/). You can use Create React App to create a new app, add the CDN to the `public/index.html` and copy paste the demo code into `src/App.js` to see Bootstrap CSS in action.
+Here is the page for [Tables](https://getbootstrap.com/docs/5.3/content/tables/). You can use Create React App to create a new app, add the CDN to the `public/index.html` and copy paste the demo code into `src/App.jsx` to see Bootstrap CSS in action.
 
 Some good first ones to check out are:
 

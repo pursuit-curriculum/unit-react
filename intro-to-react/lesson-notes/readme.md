@@ -5,41 +5,44 @@
 By the end of this lesson, you should be able to:
 
 - Understand what React is and what problem it solves.
-- Use Create React App to start a React project.
-- Understand the role of the files and folders in Create React App starter code.
+- Use Vite to start a React project.
+- Understand the role of the files and folders in Vite for React starter code.
 - Create a simple application that uses React to render its front end.
 
 <hr>
 
 ## Getting Started
 
-This lesson will help you build a simple app demonstrating Create React App's fundamental syntax, organization, and conventions.
+This lesson will help you build a simple app demonstrating React with Vite's fundamental syntax, organization, and conventions.
 
 The final app will look similar to this:
 
 ![In class build](../assets/class-build.png)
 
-There are several ways to [create an application with React or add React to a current project](https://reactjs.org/docs/getting-started.html). We'll use `Create-React-App`, which is a feature-rich application that has the following features:
+There are several ways to [create an application with React or add React to a current project](https://vitejs.dev/guide/). We'll use `Vite` (pronounced `veet`), which is a feature-rich application that has the following features:
 
 - Automatic browser reloading when you make a change and other pre-configurations that make using it very easy
 - Helpful error messages
 - File and folder structure that is easy to use and maintain
 - Configured for easy deployment
 
-To use Create-React-App to create a new app:
+To use Vite to create a new app:
 
-- `npx create-react-app@5.0 my-app`
+- `npm create vite@4 my-app`
 
 Inside this project, you will see the following files.
 
 ```
 .
-├── README.md
 ├── node_modules
+├── public
+├── src
+├── .eslintrc.cjs
+├── .gitignore
+├── index.html
 ├── package-lock.json
 ├── package.json
-├── public
-└── src
+└── vite.config.js
 ```
 
 > **Note:** If node modules are missing, use `npm install` to install the needed packages.
@@ -55,10 +58,10 @@ You will work inside the `src` folder.
 To start your app:
 
 ```
-npm start
+npm run dev
 ```
 
-Go to the **src/App.js** file.
+Go to the **src/App.jsx** file.
 
 What does each line of code do?
 
@@ -68,12 +71,12 @@ We will remove the **boilerplate** code for the rest of this lesson and add our 
 
 This app is tiny. Production level apps are massive. One of the benefits of React is that it allows you to create small custom components. Each component is typically stored in its own file.
 
-Inside the **src** folder, add a new file called `Header.js`.
+Inside the **src** folder, add a new file called `Header.jsx`.
 
 Then, add a function called `Header`:
 
 ```js
-// Header.js
+// Header.jsx
 function Header() {}
 ```
 
@@ -89,7 +92,7 @@ function Header() {
 Add some JSX that will be rendered in the browser.
 
 ```js
-// Header.js
+// Header.jsx
 function Header() {
   return (
     <header>
@@ -114,12 +117,12 @@ function Header() {
 export default Header;
 ```
 
-The default keyword allows the ability to rename this component in `App.js`.
+The default keyword allows the ability to rename this component in `App.jsx`.
 
-Return to `App.js` and import this component:
+Return to `App.jsx` and import this component:
 
 ```js
-// App.js
+// App.jsx
 import Header from "./Header";
 ```
 
@@ -172,10 +175,10 @@ function App() {
 
 ## Children Components
 
-Make a new file `Footer.js`:
+Make a new file `Footer.jsx`:
 
 ```js
-// Footer.js
+// Footer.jsx
 function Footer() {
   return (
     <footer>
@@ -188,10 +191,10 @@ function Footer() {
 export default Footer;
 ```
 
-Make a new file `Links.js`
+Make a new file `Links.jsx`
 
 ```js
-// Links.js
+// Links.jsx
 function Links() {
   return (
     <>
@@ -216,7 +219,7 @@ export default Links;
 
 **Try it**: Add the Links component inside the Footer's unordered list.
 
-Add the footer to `App.js`.
+Add the footer to `App.jsx`.
 
 ## Rendering Values
 
@@ -227,7 +230,7 @@ Currently, we have built a static app where nothing changes.
 Let's demonstrate how to _embed_ (insert) data into JSX.
 
 ```js
-// App.js
+// App.jsx
 const photoOfTheDay = "https://loremflickr.com/320/240";
 const currentDate = new Date();
 ```
@@ -259,10 +262,10 @@ footer {
 }
 ```
 
-Import this code into **Footer.js**
+Import this code into **Footer.jsx**
 
 ```js
-// Footer.js
+// Footer.jsx
 import "Footer.css";
 ```
 

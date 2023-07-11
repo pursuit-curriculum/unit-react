@@ -11,7 +11,7 @@ As you've seen, data flows down in React. When you add a prop, it becomes availa
 
 ## Thinking in React
 
-According to the [React documents](https://reactjs.org/docs/thinking-in-react.html), one of the best ways to build an app in React is to build your app in a specific order.
+According to the [React documents](https://react.dev/learn/thinking-in-react), one of the best ways to build an app in React is to build your app in a specific order.
 
 There are several key steps:
 
@@ -51,7 +51,7 @@ Data flows down from the parent component to the children components. The advant
 - Debugging is easier when the developer knows where the data is coming from and where it is going.
 - Unidirectional data flow makes the program less prone to errors because there is only one way to do it.
 
-![data folows down](./assets/data-flows-down.png)
+![data follows down](./assets/data-flows-down.png)
 
 Here is an example situation. In this sketchpad, there are four components:
 
@@ -119,10 +119,3 @@ export default function Square({ colors, chooseColor }) {
   );
 }
 ```
-
-## Resources (optional)
-
-- [Components and Props](https://reactjs.org/docs/components-and-props.html)
-- [Thinking In React](https://reactjs.org/docs/thinking-in-react.html)
-- [Container Components](https://medium.com/@learnreact/container-components-c0e67432e005)
-- [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)

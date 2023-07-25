@@ -157,6 +157,8 @@ This sets some common and best practices for formatting React. If you have a for
 
 It's important to note that local configuration files like this will override any global rules you may have set.
 
+You may also find the configurations here are too opinionated or don't suit your needs. This file is optional, and you may delete it, along with the `lint` script in the `pacakge.json`.
+
 #### `vite.config.js`
 
 This is a customizable configuration file for Vite to load React. For now, it is already set up for you. You could update it at a future time, if your needs change.

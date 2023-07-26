@@ -242,7 +242,7 @@ function handleSubmit(event) {
 
 ## Completed Build
 
-[See a completed build here](https://github.com/joinpursuit/class-build-react-state-forms/tree/build)
+[See a completed build here](https://github.com/pursuit-curriculum-resources/starter-react-forms/tree/solution)
 
 ## Upcoming Lessons
 

@@ -262,6 +262,8 @@ let { id } = useParams();
 const [product] = products.filter((product) => product.id === id);
 ```
 
+Add the following routes:
+
 **src/App.jsx**
 
 ```js

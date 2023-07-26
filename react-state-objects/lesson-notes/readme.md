@@ -64,18 +64,19 @@ const [dogs, setDogs] = useState(dogsData);
 ## Create an unordered list and make a list of dogs
 
 ```js
+// App.jsx
 
-<ul>
-{
-  dogs.map((dog) => {
-    return (
-      <li key={dog.id}>
-        <span>{dog.name}</span>
-      </li>
-    );
-  });
-}
-</ul>
+      <main>
+        <ul>
+          {dogs.map((dog) => {
+            return (
+              <li key={dog.id}>
+                <span>{dog.name}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </main>
 
 ```
 

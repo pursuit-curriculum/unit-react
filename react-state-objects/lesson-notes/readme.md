@@ -247,6 +247,9 @@ Add it to the list item and pass `dog` down as a prop:
 <DogDetails dog={dog} />
 ```
 
-You'll notice that the show/hide details functionality already works. As a class work through how this function works.
+You'll notice that the show/hide details functionality already works as a class work through how this function works.
 
-- Why is there state in `DogDetails` and what does it do. What happens if this state were put in the App.js component instead?
+- Why is there state in `DogDetails` and what does it do? What happens if this state were put in the App.js component instead?
+- 
+
+[Here is the full build](https://github.com/pursuit-curriculum-resources/starter-react-state-objects/tree/solution)

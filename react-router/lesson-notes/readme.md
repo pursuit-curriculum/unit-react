@@ -53,7 +53,7 @@ Start by forking and cloning the following repository:
 
 When you start this project, all the different components are visible on one page. Let's use React Router to create different views.
 
-1. `npm install react-router-dom`
+1. `npm install react-router-dom@6`
 
 Import React Router DOM
 

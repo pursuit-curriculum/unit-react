@@ -1,4 +1,4 @@
-# Create React App Deployment
+# React App Deployment
 
 You've been learning React, and soon you'll build a project using React. How do you share your work with others? To share, you must deploy your application to an online service.
 

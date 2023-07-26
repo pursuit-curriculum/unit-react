@@ -1,6 +1,6 @@
-# Deploying a Create React App with Netlify
+# Deploying a React App with Netlify
 
-Today's lesson will be a walk-through on how to get a Create-React App deployed on Netlify.
+Today's lesson will be a walk-through on how to get a React App deployed on Netlify.
 
 ## Learning objectives
 

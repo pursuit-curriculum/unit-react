@@ -1,11 +1,8 @@
 # Props and Component Structuring
 
-## Vocabulary
+React's main goals are to render data in a fast way for users and a maintainable way for developers.
 
-- Props
-- Functional Components
-- Container Components
-- Display Components
+So far you've learned about React components. However, while you could make multiple components, they all displayed the same data. With props (properties), you can customize each component to render different data.
 
 ## Objectives
 

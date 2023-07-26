@@ -55,7 +55,7 @@ Right now, when you click on a dog's name, the attendance doesn't change. The do
 ```js
 // App.jsx
 
-<DogListItem dog={dog} updateDogAttendance={updateDogAttendance} />
+<DogListItem key={dog.id} dog={dog} updateDogAttendance={updateDogAttendance} />
 ```
 
 Pass in `updateDogAttendance` into the object of the functional component:

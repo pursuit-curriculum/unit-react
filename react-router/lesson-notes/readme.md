@@ -315,6 +315,8 @@ Add a view for it at `/newsletter`.
 
 When the button on that page is pressed, make it redirect to the `about` page.
 
+[See the build here](https://github.com/pursuit-curriculum-resources/starter-react-router/tree/solution)
+
 ## Super Bonus
 
 Add types to the nav so that it reads:
@@ -328,4 +330,4 @@ Add types to the nav so that it reads:
 - Flameless
 - Celebratory
 
-Then, when a user clicks on the type, it shows a view of just the lamps (or candles) that match the type
+Then, when a user clicks on the type, it shows a view of just the lamps (or candles) that match the type. If there are no products for that category, display an `h3` that reads `coming soon`. 

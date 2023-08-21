@@ -45,11 +45,12 @@ To best understand conflicts, it's helpful to see one directly. The steps below 
 1. Create a new `git` repository by running the following lines in your terminal. You should only run the following lines _outside of_ an existing `git` repository.
 
    ```bash
-   take github-conflict-example
-   git init
-   echo ".DS_Store" > .gitignore
-   git commit .
-   git commit -m "Initial commit"
+  mkdir group-merge-conflicts
+  cd group-merge-conflicts
+  git init
+  echo ".DS_Store" > .gitignore
+  git add .
+  git commit -m "Initial commit"
    ```
 
 1. Next, you'll want to create a file that can cause a conflict. Create an `index.js` file and copy the following code inside of it.

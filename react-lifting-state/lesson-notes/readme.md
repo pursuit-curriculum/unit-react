@@ -55,7 +55,7 @@ Right now, when you click on a dog's name, the attendance doesn't change. The do
 ```js
 // App.jsx
 
-<DogListItem dog={dog} updateDogAttendance={updateDogAttendance} />
+<DogListItem key={dog.id} dog={dog} updateDogAttendance={updateDogAttendance} />
 ```
 
 Pass in `updateDogAttendance` into the object of the functional component:
@@ -94,4 +94,4 @@ Try to get the form to toggle back to hidden after the form submit.
 
 ### Completed build
 
-See a complete build [here](https://github.com/joinpursuit/class-build-lifting-state/tree/build)
+See a complete build [here](https://github.com/pursuit-curriculum-resources/starter-react-lifting-state/tree/solution)

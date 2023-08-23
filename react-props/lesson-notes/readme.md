@@ -287,3 +287,5 @@ function Main({ dogs }) {
 ```
 
 Why can a for loop be used in this case?
+
+[See completed code here](https://github.com/pursuit-curriculum-resources/starter-react-props/tree/solution)

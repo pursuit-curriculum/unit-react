@@ -231,4 +231,4 @@ You could also call this function on user interaction:
 
 ## Completed build
 
-A completed build can be found [here](https://github.com/joinpursuit/class-build-hooks-lifecycle/tree/build)
+A completed build can be found [here](https://github.com/pursuit-curriculum-resources/starter-react-lifecycle-networking)
